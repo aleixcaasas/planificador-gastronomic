@@ -1,9 +1,9 @@
 class User {
-    constructor(user_name, full_name, email, password, image) {
+    constructor(user_name, full_name, email, image) {
         this.user_name = user_name
         this.full_name = full_name
         this.email = email
-        this.password = password
+        this.password
         this.image = image
         this.shopping_list
         this.weekly_plan
