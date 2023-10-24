@@ -1,4 +1,4 @@
-export class Ingredient {
+class Ingredient {
     constructor(id, name, image, quantity, calories) {
         this.id = id
         this.name = name
@@ -7,3 +7,5 @@ export class Ingredient {
         this.calories = calories
     }
 }
+
+module.exports = { Ingredient }

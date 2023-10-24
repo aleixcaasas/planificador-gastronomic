@@ -1,4 +1,4 @@
-export default class User {
+class User {
     constructor(id, user_name, full_name, email, password, image, shopping_list, weekly_plan) {
         this.id = id
         this.user_name = user_name
@@ -11,7 +11,7 @@ export default class User {
     }
 }
 
-export class ShoppingListItem {
+class ShoppingListItem {
     constructor(ingredient_id, ingredient_name, ingredient_image) {
         this.ingredient_id = ingredient_id
         this.ingredient_name = ingredient_name
@@ -19,7 +19,7 @@ export class ShoppingListItem {
     }
 }
 
-export class Meal {
+class Meal {
     constructor(recipe_id, recipe_title, recipe_image, recipe_time) {
         this.recipe_id = recipe_id
         this.recipe_title = recipe_title
@@ -28,7 +28,7 @@ export class Meal {
     }
 }
 
-export class DailyPlan {
+class DailyPlan {
     constructor(breakfast, lunch, dinner) {
         this.breakfast = breakfast
         this.lunch = lunch
@@ -36,7 +36,7 @@ export class DailyPlan {
     }
 }
 
-export class WeeklyPlan {
+class WeeklyPlan {
     constructor(monday, tuesday, wednesday, thursday, friday, saturday, sunday) {
         this.monday = monday
         this.tuesday = tuesday
@@ -47,3 +47,5 @@ export class WeeklyPlan {
         this.sunday = sunday
     }
 }
+
+module.exports = { User, ShoppingListItem, Meal, DailyPlan, WeeklyPlan }

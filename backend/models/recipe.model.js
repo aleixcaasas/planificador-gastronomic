@@ -16,4 +16,4 @@ class Recipe {
     }
 }
 
-module.exports = Recipe
+module.exports = { Recipe }
