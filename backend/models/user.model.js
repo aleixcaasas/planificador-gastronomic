@@ -1,13 +1,12 @@
 class User {
-    constructor(id, user_name, full_name, email, password, image, shopping_list, weekly_plan) {
-        this.id = id
+    constructor(user_name, full_name, email, password, image) {
         this.user_name = user_name
         this.full_name = full_name
         this.email = email
         this.password = password
         this.image = image
-        this.shopping_list = shopping_list
-        this.weekly_plan = weekly_plan
+        this.shopping_list
+        this.weekly_plan
     }
 }
 
@@ -30,21 +29,21 @@ class Meal {
 
 class DailyPlan {
     constructor(breakfast, lunch, dinner) {
-        this.breakfast = breakfast
-        this.lunch = lunch
-        this.dinner = dinner
+        this.breakfast = new Meal()
+        this.lunch = new Meal()
+        this.dinner = new Meal()
     }
 }
 
 class WeeklyPlan {
-    constructor(monday, tuesday, wednesday, thursday, friday, saturday, sunday) {
-        this.monday = monday
-        this.tuesday = tuesday
-        this.wednesday = wednesday
-        this.thursday = thursday
-        this.friday = friday
-        this.saturday = saturday
-        this.sunday = sunday
+    constructor() {
+        this.monday = new DailyPlan()
+        this.tuesday = new DailyPlan()
+        this.wednesday = new DailyPlan()
+        this.thursday = new DailyPlan()
+        this.friday = new DailyPlan()
+        this.saturday = new DailyPlan()
+        this.sunday = new DailyPlan()
     }
 }
 
