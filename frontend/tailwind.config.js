@@ -9,8 +9,8 @@ export default {
     ],
     theme: {
         colors: {
-            primary: '#57BEE6',
-            secondary: '#FEAE49',
+            'false-blue': '#57BEE6',
+            'false-orange': '#FEAE49',
             'false-dark-gray': '#3D424A',
             'false-light-gray': '#C0C0BE',
             'false-white': '#E6E5DE'
@@ -24,12 +24,17 @@ export default {
     darkMode: 'class',
     plugins: [
         nextui({
-            colors: {
-                primary: '#57BEE6',
-                secondary: '#FEAE49',
-                'false-dark-gray': '#3D424A',
-                'false-light-gray': '#C0C0BE',
-                'false-white': '#E6E5DE'
+            themes: {
+                light: {
+                    colors: {
+                        secondary: '#57BEE6',
+                        primary: 'rgb(254, 174, 73)',
+                        'false-light-gray': '#C0C0BE',
+                        'false-dark-gray': '#3D424A',
+                        'false-white': '#E6E5DE',
+                        danger: 'rgb(254, 174, 73)'
+                    }
+                }
             }
         })
     ]
