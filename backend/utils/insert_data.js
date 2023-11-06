@@ -17,7 +17,6 @@ const insertIngredients = async () => {
         batch.set(docIngredient, ingredient)
     })
     result = await batch.commit()
-    console.log(result)
 }
 
 const insertRecipes = async () => {
@@ -30,5 +29,5 @@ const insertRecipes = async () => {
     result = await batch.commit()
 }
 
-//insertIngredients()
+insertIngredients()
 insertRecipes()
