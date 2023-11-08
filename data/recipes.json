@@ -1501,6 +1501,63 @@
             "Sal",
             "Pimienta"
         ],
+        "parsed_ingredients": [
+            {
+                "id": 655,
+                "name": "Quinoa",
+                "image": "https://nix-tag-images.s3.amazonaws.com/762_thumb.jpg"
+            },
+            {
+                "id": 1,
+                "name": "Agua",
+                "image": "https://nix-tag-images.s3.amazonaws.com/4483_thumb.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Aguacate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/391_thumb.jpg"
+            },
+            {
+                "id": 770,
+                "name": "Tomate Cherry",
+                "image": "https://nix-tag-images.s3.amazonaws.com/4275_thumb.jpg"
+            },
+            {
+                "id": 565,
+                "name": "Pepino",
+                "image": "https://nix-tag-images.s3.amazonaws.com/522_thumb.jpg"
+            },
+            {
+                "id": 155,
+                "name": "Cebolla Roja",
+                "image": "https://nix-tag-images.s3.amazonaws.com/8573_thumb.jpg"
+            },
+            {
+                "id": 430,
+                "name": "Limón",
+                "image": "https://nix-tag-images.s3.amazonaws.com/653_thumb.jpg"
+            },
+            {
+                "id": 222,
+                "name": "Cilantro",
+                "image": "https://nix-tag-images.s3.amazonaws.com/480_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            }
+        ],
         "steps": [
             "Enjuaga la quinua bajo agua fría en un colador fino.",
             "En una olla, lleva a ebullición 2 tazas de agua. Agrega la quinua enjuagada y reduce el fuego a bajo. Cubre y cocina durante 15-20 minutos, o hasta que la quinua esté tierna y el líquido se haya absorbido por completo. Retira del fuego y deja reposar durante 5 minutos antes de destapar con un tenedor.",
@@ -1515,32 +1572,6 @@
     },
     {
         "id": 20,
-        "title": "Pollo a la Parrilla",
-        "description": "Pollo a la parrilla jugoso y lleno de sabor con una marinada de limón, ajo y hierbas. Perfecto para una comida al aire libre con amigos y familiares.",
-        "ingredients": [
-            "4 pechugas de pollo",
-            "Jugo de 2 limones",
-            "4 dientes de ajo, picados",
-            "2 cucharadas de aceite de oliva",
-            "1 cucharadita de romero fresco picado",
-            "1 cucharadita de tomillo fresco picado",
-            "Sal",
-            "Pimienta"
-        ],
-        "steps": [
-            "En un tazón grande, mezcla el jugo de limón, el ajo picado, el aceite de oliva, el romero picado, el tomillo picado, la sal y la pimienta.",
-            "Agrega las pechugas de pollo al tazón y asegúrate de que estén bien cubiertas con la marinada. Cubre el tazón y refrigera durante al menos 30 minutos, o hasta 4 horas para obtener mejores resultados.",
-            "Precalienta la parrilla a fuego medio-alto y engrásala ligeramente para evitar que el pollo se pegue.",
-            "Retira las pechugas de pollo de la marinada y colócalas en la parrilla caliente. Cocina durante 6-8 minutos por cada lado, o hasta que el pollo esté cocido y tenga marcas de parrilla doradas.",
-            "Retira el pollo a la parrilla y déjalo reposar durante unos minutos antes de cortarlo en rodajas.",
-            "Sirve el pollo a la parrilla caliente y disfruta de su delicioso sabor."
-        ],
-        "difficulty": "Fácil",
-        "time": "40 minutos",
-        "image": "https://mccormick.widen.net/content/zzdekjkrwn/original/Pollo_a_la_Parrilla_con_Romero_y_Limon_Recipes_800x800.jpg"
-    },
-    {
-        "id": 21,
         "title": "Sushi de Salmón",
         "description": "Sushi de salmón fresco y sabroso, hecho en casa. Aprende a preparar este delicioso sushi con salmón, arroz y otros ingredientes.",
         "ingredients": [
@@ -1552,6 +1583,48 @@
             "1 cucharadita de sal",
             "Alga nori",
             "Wasabi y salsa de soja para acompañar"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 690,
+                "name": "Salmón",
+                "image": "https://nix-tag-images.s3.amazonaws.com/375_thumb.jpg"
+            },
+            {
+                "id": 55,
+                "name": "Arroz",
+                "image": "https://nix-tag-images.s3.amazonaws.com/784_thumb.jpg"
+            },
+            {
+                "id": 1,
+                "name": "Agua",
+                "image": "https://nix-tag-images.s3.amazonaws.com/4483_thumb.jpg"
+            },
+            {
+                "id": 795,
+                "name": "Vinagre",
+                "image": "https://nix-tag-images.s3.amazonaws.com/867_thumb.jpg"
+            },
+            {
+                "id": 847,
+                "name": "Azúcar",
+                "image": "https://quierocuidarme.dkv.es/sites/default/files/styles/article_teaser_big_630x360/public/2022-02/propiedades-del-azucar.jpg?itok=fNjc_565"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 15,
+                "name": "Alga Marina",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1226_thumb.jpg"
+            },
+            {
+                "id": 713,
+                "name": "Salsa De Soja Oscura",
+                "image": "https://nix-tag-images.s3.amazonaws.com/9306_thumb.jpg"
+            }
         ],
         "steps": [
             "Enjuaga el arroz para sushi bajo agua fría en un colador hasta que el agua salga clara.",
@@ -1570,33 +1643,7 @@
         "image": "https://s1.eestatic.com/2019/06/18/cocinillas/actualidad-gastronomica/sushi-pescado-actualidad_gastronomica_407220618_125852168_1706x960.jpg"
     },
     {
-        "id": 22,
-        "title": "Pasta Alfredo",
-        "description": "Una cremosa pasta Alfredo con una rica salsa de queso parmesano, mantequilla y ajo. Sencillo y delicioso.",
-        "ingredients": [
-            "200g de pasta (como fettuccine)",
-            "100g de mantequilla",
-            "2 dientes de ajo, picados",
-            "1 taza de crema espesa",
-            "1 taza de queso parmesano rallado",
-            "Sal",
-            "Pimienta",
-            "Perejil fresco picado para decorar"
-        ],
-        "steps": [
-            "Cocina la pasta en agua con sal según las instrucciones del paquete hasta que esté al dente. Luego, escúrrela y reserva.",
-            "En una sartén grande, derrite la mantequilla a fuego medio. Agrega el ajo picado y cocina durante 1-2 minutos, o hasta que esté fragante pero no dorado.",
-            "Añade la crema espesa a la sartén y calienta la mezcla hasta que comience a hervir. Reduce el fuego y cocina a fuego lento durante 2-3 minutos, o hasta que la crema espese ligeramente.",
-            "Añade el queso parmesano rallado a la crema y revuelve hasta que esté completamente derretido y la salsa esté suave. Sazona con sal y pimienta al gusto.",
-            "Agrega la pasta cocida a la salsa Alfredo y mezcla para que esté bien cubierta con la salsa.",
-            "Sirve la pasta Alfredo caliente, espolvoreada con perejil fresco picado por encima."
-        ],
-        "difficulty": "Fácil",
-        "time": "20 minutos",
-        "image": "https://recetasdecocina.elmundo.es/wp-content/uploads/2021/06/pasta-alfredo.jpg"
-    },
-    {
-        "id": 23,
+        "id": 21,
         "title": "Tacos de Pollo",
         "description": "Tacos de pollo con un relleno sabroso de pollo desmenuzado, cebolla, pimientos y especias. Sirve con tortillas de maíz calientes y tus ingredientes favoritos para tacos.",
         "ingredients": [
@@ -1613,6 +1660,68 @@
             "Tortillas de maíz",
             "Ingredientes para servir, como queso rallado, aguacate en cubos, crema agria y salsa"
         ],
+        "parsed_ingredients": [
+            {
+                "id": 599,
+                "name": "Pollo Desmenuzado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/3519_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 585,
+                "name": "Pimiento Rojo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/8707_thumb.jpg"
+            },
+            {
+                "id": 586,
+                "name": "Pimiento Verde",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1843_thumb.jpg"
+            },
+            {
+                "id": 844,
+                "name": "Comino",
+                "image": "https://especiaspedroza.es/85-large_default/comino-en-polvo.jpg"
+            },
+            {
+                "id": 194,
+                "name": "Chile De Asado De Tiras",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 846,
+                "name": "Tortilla De Maíz",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1753_thumb.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Aguacate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/391_thumb.jpg"
+            },
+            {
+                "id": 651,
+                "name": "Queso Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/594_thumb.jpg"
+            }
+        ],
         "steps": [
             "En una sartén grande, calienta un poco de aceite a fuego medio-alto. Agrega las pechugas de pollo y cocínalas hasta que estén doradas por ambos lados y cocidas por completo. Luego, retira el pollo de la sartén y desmenúzalo con dos tenedores.",
             "En la misma sartén, agrega un poco más de aceite si es necesario y luego agrega la cebolla y los pimientos cortados en tiras. Cocina hasta que estén tiernos.",
@@ -1626,7 +1735,7 @@
         "image": "https://cdn0.recetasgratis.net/es/posts/8/2/9/tacos_de_pollo_mexicanos_72928_orig.jpg"
     },
     {
-        "id": 24,
+        "id": 22,
         "title": "Ensalada Caprese",
         "description": "Una ensalada Caprese fresca y sencilla con tomates maduros, mozzarella fresca, albahaca y un aderezo balsámico. Perfecta como entrada o acompañamiento.",
         "ingredients": [
@@ -1637,6 +1746,38 @@
             "2 cucharadas de vinagre balsámico",
             "Sal",
             "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 779,
+                "name": "Tomates",
+                "image": "https://nix-tag-images.s3.amazonaws.com/191_thumb.jpg"
+            },
+            {
+                "id": 495,
+                "name": "Mozzarella Fresca",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1642_thumb.jpg"
+            },
+            {
+                "id": 5,
+                "name": "Albahaca",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1885_thumb.jpg"
+            },
+            {
+                "id": 796,
+                "name": "Vinagre Balsámico",
+                "image": "https://nix-tag-images.s3.amazonaws.com/398_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            }
         ],
         "steps": [
             "En un plato grande, alterna las rodajas de tomate y mozzarella y coloca hojas de albahaca fresca entre ellas.",
@@ -1649,7 +1790,7 @@
         "image": "https://cdn.elcocinerocasero.com/imagen/receta/1000/2022-07-06-20-09-06/ensalada-caprese.jpeg"
     },
     {
-        "id": 25,
+        "id": 23,
         "title": "Arroz Frito con Verduras",
         "description": "Arroz frito con verduras, una receta rápida y deliciosa que puedes preparar en casa. Perfecta como plato principal o acompañamiento.",
         "ingredients": [
@@ -1665,6 +1806,63 @@
             "Aceite vegetal",
             "Sal",
             "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 56,
+                "name": "Arroz Basmati",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1242_thumb.jpg"
+            },
+            {
+                "id": 823,
+                "name": "Zanahoria",
+                "image": "https://nix-tag-images.s3.amazonaws.com/452_thumb.jpg"
+            },
+            {
+                "id": 585,
+                "name": "Pimiento Rojo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/8707_thumb.jpg"
+            },
+            {
+                "id": 586,
+                "name": "Pimiento Verde",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1843_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 389,
+                "name": "Huevos",
+                "image": "https://nix-tag-images.s3.amazonaws.com/775_thumb.jpg"
+            },
+            {
+                "id": 713,
+                "name": "Salsa De Soja Oscura",
+                "image": "https://nix-tag-images.s3.amazonaws.com/9306_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            }
         ],
         "steps": [
             "En una sartén grande o wok, calienta un poco de aceite vegetal a fuego medio-alto. Agrega los huevos batidos y revuelve para hacer revuelto. Retira el revuelto de la sartén y reserva.",
@@ -1682,7 +1880,7 @@
         "image": "https://myplate-prod.azureedge.us/sites/default/files/styles/large/public/2022-08/VegetableFriedRice_527x323.jpg?itok=1FzGv2OK"
     },
     {
-        "id": 26,
+        "id": 24,
         "title": "Papas Bravas",
         "description": "Papas bravas, un clásico aperitivo español. Papas fritas crujientes servidas con una salsa picante de tomate. ¡Perfectas para compartir con amigos!",
         "ingredients": [
@@ -1698,6 +1896,43 @@
             "Sal al gusto",
             "Pimienta negra al gusto"
         ],
+        "parsed_ingredients": [
+            {
+                "id": 555,
+                "name": "Patata",
+                "image": "https://nix-tag-images.s3.amazonaws.com/752_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 578,
+                "name": "Pimienta De Jamaica",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1945_thumb.jpg"
+            },
+            {
+                "id": 370,
+                "name": "Harina",
+                "image": "https://nix-tag-images.s3.amazonaws.com/206_thumb.jpg"
+            }
+        ],
         "steps": [
             "En una sartén grande, calienta suficiente aceite vegetal para freír las papas a fuego medio-alto.",
             "Fríe las papas en lotes hasta que estén doradas y crujientes. Retira las papas fritas a un plato forrado con papel absorbente para eliminar el exceso de aceite. Sazona con sal al gusto.",
@@ -1711,7 +1946,7 @@
         "image": "https://www.goya.com/media/7699/spicy-potatoes.jpg?quality=80"
     },
     {
-        "id": 27,
+        "id": 25,
         "title": "Lasaña",
         "description": "Una lasaña clásica con capas de pasta, carne molida, salsa de tomate y queso ricotta, gratinada al horno. Una delicia italiana que a todos les encantará.",
         "ingredients": [
@@ -1730,6 +1965,68 @@
             "Pimienta",
             "Aceite de oliva"
         ],
+        "parsed_ingredients": [
+            {
+                "id": 551,
+                "name": "Pasta",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1012_thumb.jpg"
+            },
+            {
+                "id": 141,
+                "name": "Carne Molida",
+                "image": "https://nix-tag-images.s3.amazonaws.com/47_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 496,
+                "name": "Mozzarella Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1744_thumb.jpg"
+            },
+            {
+                "id": 549,
+                "name": "Parmesano Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/594_thumb.jpg"
+            },
+            {
+                "id": 5,
+                "name": "Albahaca",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1885_thumb.jpg"
+            },
+            {
+                "id": 845,
+                "name": "Orégano seco",
+                "image": "https://media.granvelada.com/27712/oregano-seco.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            }
+        ],
         "steps": [
             "En una sartén grande, calienta un poco de aceite de oliva a fuego medio. Agrega la cebolla y el ajo picados y cocina hasta que estén fragantes y la cebolla esté dorada.",
             "Añade la carne molida de res a la sartén y cocina hasta que esté dorada y cocida por completo. Escurre cualquier exceso de grasa.",
@@ -1745,7 +2042,7 @@
         "image": "https://www.elespectador.com/resizer/fiMsG1Eb5XgeEHV1hQDAhGISghE=/arc-anglerfish-arc2-prod-elespectador/public/46JYAOVG3FBHVKVV2GIXNWYK2Y.jpg"
     },
     {
-        "id": 28,
+        "id": 26,
         "title": "Tortilla Española",
         "description": "Una tortilla española clásica, también conocida como tortilla de patatas. Esta deliciosa tortilla se hace con papas, cebolla y huevos, y es perfecta para el desayuno, el almuerzo o la cena.",
         "ingredients": [
@@ -1755,6 +2052,38 @@
             "Aceite de oliva",
             "Sal",
             "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 555,
+                "name": "Patata",
+                "image": "https://nix-tag-images.s3.amazonaws.com/752_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 389,
+                "name": "Huevos",
+                "image": "https://nix-tag-images.s3.amazonaws.com/775_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            }
         ],
         "steps": [
             "En una sartén grande, calienta suficiente aceite de oliva para cubrir el fondo a fuego medio. Agrega las papas en rodajas y la cebolla en rodajas y cocínalas a fuego lento hasta que estén tiernas pero no doradas. Escurre el exceso de aceite y sazona con sal y pimienta al gusto.",
@@ -1770,7 +2099,7 @@
         "image": "https://recetasdecocina.elmundo.es/wp-content/uploads/2023/04/tortilla-de-patatas-espanola.jpg"
     },
     {
-        "id": 29,
+        "id": 27,
         "title": "Pollo al Curry",
         "description": "Pollo al curry con una salsa cremosa de tomate, cebolla, ajo, jengibre y especias. Sirve este plato aromático con arroz o naan.",
         "ingredients": [
@@ -1790,6 +2119,78 @@
             "Hojas de cilantro fresco para decorar",
             "Arroz o naan para servir"
         ],
+        "parsed_ingredients": [
+            {
+                "id": 599,
+                "name": "Pollo Desmenuzado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/3519_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 401,
+                "name": "Jengibre",
+                "image": "https://nix-tag-images.s3.amazonaws.com/5245_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 288,
+                "name": "Curry Puff",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 419,
+                "name": "Leche De Coco",
+                "image": "https://nix-tag-images.s3.amazonaws.com/288_thumb.jpg"
+            },
+            {
+                "id": 294,
+                "name": "Cúrcuma",
+                "image": "https://nix-tag-images.s3.amazonaws.com/2038_thumb.jpg"
+            },
+            {
+                "id": 844,
+                "name": "Comino",
+                "image": "https://especiaspedroza.es/85-large_default/comino-en-polvo.jpg"
+            },
+            {
+                "id": 222,
+                "name": "Cilantro",
+                "image": "https://nix-tag-images.s3.amazonaws.com/480_thumb.jpg"
+            },
+            {
+                "id": 56,
+                "name": "Arroz Basmati",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1242_thumb.jpg"
+            }
+        ],
         "steps": [
             "En una sartén grande, calienta el aceite de cocina a fuego medio. Agrega la cebolla picada y cocina hasta que esté dorada.",
             "Añade el ajo picado y el jengibre rallado a la sartén y cocina durante unos minutos hasta que estén fragantes.",
@@ -1804,36 +2205,7 @@
         "image": "https://i.blogs.es/9ea7a4/pollo_curry-copia/650_1200.jpg"
     },
     {
-        "id": 30,
-        "title": "Hamburguesas Caseras",
-        "description": "Hamburguesas caseras jugosas con carne de res, condimentos y tus ingredientes favoritos para hamburguesas. Sirve en panecillos con tus aderezos preferidos.",
-        "ingredients": [
-            "500g de carne molida de res",
-            "1 cebolla, picada",
-            "2 dientes de ajo, picados",
-            "1 huevo",
-            "1/4 de taza de pan rallado",
-            "1 cucharadita de mostaza",
-            "1 cucharadita de salsa Worcestershire",
-            "Sal",
-            "Pimienta",
-            "Panecillos para hamburguesas",
-            "Ingredientes para servir, como lechuga, tomate, cebolla, queso y salsa"
-        ],
-        "steps": [
-            "En un tazón grande, mezcla la carne molida de res con la cebolla picada, el ajo picado, el huevo, el pan rallado, la mostaza y la salsa Worcestershire. Sazona con sal y pimienta al gusto.",
-            "Forma la mezcla en hamburguesas del tamaño deseado.",
-            "Calienta una parrilla o sartén a fuego medio-alto y cocina las hamburguesas a la parrilla o a la sartén hasta que estén cocidas a tu gusto.",
-            "Tuesta ligeramente los panecillos para hamburguesas en la parrilla o en una tostadora.",
-            "Monta las hamburguesas colocando las hamburguesas cocidas en los panecillos y agregando tus ingredientes favoritos, como lechuga, tomate, cebolla, queso y salsa.",
-            "Sirve las hamburguesas caseras calientes con tus aderezos preferidos. ¡Disfruta!"
-        ],
-        "difficulty": "Fácil",
-        "time": "30 minutos",
-        "image": "https://www.demoslavueltaaldia.com/sites/default/files/hamburguesas-caseras-completas.jpg"
-    },
-    {
-        "id": 31,
+        "id": 28,
         "title": "Gazpacho",
         "description": "Gazpacho, una sopa fría española hecha con tomates maduros, pimientos, pepinos y ajo. Perfecta para los días calurosos de verano.",
         "ingredients": [
@@ -1842,12 +2214,62 @@
             "1 pepino, pelado y picado",
             "1 cebolla, picada",
             "2 dientes de ajo, picados",
-            "3 tazas de jugo de tomate",
             "1/4 de taza de vinagre de vino tinto",
             "1/4 de taza de aceite de oliva",
             "Sal",
             "Pimienta",
             "Pan duro (opcional, para espesar)"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 779,
+                "name": "Tomates",
+                "image": "https://nix-tag-images.s3.amazonaws.com/191_thumb.jpg"
+            },
+            {
+                "id": 586,
+                "name": "Pimiento Verde",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1843_thumb.jpg"
+            },
+            {
+                "id": 565,
+                "name": "Pepino",
+                "image": "https://nix-tag-images.s3.amazonaws.com/522_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 797,
+                "name": "Vinagre De Jerez",
+                "image": "https://nix-tag-images.s3.amazonaws.com/281_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 525,
+                "name": "Pan"
+            }
         ],
         "steps": [
             "En una licuadora o procesador de alimentos, combina los tomates picados, el pimiento verde, el pepino, la cebolla y el ajo. Procesa hasta obtener una mezcla suave.",
@@ -1861,36 +2283,7 @@
         "image": "https://i.blogs.es/a8ade0/gazpacho_tradicional/840_560.jpg"
     },
     {
-        "id": 32,
-        "title": "Sushi",
-        "description": "Sushi casero con arroz de sushi, pescado fresco, aguacate, pepino y nori. Acompañado de salsa de soja y wasabi.",
-        "ingredients": [
-            "2 tazas de arroz de sushi",
-            "2 1/2 tazas de agua",
-            "1/2 taza de vinagre de arroz",
-            "4 hojas de nori",
-            "150g de pescado fresco (salmón, atún, etc.), cortado en tiras",
-            "1 aguacate, pelado y cortado en tiras",
-            "1 pepino, cortado en tiras",
-            "Salsa de soja y wasabi para servir"
-        ],
-        "steps": [
-            "Enjuaga el arroz de sushi en un colador hasta que el agua salga clara. Luego, cocina el arroz con 2 1/2 tazas de agua en una olla tapada a fuego alto hasta que hierva. Reduce el fuego y cocina a fuego lento durante 15-20 minutos, o hasta que el arroz esté tierno y el agua se haya absorbido por completo.",
-            "Mientras el arroz está caliente, mezcla el vinagre de arroz en él para darle sabor y déjalo enfriar a temperatura ambiente.",
-            "Coloca una hoja de nori en una esterilla de bambú para sushi con el lado rugoso hacia arriba.",
-            "Moja tus dedos en agua con sal y luego extiende una fina capa de arroz sobre la hoja de nori, dejando un borde de 1 pulgada en la parte superior sin cubrir.",
-            "Coloca tiras de pescado, aguacate y pepino en el centro del arroz.",
-            "Usando la esterilla de bambú, enrolla la hoja de nori firmemente alrededor del relleno. Humedece el borde sin arroz para sellar el rollo.",
-            "Repite el proceso con las hojas de nori restantes y los ingredientes.",
-            "Usa un cuchillo afilado para cortar cada rollo de sushi en rodajas de 1 pulgada.",
-            "Sirve el sushi con salsa de soja y wasabi. ¡Disfruta de tu sushi casero!"
-        ],
-        "difficulty": "Moderada",
-        "time": "60 minutos",
-        "image": "https://imag.bonviveur.com/sushi-casero.jpg"
-    },
-    {
-        "id": 33,
+        "id": 29,
         "title": "Sopa de Lentejas",
         "description": "Sopa de lentejas nutritiva y reconfortante con lentejas, verduras y especias. Perfecta para los días fríos de invierno.",
         "ingredients": [
@@ -1909,6 +2302,73 @@
             "Aceite de oliva",
             "Hojas de perejil fresco para decorar"
         ],
+        "parsed_ingredients": [
+            {
+                "id": 426,
+                "name": "Lentejas",
+                "image": "https://nix-tag-images.s3.amazonaws.com/230_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 823,
+                "name": "Zanahoria",
+                "image": "https://nix-tag-images.s3.amazonaws.com/452_thumb.jpg"
+            },
+            {
+                "id": 52,
+                "name": "Apio",
+                "image": "https://nix-tag-images.s3.amazonaws.com/456_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 844,
+                "name": "Comino",
+                "image": "https://especiaspedroza.es/85-large_default/comino-en-polvo.jpg"
+            },
+            {
+                "id": 578,
+                "name": "Pimienta De Jamaica",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1945_thumb.jpg"
+            },
+            {
+                "id": 110,
+                "name": "Caldo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1089_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 568,
+                "name": "Perejil",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1931_thumb.jpg"
+            }
+        ],
         "steps": [
             "Enjuaga las lentejas bajo agua fría y escúrrelas.",
             "En una olla grande, calienta un poco de aceite de oliva a fuego medio. Agrega la cebolla picada, las zanahorias cortadas en rodajas, el apio cortado en rodajas y el ajo picado. Cocina hasta que las verduras estén tiernas y fragantes.",
@@ -1922,7 +2382,7 @@
         "image": "https://www.goya.com/media/3686/hearty-lentil-soup.jpg?quality=80"
     },
     {
-        "id": 34,
+        "id": 30,
         "title": "Arroz con Pollo",
         "description": "Arroz con pollo, un plato clásico de la cocina latinoamericana con arroz, pollo, verduras y sabores deliciosos. Reconfortante y delicioso.",
         "ingredients": [
@@ -1933,13 +2393,74 @@
             "1 pimiento rojo, picado",
             "1 pimiento verde, picado",
             "3 dientes de ajo, picados",
-            "1 taza de guisantes (arvejas) congelados",
             "1/2 taza de zanahorias en rodajas finas",
             "1 cucharadita de comino molido",
             "1 cucharadita de azafrán en hebras (opcional)",
             "Aceite de oliva",
             "Sal",
             "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 55,
+                "name": "Arroz",
+                "image": "https://nix-tag-images.s3.amazonaws.com/784_thumb.jpg"
+            },
+            {
+                "id": 113,
+                "name": "Caldo De Pollo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/3336_thumb.jpg"
+            },
+            {
+                "id": 16,
+                "name": "Alitas De Pollo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1830_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 585,
+                "name": "Pimiento Rojo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/8707_thumb.jpg"
+            },
+            {
+                "id": 586,
+                "name": "Pimiento Verde",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1843_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 823,
+                "name": "Zanahoria",
+                "image": "https://nix-tag-images.s3.amazonaws.com/452_thumb.jpg"
+            },
+            {
+                "id": 844,
+                "name": "Comino",
+                "image": "https://especiaspedroza.es/85-large_default/comino-en-polvo.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            }
         ],
         "steps": [
             "En una olla grande, calienta un poco de aceite de oliva a fuego medio-alto. Agrega el pollo cortado en trozos y cocina hasta que esté dorado por todos lados. Retira el pollo de la olla y reserva.",
@@ -1952,73 +2473,5 @@
         "difficulty": "Moderada",
         "time": "60 minutos",
         "image": "https://www.aceitesdeolivadeespana.com/wp-content/uploads/2021/05/Arroz-con-pollo.jpg"
-    },
-    {
-        "id": 35,
-        "title": "Enchiladas",
-        "description": "Enchiladas rellenas de pollo, bañadas en salsa de enchilada y gratinadas con queso. Un plato clásico de la cocina mexicana.",
-        "ingredients": [
-            "2 pechugas de pollo, cocidas y desmenuzadas",
-            "1 cebolla, picada",
-            "2 dientes de ajo, picados",
-            "1 lata de salsa de enchilada",
-            "1 lata de chiles verdes picados",
-            "1 taza de queso cheddar rallado",
-            "1 taza de queso monterrey jack rallado",
-            "8 tortillas de maíz",
-            "Aceite de oliva",
-            "Sal",
-            "Pimienta",
-            "Cilantro fresco picado para decorar"
-        ],
-        "steps": [
-            "En una sartén grande, calienta un poco de aceite de oliva a fuego medio. Agrega la cebolla picada y el ajo picado, y saltea hasta que estén tiernos y fragantes.",
-            "Añade el pollo desmenuzado a la sartén y mezcla con la cebolla y el ajo. Sazona con sal y pimienta al gusto.",
-            "Añade la mitad de la salsa de enchilada y los chiles verdes picados a la mezcla de pollo. Cocina por unos minutos hasta que todo esté bien caliente.",
-            "Precalienta el horno a 180°C (350°F).",
-            "Calienta las tortillas de maíz en una sartén o en el microondas según las instrucciones del paquete.",
-            "Rellena cada tortilla con la mezcla de pollo y dobla las tortillas en forma de enchiladas.",
-            "Coloca las enchiladas rellenas en una fuente para horno. Vierte la salsa de enchilada restante sobre las enchiladas y espolvorea el queso cheddar y el queso monterrey jack rallados por encima.",
-            "Hornea las enchiladas en el horno precalentado durante 20-25 minutos, o hasta que el queso esté dorado y burbujeante.",
-            "Sirve las enchiladas calientes, espolvoreadas con cilantro fresco picado. ¡Disfruta de este clásico de la cocina mexicana!"
-        ],
-        "difficulty": "Moderada",
-        "time": "45 minutos",
-        "image": "https://www.gourmet.cl/wp-content/uploads/2021/08/foto-istock-enchilada-tama%C3%B1o-web.jpg"
-    },
-    {
-        "id": 36,
-        "title": "Tacos de Carnitas",
-        "description": "Tacos de carnitas, una deliciosa receta mexicana con cerdo desmenuzado cocido lentamente con especias hasta que esté tierno y crujiente.",
-        "ingredients": [
-            "1 kg de carne de cerdo (preferiblemente pierna o paleta), cortada en trozos",
-            "1 cebolla, picada en trozos grandes",
-            "4 dientes de ajo, picados",
-            "2 hojas de laurel",
-            "1 cucharadita de comino molido",
-            "1 cucharadita de pimentón",
-            "1/2 cucharadita de orégano seco",
-            "Sal",
-            "Pimienta",
-            "Aceite de cocina",
-            "Para servir:",
-            "Tortillas de maíz",
-            "Cebolla morada en rodajas finas",
-            "Cilantro fresco picado",
-            "Limones en rodajas",
-            "Salsa de tomate picante (opcional)"
-        ],
-        "steps": [
-            "En una olla grande, calienta un poco de aceite de cocina a fuego medio-alto. Agrega los trozos de cerdo y dorarlos por todos lados hasta que estén bien sellados.",
-            "Añade la cebolla picada, el ajo picado, las hojas de laurel, el comino molido, el pimentón, el orégano seco, la sal y la pimienta a la olla. Revuelve bien para que todas las especias se mezclen con la carne.",
-            "Cubre la carne con suficiente agua y lleva la mezcla a ebullición. Luego, reduce el fuego a bajo, tapa la olla y cocina a fuego lento durante 2-3 horas, o hasta que la carne esté tierna y se desmenuce fácilmente con un tenedor.",
-            "Una vez que la carne esté lista, retira las hojas de laurel y desmenúzala con un tenedor.",
-            "Calienta las tortillas de maíz en una sartén o en el microondas según las instrucciones del paquete.",
-            "Para armar los tacos, coloca un poco de carne desmenuzada en cada tortilla caliente. Luego, agrega cebolla morada en rodajas finas, cilantro fresco picado y un chorrito de limón. Si lo prefieres, añade salsa de tomate picante.",
-            "Sirve los tacos de carnitas calientes y disfruta de esta deliciosa receta mexicana."
-        ],
-        "difficulty": "Moderada",
-        "time": "3 horas",
-        "image": "https://cielitorosado.com/wp-content/uploads/2022/11/CARNITAS-sm.jpg"
     }
 ]
