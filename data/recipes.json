@@ -1,1124 +1,2477 @@
 [
-  {
-    "id": 1,
-    "title": "Pasta Alfredo con Pollo",
-    "description": "Disfruta de un plato cremoso de pasta Alfredo con tiernos trozos de pollo. Esta receta es fácil de preparar y deliciosa.",
-    "ingredients": [
-      "200g de pasta fettuccine",
-      "2 pechugas de pollo, cortadas en tiras",
-      "2 cucharadas de mantequilla",
-      "1 taza de crema de leche",
-      "1 taza de queso parmesano rallado",
-      "Sal",
-      "Pimienta",
-      "Perejil fresco picado para decorar"
-    ],
-    "steps": [
-      "Cocina la pasta según las instrucciones del paquete. Escúrrela y reserva.",
-      "En una sartén grande, derrite la mantequilla a fuego medio. Agrega las tiras de pollo y cocina hasta que estén doradas y cocidas por completo.",
-      "Añade la crema de leche y el queso parmesano rallado a la sartén. Cocina a fuego lento hasta que la salsa se espese.",
-      "Incorpora la pasta cocida a la salsa y mezcla bien. Cocina por unos minutos hasta que todo esté bien caliente.",
-      "Sazona con sal y pimienta al gusto. Sirve caliente, espolvoreado con perejil fresco picado."
-    ],
-    "difficulty": "Fácil",
-    "time": "30 minutos",
-    "image": "https://buenprovecho.hn/wp-content/uploads/2020/10/Pasta_Alfredo2.jpeg.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 2,
-    "title": "Ensalada César",
-    "description": "Una clásica ensalada César con crutones, pollo a la parrilla y una deliciosa vinagreta cremosa. Perfecta como plato principal o acompañamiento.",
-    "ingredients": [
-      "1 lechuga romana, lavada y cortada en trozos",
-      "2 pechugas de pollo a la parrilla, en tiras",
-      "1 taza de crutones de pan",
-      "1/2 taza de queso parmesano rallado",
-      "Para la vinagreta:",
-      "2 cucharadas de mayonesa",
-      "1 cucharada de mostaza Dijon",
-      "2 dientes de ajo, picados",
-      "2 cucharadas de jugo de limón",
-      "Sal",
-      "Pimienta",
-      "2 cucharadas de aceite de oliva"
-    ],
-    "steps": [
-      "En un tazón grande, combina la lechuga romana, las tiras de pollo a la parrilla, los crutones y el queso parmesano rallado.",
-      "En otro tazón, prepara la vinagreta mezclando la mayonesa, la mostaza Dijon, el ajo picado, el jugo de limón, la sal y la pimienta. Luego, añade lentamente el aceite de oliva mientras mezclas para emulsionar la vinagreta.",
-      "Vierte la vinagreta sobre la ensalada y mezcla bien para asegurarte de que todos los ingredientes estén cubiertos.",
-      "Sirve la ensalada César con un poco de queso parmesano adicional por encima y disfruta."
-    ],
-    "difficulty": "Fácil",
-    "time": "20 minutos",
-    "image": "https://elcomercio.pe/resizer/fguUTIzO_kLM5L3HkGtZ96xXRe0=/1200x675/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/EOQAL66HYBDDTI3ZYIA5FZIQHU.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 3,
-    "title": "Salmón al Horno con Limón y Eneldo",
-    "description": "Un plato saludable y delicioso de salmón al horno con una jugosa cobertura de limón y eneldo. Fácil de preparar y perfecto para una cena ligera.",
-    "ingredients": [
-      "4 filetes de salmón",
-      "2 limones, en rodajas finas",
-      "2 cucharadas de eneldo fresco picado",
-      "2 cucharadas de aceite de oliva",
-      "Sal",
-      "Pimienta"
-    ],
-    "steps": [
-      "Precalienta el horno a 180°C (350°F).",
-      "Coloca los filetes de salmón en una bandeja para hornear forrada con papel de aluminio.",
-      "Sazona el salmón con sal y pimienta al gusto. Luego, coloca rodajas de limón encima de cada filete y espolvorea con eneldo fresco picado.",
-      "Rocía los filetes de salmón con aceite de oliva.",
-      "Hornea en el horno precalentado durante 15-20 minutos, o hasta que el salmón esté cocido y se desmenuce fácilmente con un tenedor.",
-      "Sirve caliente con más rodajas de limón y eneldo fresco por encima."
-    ],
-    "difficulty": "Fácil",
-    "time": "20 minutos",
-    "image": "https://1.bp.blogspot.com/-a-oI_9ysNI4/YbXLQ-0z5eI/AAAAAAAAEc8/Q2lWqxfaMf4JdtlFoRgHAsXZHJMGJnPIACNcBGAsYHQ/s0/Salm%25C3%25B3n%2Bal%2BHorno%2Bcon%2BSalsa%2Bde%2BLim%25C3%25B3n%252C%2BEneldo%2By%2BMantequilla%2B%2528Vertical%2529%2B2.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 4,
-    "title": "Tacos de Carne Asada",
-    "description": "Deliciosos tacos de carne asada con sabrosos trozos de carne marinada y todos los ingredientes clásicos de los tacos. ¡Prepara una fiesta de tacos en casa!",
-    "ingredients": [
-      "500g de carne de res, en tiras delgadas",
-      "1 cucharada de aceite de oliva",
-      "2 dientes de ajo, picados",
-      "1 cucharada de comino molido",
-      "1 cucharadita de chile en polvo",
-      "1 cucharadita de orégano seco",
-      "Sal",
-      "Pimienta",
-      "Para servir:",
-      "Tortillas de maíz",
-      "Cebolla picada",
-      "Cilantro fresco picado",
-      "Salsa de tomate",
-      "Aguacate en rodajas",
-      "Limones en rodajas"
-    ],
-    "steps": [
-      "En un tazón grande, mezcla la carne de res con el aceite de oliva, el ajo picado, el comino molido, el chile en polvo, el orégano seco, la sal y la pimienta. Asegúrate de que la carne esté bien cubierta con la marinada. Deja marinar durante al menos 30 minutos.",
-      "Calienta una sartén grande a fuego medio-alto. Cocina la carne marinada en la sartén caliente durante 3-4 minutos por cada lado, o hasta que esté cocida a tu gusto.",
-      "Calienta las tortillas de maíz en una sartén o en el microondas.",
-      "Arma los tacos colocando la carne asada cocida en las tortillas calientes. Luego, agrega cebolla picada, cilantro fresco picado, salsa de tomate, aguacate en rodajas y una rodaja de limón por encima de cada taco.",
-      "Sirve los tacos de carne asada calientes y disfruta."
-    ],
-    "difficulty": "Fácil",
-    "time": "30 minutos",
-    "image": "https://www.goya.com/media/4124/carne-asada-tacos1.jpg?quality=80",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 5,
-    "title": "Pizza Casera",
-    "description": "Haz tu propia pizza casera con los ingredientes que más te gusten. La masa es fácil de hacer y puedes personalizarla a tu gusto.",
-    "ingredients": [
-      "Para la masa:",
-      "300g de harina de trigo",
-      "1 cucharadita de levadura seca",
-      "1 cucharadita de azúcar",
-      "1/2 cucharadita de sal",
-      "200ml de agua tibia",
-      "2 cucharadas de aceite de oliva",
-      "Para la salsa de tomate:",
-      "200g de tomate triturado",
-      "1 diente de ajo, picado",
-      "1 cucharadita de orégano seco",
-      "Sal",
-      "Pimienta",
-      "Para los ingredientes:",
-      "Queso mozzarella rallado",
-      "Jamón, champiñones, pimientos, aceitunas, etc.",
-      "Aceite de oliva para pincelar"
-    ],
-    "steps": [
-      "Prepara la masa mezclando la harina, la levadura seca, el azúcar y la sal en un tazón grande. Agrega el agua tibia y el aceite de oliva. Amasa la masa durante unos 10 minutos hasta que esté suave y elástica. Cubre el tazón con un paño húmedo y deja que la masa repose durante 1 hora o hasta que duplique su tamaño.",
-      "Mientras tanto, prepara la salsa de tomate mezclando el tomate triturado, el ajo picado, el orégano seco, la sal y la pimienta en un tazón pequeño.",
-      "Precalienta el horno a 220°C (425°F).",
-      "Divide la masa en porciones y estira cada porción en un círculo del tamaño deseado. Coloca las bases de pizza en una bandeja para hornear.",
-      "Extiende la salsa de tomate sobre las bases de pizza y agrega el queso mozzarella rallado y los ingredientes de tu elección.",
-      "Pincela los bordes de la pizza con aceite de oliva.",
-      "Hornea las pizzas en el horno precalentado durante 12-15 minutos o hasta que la masa esté dorada y el queso esté burbujeante.",
-      "Saca las pizzas del horno, córtalas en porciones y sirve caliente."
-    ],
-    "difficulty": "Moderada",
-    "time": "90 minutos",
-    "image": "https://eci.contebio.com/material/contents/29173/1680254323_pizza-casera.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 6,
-    "title": "Enchiladas de Pollo",
-    "description": "Disfruta de enchiladas rellenas de pollo, cubiertas con salsa roja y queso derretido. Esta receta es fácil de hacer y llena de sabor.",
-    "ingredients": [
-      "2 pechugas de pollo cocidas y desmenuzadas",
-      "1 cebolla picada",
-      "2 dientes de ajo picados",
-      "1 lata de chiles verdes picados",
-      "1 lata de salsa de enchilada roja",
-      "1 taza de queso cheddar rallado",
-      "8 tortillas de maíz",
-      "Aceite de cocina",
-      "Sal",
-      "Pimienta"
-    ],
-    "steps": [
-      "En una sartén grande, calienta un poco de aceite de cocina a fuego medio. Agrega la cebolla y el ajo picados y cocina hasta que estén dorados y fragantes.",
-      "Añade los chiles verdes picados y la salsa de enchilada roja a la sartén. Cocina durante unos minutos hasta que la mezcla esté bien caliente.",
-      "Agrega las pechugas de pollo desmenuzadas a la mezcla de salsa y revuelve para cubrir el pollo con la salsa. Cocina por unos minutos hasta que todo esté bien mezclado y caliente. Sazona con sal y pimienta al gusto.",
-      "Precalienta el horno a 180°C (350°F).",
-      "Rellena cada tortilla con la mezcla de pollo y enrolla las tortillas.",
-      "Coloca las enchiladas enrolladas en una fuente para horno.",
-      "Espolvorea el queso cheddar rallado por encima de las enchiladas.",
-      "Hornea en el horno precalentado durante 15-20 minutos, o hasta que el queso esté derretido y burbujeante.",
-      "Sirve las enchiladas de pollo calientes y disfruta."
-    ],
-    "difficulty": "Fácil",
-    "time": "30 minutos",
-    "image": "https://www.divinacocina.es/wp-content/uploads/2023/02/enchiladas-de-pollo-c3.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 7,
-    "title": "Risotto de Champiñones",
-    "description": "Un delicioso risotto de champiñones con arroz cremoso y un sabor a hongos reconfortante. Perfecto como plato principal o acompañamiento.",
-    "ingredients": [
-      "300g de arroz Arborio",
-      "200g de champiñones, en rodajas",
-      "1 cucharada de mantequilla",
-      "1 cucharada de aceite de oliva",
-      "1 cebolla, picada",
-      "2 dientes de ajo, picados",
-      "1 taza de vino blanco seco",
-      "1,5 litros de caldo de pollo caliente",
-      "1 taza de queso parmesano rallado",
-      "Sal",
-      "Pimienta",
-      "Perejil fresco picado para decorar"
-    ],
-    "steps": [
-      "En una sartén grande, derrite la mantequilla y el aceite de oliva a fuego medio. Agrega la cebolla picada y el ajo picado, y saltea hasta que estén dorados y fragantes.",
-      "Añade los champiñones en rodajas a la sartén y cocina hasta que estén dorados y tiernos.",
-      "Agrega el arroz Arborio a la sartén y revuelve para que se mezcle con los ingredientes.",
-      "Vierte el vino blanco seco en la sartén y revuelve hasta que se absorba.",
-      "Comienza a agregar el caldo de pollo caliente, una cucharada a la vez, revolviendo constantemente y esperando a que se absorba antes de agregar más. Continúa este proceso hasta que el arroz esté cocido y cremoso, esto tomará unos 20-25 minutos.",
-      "Retira la sartén del fuego y mezcla el queso parmesano rallado. Sazona con sal y pimienta al gusto.",
-      "Sirve el risotto de champiñones caliente, espolvoreado con perejil fresco picado por encima."
-    ],
-    "difficulty": "Moderada",
-    "time": "45 minutos",
-    "image": "https://www.hogarmania.com/archivos/201702/5926-1-risotto-de-champinones-1312-xl-1280x720x80xX.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 8,
-    "title": "Hamburguesa Clásica",
-    "description": "Prepara una deliciosa hamburguesa casera con tus ingredientes favoritos. Esta hamburguesa clásica es perfecta para una comida reconfortante.",
-    "ingredients": [
-      "500g de carne molida de res",
-      "1 cebolla, picada",
-      "2 dientes de ajo, picados",
-      "1 huevo",
-      "1/2 taza de pan rallado",
-      "1 cucharadita de mostaza",
-      "1 cucharadita de salsa de tomate",
-      "Sal",
-      "Pimienta",
-      "Para servir:",
-      "Pan de hamburguesa",
-      "Lechuga, tomate, cebolla, queso, ketchup, mayonesa, etc."
-    ],
-    "steps": [
-      "En un tazón grande, mezcla la carne molida de res con la cebolla picada, el ajo picado, el huevo, el pan rallado, la mostaza, la salsa de tomate, la sal y la pimienta. Asegúrate de que todos los ingredientes estén bien combinados.",
-      "Divide la mezcla en porciones y forma hamburguesas del tamaño deseado.",
-      "Calienta una parrilla o sartén a fuego medio-alto. Cocina las hamburguesas a la parrilla durante 4-5 minutos por cada lado, o hasta que estén cocidas a tu gusto.",
-      "Tuesta ligeramente los panes de hamburguesa en la parrilla o en una sartén.",
-      "Arma las hamburguesas colocando las hamburguesas cocidas en los panes y agregando tus ingredientes favoritos, como lechuga, tomate, cebolla, queso, ketchup, mayonesa, etc.",
-      "Sirve las hamburguesas calientes y disfruta."
-    ],
-    "difficulty": "Fácil",
-    "time": "30 minutos",
-    "image": "https://canalcocina.es/medias/images/1402LaCocinaDeNicolaHamburguesaClasicaTrucoFrances.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 9,
-    "title": "Sopa de Tomate",
-    "description": "Una reconfortante sopa de tomate casera con un sabor fresco y delicioso. Perfecta como entrante o acompañamiento.",
-    "ingredients": [
-      "1 kg de tomates maduros, pelados y picados",
-      "1 cebolla, picada",
-      "2 dientes de ajo, picados",
-      "2 cucharadas de aceite de oliva",
-      "1 litro de caldo de pollo o vegetal",
-      "1 cucharadita de azúcar",
-      "Sal",
-      "Pimienta",
-      "Para servir:",
-      "Crema fresca",
-      "Albahaca fresca picada",
-      "Crutones de pan"
-    ],
-    "steps": [
-      "En una cacerola grande, calienta el aceite de oliva a fuego medio. Agrega la cebolla picada y el ajo picado, y saltea hasta que estén dorados y fragantes.",
-      "Añade los tomates picados a la cacerola y cocina durante unos minutos hasta que los tomates se ablanden.",
-      "Vierte el caldo de pollo o vegetal en la cacerola y lleva la mezcla a ebullición. Luego, reduce el fuego y cocina a fuego lento durante unos 15-20 minutos.",
-      "Usa una licuadora de mano o una licuadora de pie para mezclar la sopa hasta que quede suave y sin grumos.",
-      "Vuelve a poner la sopa en la cacerola y caliéntala a fuego lento. Añade azúcar, sal y pimienta al gusto.",
-      "Sirve la sopa de tomate caliente, con una cucharada de crema fresca, albahaca fresca picada y crutones de pan por encima."
-    ],
-    "difficulty": "Fácil",
-    "time": "45 minutos",
-    "image": "https://eci.contebio.com/material/aptc/images/aptc/2187222/sopa-de-tomate-con-queso-feta-y-berberechos_0.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 10,
-    "title": "Pollo a la Parrilla con Limón y Hierbas",
-    "description": "Pollo a la parrilla jugoso y lleno de sabor, marinado con limón y hierbas frescas. Una comida deliciosa para los amantes del pollo.",
-    "ingredients": [
-      "4 pechugas de pollo",
-      "2 limones, el jugo y la ralladura",
-      "2 cucharadas de aceite de oliva",
-      "2 dientes de ajo, picados",
-      "1 cucharada de hierbas frescas picadas (romero, tomillo, orégano)",
-      "Sal",
-      "Pimienta"
-    ],
-    "steps": [
-      "En un tazón grande, mezcla el jugo y la ralladura de limón, el aceite de oliva, el ajo picado, las hierbas frescas picadas, la sal y la pimienta.",
-      "Añade las pechugas de pollo al tazón y asegúrate de que estén bien cubiertas con la marinada. Deja marinar en el refrigerador durante al menos 30 minutos.",
-      "Precalienta la parrilla a fuego medio-alto.",
-      "Retira las pechugas de pollo de la marinada y colócalas en la parrilla caliente. Cocina durante 6-8 minutos por cada lado, o hasta que estén cocidas y doradas.",
-      "Sirve el pollo a la parrilla caliente, con rodajas de limón por encima."
-    ],
-    "difficulty": "Fácil",
-    "time": "40 minutos",
-    "image": "https://assets.kraftfoods.com/recipe_images/opendeploy/179775_640x428.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 11,
-    "title": "Tarta de Manzana",
-    "description": "Una deliciosa tarta de manzana casera con una base de masa quebrada y un relleno de manzanas dulces y canela. Perfecta para el postre o la merienda.",
-    "ingredients": [
-      "Para la masa quebrada:",
-      "200g de harina de trigo",
-      "100g de mantequilla fría, en cubos",
-      "1 cucharada de azúcar",
-      "1 pizca de sal",
-      "2-3 cucharadas de agua fría",
-      "Para el relleno:",
-      "4 manzanas, peladas, desinfectadas y en rodajas finas",
-      "1/2 taza de azúcar",
-      "1 cucharadita de canela en polvo",
-      "2 cucharadas de mermelada de albaricoque",
-      "Para decorar:",
-      "Azúcar glas",
-      "Crema batida (opcional)"
-    ],
-    "steps": [
-      "Para la masa quebrada, coloca la harina, la mantequilla, el azúcar y la sal en un procesador de alimentos. Pulsa hasta que la mezcla se parezca a migajas. Luego, agrega el agua fría, una cucharada a la vez, hasta que la masa se una en una bola.",
-      "Envuelve la masa en film transparente y refrigérala durante 30 minutos.",
-      "Precalienta el horno a 180°C (350°F).",
-      "Estira la masa quebrada en un círculo grande y forra un molde para tarta. Pincha el fondo de la masa con un tenedor y hornea durante 15 minutos hasta que esté dorada.",
-      "Mientras tanto, prepara el relleno mezclando las rodajas de manzana, el azúcar y la canela en un tazón grande.",
-      "Una vez que la masa esté lista, sácala del horno y déjala enfriar un poco. Luego, extiende la mermelada de albaricoque sobre la base de la tarta.",
-      "Coloca las rodajas de manzana en la base de la tarta, superponiéndolas ligeramente.",
-      "Hornea la tarta durante 30-35 minutos, o hasta que las manzanas estén tiernas y la tarta esté dorada.",
-      "Deja enfriar la tarta de manzana antes de espolvorearla con azúcar glas y servirla con crema batida si lo deseas."
-    ],
-    "difficulty": "Moderada",
-    "time": "90 minutos",
-    "image": "https://imag.bonviveur.com/tarta-de-manzana.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 12,
-    "title": "Sándwich BLT",
-    "description": "Un clásico sándwich BLT (bacon, lechuga y tomate) con tocineta crujiente, lechuga fresca y tomates maduros. Perfecto para un almuerzo rápido y delicioso.",
-    "ingredients": [
-      "4 rebanadas de pan tostado",
-      "8 lonchas de tocineta, cocidas y crujientes",
-      "4 hojas de lechuga",
-      "4 rodajas de tomate maduro",
-      "Mayonesa al gusto",
-      "Sal",
-      "Pimienta"
-    ],
-    "steps": [
-      "Tuesta las rebanadas de pan hasta que estén doradas y crujientes.",
-      "Unta mayonesa en una de las caras de cada rebanada de pan.",
-      "Coloca las hojas de lechuga sobre dos de las rebanadas de pan.",
-      "Agrega las rodajas de tomate sobre las hojas de lechuga y sazona con sal y pimienta al gusto.",
-      "Coloca las lonchas de tocineta crujiente sobre el tomate.",
-      "Cubre cada sándwich con las rebanadas de pan tostado restantes, con el lado untado de mayonesa hacia abajo.",
-      "Corta los sándwiches por la mitad diagonalmente y sírvelos."
-    ],
-    "difficulty": "Fácil",
-    "time": "15 minutos",
-    "image": "https://www.divinacocina.es/wp-content/uploads/sandwich-blt.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 13,
-    "title": "Tacos de Pescado",
-    "description": "Tacos de pescado crujientes y llenos de sabor, con una salsa de yogur y cilantro fresco. Una deliciosa opción de tacos para los amantes del pescado.",
-    "ingredients": [
-      "400g de filetes de pescado blanco (como el bacalao o la tilapia)",
-      "1 taza de harina de trigo",
-      "2 huevos, batidos",
-      "1 taza de pan rallado",
-      "1 cucharadita de paprika",
-      "Sal",
-      "Pimienta",
-      "8 tortillas de maíz",
-      "Para la salsa de yogur:",
-      "1 taza de yogur natural",
-      "1 manojo de cilantro fresco, picado",
-      "1 diente de ajo, picado",
-      "Jugo de 1 limón",
-      "Sal",
-      "Pimienta"
-    ],
-    "steps": [
-      "Corta los filetes de pescado en tiras del tamaño deseado.",
-      "En un tazón, mezcla la harina de trigo, la paprika, la sal y la pimienta.",
-      "Pasa las tiras de pescado por la harina de trigo, luego por los huevos batidos y finalmente por el pan rallado, asegurándote de que estén bien cubiertas.",
-      "Calienta aceite en una sartén grande a fuego medio-alto. Fría las tiras de pescado hasta que estén doradas y crujientes, aproximadamente 2-3 minutos por cada lado. Escúrrelas sobre papel absorbente.",
-      "Para hacer la salsa de yogur, mezcla el yogur natural, el cilantro picado, el ajo picado, el jugo de limón, la sal y la pimienta en un tazón.",
-      "Calienta las tortillas de maíz en una sartén o en el microondas.",
-      "Arma los tacos colocando las tiras de pescado fritas en las tortillas calientes y agregando la salsa de yogur por encima.",
-      "Sirve los tacos de pescado calientes y disfruta."
-    ],
-    "difficulty": "Moderada",
-    "time": "30 minutos",
-    "image": "https://images.cookforyourlife.org/wp-content/uploads/2018/08/Lemon-Lime-Fish-Tacos.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 14,
-    "title": "Pasta Carbonara",
-    "description": "Una clásica pasta carbonara con una cremosa salsa de huevo, queso parmesano y panceta crujiente. Un plato italiano delicioso y reconfortante.",
-    "ingredients": [
-      "300g de pasta (como espaguetis o fettuccine)",
-      "150g de panceta o tocino, cortada en trozos pequeños",
-      "2 huevos",
-      "150g de queso parmesano rallado",
-      "2 dientes de ajo, picados",
-      "Sal",
-      "Pimienta",
-      "Perejil fresco picado para decorar"
-    ],
-    "steps": [
-      "Cocina la pasta en una olla grande de agua con sal según las instrucciones del paquete hasta que esté al dente. Luego, escúrrela y reserva un poco del agua de cocción.",
-      "Mientras tanto, en una sartén grande, cocina la panceta o tocino a fuego medio-alto hasta que esté crujiente. Retira el exceso de grasa si es necesario.",
-      "En un tazón, bate los huevos y mezcla con el queso parmesano rallado. Agrega el ajo picado y sazona con sal y pimienta al gusto.",
-      "Añade la pasta caliente a la sartén con la panceta crujiente y mezcla bien.",
-      "Retira la sartén del fuego y vierte la mezcla de huevo y queso sobre la pasta caliente, revolviendo rápidamente para que la salsa se adhiera a la pasta. Agrega un poco de agua de cocción reservada si es necesario para obtener una consistencia cremosa.",
-      "Sirve la pasta carbonara caliente, espolvoreada con perejil fresco picado por encima."
-    ],
-    "difficulty": "Fácil",
-    "time": "20 minutos",
-    "image": "https://i.blogs.es/8819e1/carbonara-rec/650_1200.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 15,
-    "title": "Tacos Veganos",
-    "description": "Tacos veganos llenos de sabor con carne de nueces, aguacate, salsa de cilantro y cebolla morada encurtida. Una opción deliciosa y sin carne.",
-    "ingredients": [
-      "1 taza de nueces",
-      "1 cucharada de aceite de oliva",
-      "1 cucharada de salsa de soja",
-      "1 cucharadita de comino en polvo",
-      "1 cucharadita de chile en polvo",
-      "1/2 cucharadita de ajo en polvo",
-      "1/2 cucharadita de cebolla en polvo",
-      "8 tortillas de maíz",
-      "2 aguacates, en rodajas",
-      "Para la salsa de cilantro:",
-      "1 manojo de cilantro fresco",
-      "1 diente de ajo",
-      "Jugo de 1 limón",
-      "Sal",
-      "Pimienta",
-      "Para la cebolla morada encurtida:",
-      "1 cebolla morada, en rodajas finas",
-      "Vinagre de manzana",
-      "Sal y azúcar al gusto"
-    ],
-    "steps": [
-      "En un procesador de alimentos, mezcla las nueces, el aceite de oliva, la salsa de soja, el comino en polvo, el chile en polvo, el ajo en polvo y la cebolla en polvo hasta que todo esté bien combinado y las nueces tengan una textura similar a la carne molida.",
-      "En una sartén grande, calienta la mezcla de nueces a fuego medio-alto y cocina durante unos minutos hasta que estén calientes y fragantes.",
-      "Para hacer la salsa de cilantro, mezcla el cilantro fresco, el ajo, el jugo de limón, la sal y la pimienta en una licuadora hasta obtener una salsa suave.",
-      "Para la cebolla morada encurtida, coloca las rodajas de cebolla en un tazón y cúbrelas con vinagre de manzana. Agrega sal y azúcar al gusto. Deja reposar durante al menos 30 minutos.",
-      "Calienta las tortillas de maíz en una sartén o en el microondas.",
-      "Arma los tacos colocando la carne de nueces cocida en las tortillas calientes y agregando rodajas de aguacate, salsa de cilantro y cebolla morada encurtida por encima.",
-      "Sirve los tacos veganos calientes y disfruta."
-    ],
-    "difficulty": "Moderada",
-    "time": "30 minutos",
-    "image": "https://veggiefestchicago.org/wp-content/uploads/2022/02/Classic-Tacos-B-Wb-1.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 16,
-    "title": "Pizza Margarita",
-    "description": "La clásica pizza Margarita con una base de masa de pizza crujiente, salsa de tomate, mozzarella y albahaca fresca. Una delicia italiana simple pero deliciosa.",
-    "ingredients": [
-      "Para la masa de pizza:",
-      "300g de harina de trigo",
-      "1 cucharadita de levadura seca",
-      "1 cucharadita de azúcar",
-      "1 cucharadita de sal",
-      "200ml de agua tibia",
-      "Para la cobertura:",
-      "150ml de salsa de tomate",
-      "200g de mozzarella, rallada o en rodajas",
-      "Unas hojas de albahaca fresca",
-      "Aceite de oliva",
-      "Sal",
-      "Pimienta"
-    ],
-    "steps": [
-      "Para hacer la masa de pizza, mezcla la levadura seca, el azúcar y el agua tibia en un tazón y deja reposar durante unos minutos hasta que la mezcla comience a burbujear.",
-      "En otro tazón, mezcla la harina de trigo y la sal. Luego, vierte la mezcla de levadura sobre la harina y mezcla hasta obtener una masa suave.",
-      "Amasa la masa en una superficie enharinada durante unos 5-7 minutos, o hasta que esté elástica y suave. Luego, forma una bola con la masa y colócala en un tazón ligeramente enharinado. Cubre el tazón con un paño húmedo y deja que la masa repose y duplique su tamaño, aproximadamente 1 hora.",
-      "Precalienta el horno a la temperatura más alta posible.",
-      "Estira la masa en una superficie enharinada para que tenga el tamaño y grosor deseados para tu pizza.",
-      "Transfiere la masa estirada a una bandeja para horno enharinada o a una piedra para pizza.",
-      "Extiende la salsa de tomate sobre la masa y agrega la mozzarella rallada o en rodajas.",
-      "Hornea la pizza en el horno precalentado durante 10-15 minutos, o hasta que la masa esté dorada y la mozzarella esté burbujeante y dorada.",
-      "Retira la pizza del horno y agrega las hojas de albahaca fresca. Rocía con un poco de aceite de oliva y sazona con sal y pimienta al gusto.",
-      "Sirve la pizza Margarita caliente y disfruta."
-    ],
-    "difficulty": "Moderada",
-    "time": "90 minutos",
-    "image": "https://images.hola.com/imagenes/cocina/recetas/20200120158501/pizza-margarita-casera/0-770-811/pizza-margarita-m.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 17,
-    "title": "Ratatouille",
-    "description": "Una receta clásica de Ratatouille, un guiso francés lleno de vegetales asados en una rica salsa de tomate. Perfecto como plato principal o acompañamiento.",
-    "ingredients": [
-      "1 berenjena, cortada en rodajas finas",
-      "1 calabacín, cortado en rodajas finas",
-      "1 pimiento rojo, cortado en tiras",
-      "1 pimiento amarillo, cortado en tiras",
-      "1 cebolla, cortada en tiras",
-      "2 dientes de ajo, picados",
-      "1 lata de tomates triturados (400g)",
-      "1 cucharadita de tomillo seco",
-      "1 cucharadita de albahaca seca",
-      "Aceite de oliva",
-      "Sal",
-      "Pimienta",
-      "Perejil fresco picado para decorar"
-    ],
-    "steps": [
-      "Precalienta el horno a 200°C (390°F).",
-      "En una bandeja para horno grande, coloca las rodajas de berenjena, calabacín, tiras de pimiento rojo, tiras de pimiento amarillo y tiras de cebolla.",
-      "En un tazón, mezcla los tomates triturados, el ajo picado, el tomillo seco y la albahaca seca. Vierte esta mezcla sobre las verduras en la bandeja para horno.",
-      "Rocía un poco de aceite de oliva sobre las verduras y sazona con sal y pimienta al gusto.",
-      "Hornea en el horno precalentado durante 45-50 minutos, o hasta que las verduras estén tiernas y ligeramente doradas.",
-      "Sirve el Ratatouille caliente, espolvoreado con perejil fresco picado por encima."
-    ],
-    "difficulty": "Fácil",
-    "time": "60 minutos",
-    "image": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/9cffafab1d5436c0695bd417c6200a19/Derivates/400b7cd10996dc118063ff8c2028e2627e28bd36.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 18,
-    "title": "Tarta de Chocolate",
-    "description": "Una indulgente tarta de chocolate con una base de galleta, un relleno de chocolate suave y una cobertura de ganache de chocolate. Perfecta para los amantes del chocolate.",
-    "ingredients": [
-      "Para la base:",
-      "200g de galletas digestivas",
-      "100g de mantequilla derretida",
-      "Para el relleno:",
-      "200g de chocolate negro, picado",
-      "300ml de nata para montar",
-      "2 cucharadas de azúcar",
-      "Para la ganache:",
-      "100g de chocolate negro, picado",
-      "100ml de nata para montar",
-      "1 cucharada de mantequilla"
-    ],
-    "steps": [
-      "Para hacer la base de galleta, tritura las galletas digestivas en un procesador de alimentos hasta que se conviertan en migajas finas. Luego, mezcla las migajas de galleta con la mantequilla derretida.",
-      "Presiona la mezcla de galleta en el fondo de un molde para tarta desmontable y refrigérala mientras preparas el relleno.",
-      "Para hacer el relleno de chocolate, calienta la nata para montar en una cacerola hasta que comience a hervir. Luego, retira la cacerola del fuego y agrega el chocolate picado y el azúcar. Revuelve hasta que el chocolate se derrita y la mezcla esté suave.",
-      "Vierte la mezcla de chocolate sobre la base de galleta en el molde para tarta. Refrigera durante al menos 2 horas, o hasta que el relleno esté firme.",
-      "Para hacer la ganache de chocolate, calienta la nata para montar en una cacerola hasta que comience a hervir. Luego, retira la cacerola del fuego y agrega el chocolate picado y la mantequilla. Revuelve hasta que el chocolate se derrita y la mezcla esté suave.",
-      "Vierte la ganache de chocolate sobre la tarta de chocolate y refrigera durante al menos 1 hora, o hasta que la ganache esté firme.",
-      "Desmolda la tarta de chocolate y sírvela fría. Disfruta de esta deliciosa indulgencia."
-    ],
-    "difficulty": "Moderada",
-    "time": "3 horas",
-    "image": "https://e00-xlk-cooking-elmundo.uecdn.es/files/gallery_image_mobile_cover/uploads/2023/03/01/63fe893b130ca.jpeg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 19,
-    "title": "Ensalada de Quinua",
-    "description": "Una ensalada saludable y deliciosa de quinua con aguacate, tomate, pepino y aderezo de limón y cilantro. Perfecta como plato principal o acompañamiento.",
-    "ingredients": [
-      "1 taza de quinua",
-      "2 tazas de agua",
-      "1 aguacate, en cubos",
-      "1 tomate, en cubos",
-      "1 pepino, en cubos",
-      "1/2 cebolla roja, picada",
-      "Para el aderezo de limón y cilantro:",
-      "Jugo de 2 limones",
-      "1/4 de taza de cilantro fresco picado",
-      "2 cucharadas de aceite de oliva",
-      "Sal",
-      "Pimienta"
-    ],
-    "steps": [
-      "Enjuaga la quinua bajo agua fría en un colador fino.",
-      "En una olla, lleva a ebullición 2 tazas de agua. Agrega la quinua enjuagada y reduce el fuego a bajo. Cubre y cocina durante 15-20 minutos, o hasta que la quinua esté tierna y el líquido se haya absorbido por completo. Retira del fuego y deja reposar durante 5 minutos antes de destapar con un tenedor.",
-      "Mientras tanto, prepara el aderezo de limón y cilantro mezclando el jugo de limón, el cilantro picado, el aceite de oliva, la sal y la pimienta en un tazón pequeño.",
-      "En un tazón grande, combina la quinua cocida, el aguacate en cubos, el tomate en cubos, el pepino en cubos y la cebolla roja picada.",
-      "Vierte el aderezo de limón y cilantro sobre la ensalada de quinua y mezcla bien para asegurarte de que todos los ingredientes estén cubiertos con el aderezo.",
-      "Sirve la ensalada de quinua fría como plato principal o acompañamiento. Disfruta de esta deliciosa y saludable opción."
-    ],
-    "difficulty": "Fácil",
-    "time": "30 minutos",
-    "image": "https://www.goya.com/media/4003/quinoa-salad.jpg?quality=80",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 20,
-    "title": "Pollo a la Parrilla",
-    "description": "Pollo a la parrilla jugoso y lleno de sabor con una marinada de limón, ajo y hierbas. Perfecto para una comida al aire libre con amigos y familiares.",
-    "ingredients": [
-      "4 pechugas de pollo",
-      "Jugo de 2 limones",
-      "4 dientes de ajo, picados",
-      "2 cucharadas de aceite de oliva",
-      "1 cucharadita de romero fresco picado",
-      "1 cucharadita de tomillo fresco picado",
-      "Sal",
-      "Pimienta"
-    ],
-    "steps": [
-      "En un tazón grande, mezcla el jugo de limón, el ajo picado, el aceite de oliva, el romero picado, el tomillo picado, la sal y la pimienta.",
-      "Agrega las pechugas de pollo al tazón y asegúrate de que estén bien cubiertas con la marinada. Cubre el tazón y refrigera durante al menos 30 minutos, o hasta 4 horas para obtener mejores resultados.",
-      "Precalienta la parrilla a fuego medio-alto y engrásala ligeramente para evitar que el pollo se pegue.",
-      "Retira las pechugas de pollo de la marinada y colócalas en la parrilla caliente. Cocina durante 6-8 minutos por cada lado, o hasta que el pollo esté cocido y tenga marcas de parrilla doradas.",
-      "Retira el pollo a la parrilla y déjalo reposar durante unos minutos antes de cortarlo en rodajas.",
-      "Sirve el pollo a la parrilla caliente y disfruta de su delicioso sabor."
-    ],
-    "difficulty": "Fácil",
-    "time": "40 minutos",
-    "image": "https://mccormick.widen.net/content/zzdekjkrwn/original/Pollo_a_la_Parrilla_con_Romero_y_Limon_Recipes_800x800.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 21,
-    "title": "Sushi de Salmón",
-    "description": "Sushi de salmón fresco y sabroso, hecho en casa. Aprende a preparar este delicioso sushi con salmón, arroz y otros ingredientes.",
-    "ingredients": [
-      "200g de salmón fresco, cortado en tiras",
-      "1 taza de arroz para sushi",
-      "2 tazas de agua",
-      "2 cucharadas de vinagre de arroz",
-      "1 cucharada de azúcar",
-      "1 cucharadita de sal",
-      "Alga nori",
-      "Wasabi y salsa de soja para acompañar"
-    ],
-    "steps": [
-      "Enjuaga el arroz para sushi bajo agua fría en un colador hasta que el agua salga clara.",
-      "En una olla, combina el arroz enjuagado y 2 tazas de agua. Lleva a ebullición, luego reduce el fuego a bajo, cubre y cocina durante 15-20 minutos, o hasta que el arroz esté cocido y el agua se haya absorbido por completo.",
-      "Mientras el arroz se cocina, en un tazón pequeño, mezcla el vinagre de arroz, el azúcar y la sal. Calienta la mezcla en el microondas durante unos segundos hasta que el azúcar y la sal se disuelvan por completo.",
-      "Una vez que el arroz esté cocido, colócalo en un tazón grande y vierte la mezcla de vinagre caliente sobre él. Mezcla el arroz suavemente para que quede bien sazonado.",
-      "Deja enfriar el arroz sazonado a temperatura ambiente.",
-      "Para armar los rollos de sushi, coloca una hoja de alga nori en una esterilla de bambú para sushi cubierta con film transparente. Humedece tus manos y extiende una capa delgada de arroz sobre el alga nori, dejando un borde de 1 cm sin cubrir en la parte superior.",
-      "Coloca tiras de salmón en el centro del arroz.",
-      "Usando la esterilla de bambú, enrolla el sushi de salmón presionando firmemente pero con cuidado. Humedece ligeramente el borde sin arroz para sellar el rollo.",
-      "Repite el proceso con el resto de ingredientes.",
-      "Corta los rollos de sushi en rodajas y sírvelos con wasabi y salsa de soja."
-    ],
-    "difficulty": "Moderada",
-    "time": "45 minutos",
-    "image": "https://s1.eestatic.com/2019/06/18/cocinillas/actualidad-gastronomica/sushi-pescado-actualidad_gastronomica_407220618_125852168_1706x960.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 22,
-    "title": "Pasta Alfredo",
-    "description": "Una cremosa pasta Alfredo con una rica salsa de queso parmesano, mantequilla y ajo. Sencillo y delicioso.",
-    "ingredients": [
-      "200g de pasta (como fettuccine)",
-      "100g de mantequilla",
-      "2 dientes de ajo, picados",
-      "1 taza de crema espesa",
-      "1 taza de queso parmesano rallado",
-      "Sal",
-      "Pimienta",
-      "Perejil fresco picado para decorar"
-    ],
-    "steps": [
-      "Cocina la pasta en agua con sal según las instrucciones del paquete hasta que esté al dente. Luego, escúrrela y reserva.",
-      "En una sartén grande, derrite la mantequilla a fuego medio. Agrega el ajo picado y cocina durante 1-2 minutos, o hasta que esté fragante pero no dorado.",
-      "Añade la crema espesa a la sartén y calienta la mezcla hasta que comience a hervir. Reduce el fuego y cocina a fuego lento durante 2-3 minutos, o hasta que la crema espese ligeramente.",
-      "Añade el queso parmesano rallado a la crema y revuelve hasta que esté completamente derretido y la salsa esté suave. Sazona con sal y pimienta al gusto.",
-      "Agrega la pasta cocida a la salsa Alfredo y mezcla para que esté bien cubierta con la salsa.",
-      "Sirve la pasta Alfredo caliente, espolvoreada con perejil fresco picado por encima."
-    ],
-    "difficulty": "Fácil",
-    "time": "20 minutos",
-    "image": "https://recetasdecocina.elmundo.es/wp-content/uploads/2021/06/pasta-alfredo.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 23,
-    "title": "Tacos de Pollo",
-    "description": "Tacos de pollo con un relleno sabroso de pollo desmenuzado, cebolla, pimientos y especias. Sirve con tortillas de maíz calientes y tus ingredientes favoritos para tacos.",
-    "ingredients": [
-      "2 pechugas de pollo",
-      "1 cebolla, cortada en tiras",
-      "1 pimiento rojo, cortado en tiras",
-      "1 pimiento verde, cortado en tiras",
-      "2 cucharaditas de comino molido",
-      "2 cucharaditas de chile en polvo",
-      "1 cucharadita de ajo en polvo",
-      "1 cucharadita de cebolla en polvo",
-      "Sal",
-      "Pimienta",
-      "Tortillas de maíz",
-      "Ingredientes para servir, como queso rallado, aguacate en cubos, crema agria y salsa"
-    ],
-    "steps": [
-      "En una sartén grande, calienta un poco de aceite a fuego medio-alto. Agrega las pechugas de pollo y cocínalas hasta que estén doradas por ambos lados y cocidas por completo. Luego, retira el pollo de la sartén y desmenúzalo con dos tenedores.",
-      "En la misma sartén, agrega un poco más de aceite si es necesario y luego agrega la cebolla y los pimientos cortados en tiras. Cocina hasta que estén tiernos.",
-      "Vuelve a agregar el pollo desmenuzado a la sartén y espolvorea las especias (comino, chile en polvo, ajo en polvo, cebolla en polvo) sobre la mezcla. Sazona con sal y pimienta al gusto. Cocina por unos minutos para que los sabores se mezclen bien.",
-      "Calienta las tortillas de maíz en una sartén o en el microondas según las instrucciones del paquete.",
-      "Sirve los tacos de pollo con el relleno de pollo desmenuzado, cebolla y pimientos en las tortillas de maíz calientes. Agrega tus ingredientes favoritos para tacos, como queso rallado, aguacate en cubos, crema agria y salsa.",
-      "Disfruta de tus deliciosos tacos de pollo caseros."
-    ],
-    "difficulty": "Fácil",
-    "time": "30 minutos",
-    "image": "https://cdn0.recetasgratis.net/es/posts/8/2/9/tacos_de_pollo_mexicanos_72928_orig.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 24,
-    "title": "Ensalada Caprese",
-    "description": "Una ensalada Caprese fresca y sencilla con tomates maduros, mozzarella fresca, albahaca y un aderezo balsámico. Perfecta como entrada o acompañamiento.",
-    "ingredients": [
-      "4 tomates maduros, en rodajas",
-      "200g de mozzarella fresca, en rodajas",
-      "Hojas de albahaca fresca",
-      "3 cucharadas de aceite de oliva extra virgen",
-      "2 cucharadas de vinagre balsámico",
-      "Sal",
-      "Pimienta"
-    ],
-    "steps": [
-      "En un plato grande, alterna las rodajas de tomate y mozzarella y coloca hojas de albahaca fresca entre ellas.",
-      "En un tazón pequeño, mezcla el aceite de oliva y el vinagre balsámico. Sazona con sal y pimienta al gusto.",
-      "Rocía la vinagreta sobre la ensalada Caprese antes de servir.",
-      "Disfruta de esta refrescante ensalada como entrada o acompañamiento."
-    ],
-    "difficulty": "Fácil",
-    "time": "15 minutos",
-    "image": "https://cdn.elcocinerocasero.com/imagen/receta/1000/2022-07-06-20-09-06/ensalada-caprese.jpeg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 25,
-    "title": "Arroz Frito con Verduras",
-    "description": "Arroz frito con verduras, una receta rápida y deliciosa que puedes preparar en casa. Perfecta como plato principal o acompañamiento.",
-    "ingredients": [
-      "2 tazas de arroz cocido y frío",
-      "1 zanahoria, en cubos pequeños",
-      "1 pimiento rojo, en cubos pequeños",
-      "1 pimiento verde, en cubos pequeños",
-      "1 cebolla, picada",
-      "2 dientes de ajo, picados",
-      "2 huevos, batidos",
-      "3 cucharadas de salsa de soja",
-      "Aceite de sésamo tostado",
-      "Aceite vegetal",
-      "Sal",
-      "Pimienta"
-    ],
-    "steps": [
-      "En una sartén grande o wok, calienta un poco de aceite vegetal a fuego medio-alto. Agrega los huevos batidos y revuelve para hacer revuelto. Retira el revuelto de la sartén y reserva.",
-      "Añade un poco más de aceite a la sartén y luego agrega el ajo picado y la cebolla picada. Cocina hasta que estén fragantes y la cebolla esté dorada.",
-      "Agrega la zanahoria en cubos y los pimientos rojo y verde en cubos a la sartén. Cocina hasta que las verduras estén tiernas pero aún crujientes.",
-      "Añade el arroz cocido y frío a la sartén y revuelve para combinar con las verduras.",
-      "Vierte la salsa de soja sobre el arroz y mezcla bien para que esté uniformemente cubierto.",
-      "Agrega el revuelto de huevo cocido de nuevo a la sartén y revuelve para combinar con el arroz y las verduras.",
-      "Sazona con sal y pimienta al gusto.",
-      "Justo antes de servir, rocía un poco de aceite de sésamo tostado sobre el arroz frito para darle un sabor adicional.",
-      "Sirve el arroz frito con verduras caliente como plato principal o acompañamiento."
-    ],
-    "difficulty": "Fácil",
-    "time": "25 minutos",
-    "image": "https://myplate-prod.azureedge.us/sites/default/files/styles/large/public/2022-08/VegetableFriedRice_527x323.jpg?itok=1FzGv2OK",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 26,
-    "title": "Papas Bravas",
-    "description": "Papas bravas, un clásico aperitivo español. Papas fritas crujientes servidas con una salsa picante de tomate. ¡Perfectas para compartir con amigos!",
-    "ingredients": [
-      "4 papas grandes, peladas y cortadas en cubos",
-      "Aceite vegetal para freír",
-      "Sal al gusto",
-      "Para la salsa brava:",
-      "1/2 taza de puré de tomate",
-      "1 cucharadita de pimentón picante",
-      "1 cucharadita de pimentón dulce",
-      "1 cucharadita de harina",
-      "1 cucharada de aceite de oliva",
-      "Sal al gusto",
-      "Pimienta negra al gusto"
-    ],
-    "steps": [
-      "En una sartén grande, calienta suficiente aceite vegetal para freír las papas a fuego medio-alto.",
-      "Fríe las papas en lotes hasta que estén doradas y crujientes. Retira las papas fritas a un plato forrado con papel absorbente para eliminar el exceso de aceite. Sazona con sal al gusto.",
-      "En una pequeña cacerola, calienta una cucharada de aceite de oliva a fuego medio. Agrega la harina y los dos tipos de pimentón (picante y dulce) y cocina durante unos minutos hasta que estén fragantes.",
-      "Añade el puré de tomate a la cacerola y mezcla bien para combinar todos los ingredientes. Cocina a fuego lento durante unos minutos hasta que la salsa esté caliente y espesa.",
-      "Sazona la salsa brava con sal y pimienta negra al gusto.",
-      "Sirve las papas bravas calientes, acompañadas de la salsa brava. ¡Disfruta de este clásico aperitivo español!"
-    ],
-    "difficulty": "Moderada",
-    "time": "40 minutos",
-    "image": "https://www.goya.com/media/7699/spicy-potatoes.jpg?quality=80",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 27,
-    "title": "Lasaña",
-    "description": "Una lasaña clásica con capas de pasta, carne molida, salsa de tomate y queso ricotta, gratinada al horno. Una delicia italiana que a todos les encantará.",
-    "ingredients": [
-      "9 láminas de pasta para lasaña, cocidas según las instrucciones del paquete",
-      "500g de carne molida de res",
-      "1 cebolla, picada",
-      "2 dientes de ajo, picados",
-      "800g de salsa de tomate",
-      "250g de queso ricotta",
-      "1 huevo",
-      "1 taza de queso mozzarella rallado",
-      "1/2 taza de queso parmesano rallado",
-      "1 cucharadita de albahaca seca",
-      "1 cucharadita de orégano seco",
-      "Sal",
-      "Pimienta",
-      "Aceite de oliva"
-    ],
-    "steps": [
-      "En una sartén grande, calienta un poco de aceite de oliva a fuego medio. Agrega la cebolla y el ajo picados y cocina hasta que estén fragantes y la cebolla esté dorada.",
-      "Añade la carne molida de res a la sartén y cocina hasta que esté dorada y cocida por completo. Escurre cualquier exceso de grasa.",
-      "Agrega la salsa de tomate, la albahaca seca, el orégano seco, la sal y la pimienta a la sartén con la carne molida. Cocina a fuego lento durante unos minutos para que los sabores se mezclen.",
-      "En un tazón aparte, mezcla el queso ricotta con el huevo batido y una pizca de sal y pimienta.",
-      "Precalienta el horno a 180°C (350°F).",
-      "En una fuente para horno, coloca una capa de láminas de pasta cocida, seguida de una capa de la mezcla de carne y salsa de tomate, una capa de queso ricotta y una capa de queso mozzarella rallado. Repite este proceso hasta que todos los ingredientes se hayan utilizado, terminando con una capa de queso mozzarella y espolvoreando queso parmesano rallado por encima.",
-      "Hornea la lasaña en el horno precalentado durante 30-35 minutos, o hasta que esté dorada y burbujeante.",
-      "Deja reposar la lasaña durante unos minutos antes de servir. ¡Disfruta de esta deliciosa lasaña casera!"
-    ],
-    "difficulty": "Moderada",
-    "time": "90 minutos",
-    "image": "https://www.elespectador.com/resizer/fiMsG1Eb5XgeEHV1hQDAhGISghE=/arc-anglerfish-arc2-prod-elespectador/public/46JYAOVG3FBHVKVV2GIXNWYK2Y.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 28,
-    "title": "Tortilla Española",
-    "description": "Una tortilla española clásica, también conocida como tortilla de patatas. Esta deliciosa tortilla se hace con papas, cebolla y huevos, y es perfecta para el desayuno, el almuerzo o la cena.",
-    "ingredients": [
-      "4 papas grandes, peladas y cortadas en rodajas finas",
-      "1 cebolla grande, cortada en rodajas finas",
-      "6 huevos",
-      "Aceite de oliva",
-      "Sal",
-      "Pimienta"
-    ],
-    "steps": [
-      "En una sartén grande, calienta suficiente aceite de oliva para cubrir el fondo a fuego medio. Agrega las papas en rodajas y la cebolla en rodajas y cocínalas a fuego lento hasta que estén tiernas pero no doradas. Escurre el exceso de aceite y sazona con sal y pimienta al gusto.",
-      "En un tazón grande, bate los huevos y sazona con sal y pimienta al gusto.",
-      "Añade las papas y la cebolla cocidas a los huevos batidos y mezcla bien para que estén bien combinados.",
-      "En la misma sartén, calienta un poco más de aceite si es necesario y vierte la mezcla de huevo, papas y cebolla.",
-      "Cocina la tortilla a fuego lento durante unos minutos hasta que los bordes estén dorados y la parte superior esté casi cocida.",
-      "Con la ayuda de un plato grande o una tapadera, voltea la tortilla y cocínala por el otro lado hasta que esté dorada y completamente cocida por dentro.",
-      "Sirve la tortilla española caliente o a temperatura ambiente, cortada en triángulos o cuadros. ¡Disfruta!"
-    ],
-    "difficulty": "Fácil",
-    "time": "45 minutos",
-    "image": "https://recetasdecocina.elmundo.es/wp-content/uploads/2023/04/tortilla-de-patatas-espanola.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 29,
-    "title": "Pollo al Curry",
-    "description": "Pollo al curry con una salsa cremosa de tomate, cebolla, ajo, jengibre y especias. Sirve este plato aromático con arroz o naan.",
-    "ingredients": [
-      "4 pechugas de pollo, cortadas en trozos",
-      "1 cebolla grande, picada",
-      "3 dientes de ajo, picados",
-      "1 trozo de jengibre fresco, rallado",
-      "2 cucharadas de aceite de cocina",
-      "2 cucharadas de pasta de curry (rojo, verde o amarillo, según tu preferencia)",
-      "1 lata de tomate triturado",
-      "1 lata de leche de coco",
-      "1 cucharadita de cúrcuma en polvo",
-      "1 cucharadita de comino molido",
-      "1 cucharadita de cilantro molido",
-      "Sal",
-      "Pimienta",
-      "Hojas de cilantro fresco para decorar",
-      "Arroz o naan para servir"
-    ],
-    "steps": [
-      "En una sartén grande, calienta el aceite de cocina a fuego medio. Agrega la cebolla picada y cocina hasta que esté dorada.",
-      "Añade el ajo picado y el jengibre rallado a la sartén y cocina durante unos minutos hasta que estén fragantes.",
-      "Agrega la pasta de curry a la sartén y saltea durante unos minutos para que se mezclen bien los sabores.",
-      "Añade los trozos de pollo a la sartén y cocina hasta que estén dorados por todos lados.",
-      "Vierte el tomate triturado en la sartén y mezcla bien con el pollo y la cebolla.",
-      "Agrega la leche de coco, la cúrcuma en polvo, el comino molido y el cilantro molido a la sartén. Sazona con sal y pimienta al gusto. Cocina a fuego lento durante unos 20-25 minutos, o hasta que el pollo esté cocido y la salsa se haya espesado.",
-      "Sirve el pollo al curry caliente, espolvoreado con hojas de cilantro fresco y acompáñalo con arroz o naan. ¡Disfruta!"
-    ],
-    "difficulty": "Moderada",
-    "time": "45 minutos",
-    "image": "https://i.blogs.es/9ea7a4/pollo_curry-copia/650_1200.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 30,
-    "title": "Hamburguesas Caseras",
-    "description": "Hamburguesas caseras jugosas con carne de res, condimentos y tus ingredientes favoritos para hamburguesas. Sirve en panecillos con tus aderezos preferidos.",
-    "ingredients": [
-      "500g de carne molida de res",
-      "1 cebolla, picada",
-      "2 dientes de ajo, picados",
-      "1 huevo",
-      "1/4 de taza de pan rallado",
-      "1 cucharadita de mostaza",
-      "1 cucharadita de salsa Worcestershire",
-      "Sal",
-      "Pimienta",
-      "Panecillos para hamburguesas",
-      "Ingredientes para servir, como lechuga, tomate, cebolla, queso y salsa"
-    ],
-    "steps": [
-      "En un tazón grande, mezcla la carne molida de res con la cebolla picada, el ajo picado, el huevo, el pan rallado, la mostaza y la salsa Worcestershire. Sazona con sal y pimienta al gusto.",
-      "Forma la mezcla en hamburguesas del tamaño deseado.",
-      "Calienta una parrilla o sartén a fuego medio-alto y cocina las hamburguesas a la parrilla o a la sartén hasta que estén cocidas a tu gusto.",
-      "Tuesta ligeramente los panecillos para hamburguesas en la parrilla o en una tostadora.",
-      "Monta las hamburguesas colocando las hamburguesas cocidas en los panecillos y agregando tus ingredientes favoritos, como lechuga, tomate, cebolla, queso y salsa.",
-      "Sirve las hamburguesas caseras calientes con tus aderezos preferidos. ¡Disfruta!"
-    ],
-    "difficulty": "Fácil",
-    "time": "30 minutos",
-    "image": "https://www.demoslavueltaaldia.com/sites/default/files/hamburguesas-caseras-completas.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 31,
-    "title": "Gazpacho",
-    "description": "Gazpacho, una sopa fría española hecha con tomates maduros, pimientos, pepinos y ajo. Perfecta para los días calurosos de verano.",
-    "ingredients": [
-      "1 kg de tomates maduros, pelados y picados",
-      "1 pimiento verde, picado",
-      "1 pepino, pelado y picado",
-      "1 cebolla, picada",
-      "2 dientes de ajo, picados",
-      "3 tazas de jugo de tomate",
-      "1/4 de taza de vinagre de vino tinto",
-      "1/4 de taza de aceite de oliva",
-      "Sal",
-      "Pimienta",
-      "Pan duro (opcional, para espesar)"
-    ],
-    "steps": [
-      "En una licuadora o procesador de alimentos, combina los tomates picados, el pimiento verde, el pepino, la cebolla y el ajo. Procesa hasta obtener una mezcla suave.",
-      "Añade el jugo de tomate, el vinagre de vino tinto y el aceite de oliva a la mezcla y vuelve a procesar hasta que todo esté bien combinado.",
-      "Si deseas que el gazpacho sea más espeso, puedes añadir trozos de pan duro a la mezcla y procesar nuevamente hasta obtener la consistencia deseada.",
-      "Sazona el gazpacho con sal y pimienta al gusto y refrigéralo durante al menos 2 horas antes de servirlo para que esté bien frío.",
-      "Sirve el gazpacho en cuencos individuales y decóralo con trozos de pimiento, pepino y cebolla si lo deseas. ¡Disfruta de esta refrescante sopa fría!"
-    ],
-    "difficulty": "Fácil",
-    "time": "15 minutos",
-    "image": "https://i.blogs.es/a8ade0/gazpacho_tradicional/840_560.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 32,
-    "title": "Sushi",
-    "description": "Sushi casero con arroz de sushi, pescado fresco, aguacate, pepino y nori. Acompañado de salsa de soja y wasabi.",
-    "ingredients": [
-      "2 tazas de arroz de sushi",
-      "2 1/2 tazas de agua",
-      "1/2 taza de vinagre de arroz",
-      "4 hojas de nori",
-      "150g de pescado fresco (salmón, atún, etc.), cortado en tiras",
-      "1 aguacate, pelado y cortado en tiras",
-      "1 pepino, cortado en tiras",
-      "Salsa de soja y wasabi para servir"
-    ],
-    "steps": [
-      "Enjuaga el arroz de sushi en un colador hasta que el agua salga clara. Luego, cocina el arroz con 2 1/2 tazas de agua en una olla tapada a fuego alto hasta que hierva. Reduce el fuego y cocina a fuego lento durante 15-20 minutos, o hasta que el arroz esté tierno y el agua se haya absorbido por completo.",
-      "Mientras el arroz está caliente, mezcla el vinagre de arroz en él para darle sabor y déjalo enfriar a temperatura ambiente.",
-      "Coloca una hoja de nori en una esterilla de bambú para sushi con el lado rugoso hacia arriba.",
-      "Moja tus dedos en agua con sal y luego extiende una fina capa de arroz sobre la hoja de nori, dejando un borde de 1 pulgada en la parte superior sin cubrir.",
-      "Coloca tiras de pescado, aguacate y pepino en el centro del arroz.",
-      "Usando la esterilla de bambú, enrolla la hoja de nori firmemente alrededor del relleno. Humedece el borde sin arroz para sellar el rollo.",
-      "Repite el proceso con las hojas de nori restantes y los ingredientes.",
-      "Usa un cuchillo afilado para cortar cada rollo de sushi en rodajas de 1 pulgada.",
-      "Sirve el sushi con salsa de soja y wasabi. ¡Disfruta de tu sushi casero!"
-    ],
-    "difficulty": "Moderada",
-    "time": "60 minutos",
-    "image": "https://imag.bonviveur.com/sushi-casero.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 33,
-    "title": "Sopa de Lentejas",
-    "description": "Sopa de lentejas nutritiva y reconfortante con lentejas, verduras y especias. Perfecta para los días fríos de invierno.",
-    "ingredients": [
-      "1 taza de lentejas secas",
-      "1 cebolla, picada",
-      "2 zanahorias, peladas y cortadas en rodajas",
-      "2 tallos de apio, cortados en rodajas",
-      "3 dientes de ajo, picados",
-      "1 lata de tomate triturado",
-      "1 cucharadita de comino molido",
-      "1 cucharadita de pimentón",
-      "1/2 cucharadita de pimienta de cayena (opcional)",
-      "6 tazas de caldo de verduras",
-      "Sal",
-      "Pimienta",
-      "Aceite de oliva",
-      "Hojas de perejil fresco para decorar"
-    ],
-    "steps": [
-      "Enjuaga las lentejas bajo agua fría y escúrrelas.",
-      "En una olla grande, calienta un poco de aceite de oliva a fuego medio. Agrega la cebolla picada, las zanahorias cortadas en rodajas, el apio cortado en rodajas y el ajo picado. Cocina hasta que las verduras estén tiernas y fragantes.",
-      "Añade el comino molido, el pimentón y la pimienta de cayena (si la estás usando) a las verduras y saltea durante unos minutos para que las especias se mezclen bien.",
-      "Añade las lentejas enjuagadas y el tomate triturado a la olla. Vierte el caldo de verduras y sazona con sal y pimienta al gusto.",
-      "Lleva la sopa a ebullición, luego reduce el fuego y cocina a fuego lento durante 25-30 minutos, o hasta que las lentejas estén tiernas.",
-      "Sirve la sopa de lentejas caliente, decorada con hojas de perejil fresco. ¡Disfruta de esta reconfortante sopa!"
-    ],
-    "difficulty": "Fácil",
-    "time": "45 minutos",
-    "image": "https://www.goya.com/media/3686/hearty-lentil-soup.jpg?quality=80",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 34,
-    "title": "Arroz con Pollo",
-    "description": "Arroz con pollo, un plato clásico de la cocina latinoamericana con arroz, pollo, verduras y sabores deliciosos. Reconfortante y delicioso.",
-    "ingredients": [
-      "2 tazas de arroz",
-      "4 tazas de caldo de pollo",
-      "4 pechugas de pollo, cortadas en trozos",
-      "1 cebolla, picada",
-      "1 pimiento rojo, picado",
-      "1 pimiento verde, picado",
-      "3 dientes de ajo, picados",
-      "1 taza de guisantes (arvejas) congelados",
-      "1/2 taza de zanahorias en rodajas finas",
-      "1 cucharadita de comino molido",
-      "1 cucharadita de azafrán en hebras (opcional)",
-      "Aceite de oliva",
-      "Sal",
-      "Pimienta"
-    ],
-    "steps": [
-      "En una olla grande, calienta un poco de aceite de oliva a fuego medio-alto. Agrega el pollo cortado en trozos y cocina hasta que esté dorado por todos lados. Retira el pollo de la olla y reserva.",
-      "En la misma olla, agrega un poco más de aceite si es necesario, luego añade la cebolla, los pimientos y el ajo. Cocina hasta que las verduras estén tiernas.",
-      "Añade el arroz a la olla y mezcla para que se impregne de los sabores. Cocina durante unos minutos hasta que el arroz esté ligeramente dorado.",
-      "Regresa el pollo dorado a la olla y mezcla con el arroz y las verduras.",
-      "Añade el caldo de pollo, los guisantes, las zanahorias, el comino molido, el azafrán (si lo estás usando), la sal y la pimienta. Lleva la mezcla a ebullición, luego reduce el fuego a bajo, tapa la olla y cocina a fuego lento durante unos 20-25 minutos, o hasta que el arroz esté cocido y el líquido se haya absorbido por completo.",
-      "Sirve el arroz con pollo caliente y disfruta de este clásico plato latinoamericano."
-    ],
-    "difficulty": "Moderada",
-    "time": "60 minutos",
-    "image": "https://www.aceitesdeolivadeespana.com/wp-content/uploads/2021/05/Arroz-con-pollo.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 35,
-    "title": "Enchiladas",
-    "description": "Enchiladas rellenas de pollo, bañadas en salsa de enchilada y gratinadas con queso. Un plato clásico de la cocina mexicana.",
-    "ingredients": [
-      "2 pechugas de pollo, cocidas y desmenuzadas",
-      "1 cebolla, picada",
-      "2 dientes de ajo, picados",
-      "1 lata de salsa de enchilada",
-      "1 lata de chiles verdes picados",
-      "1 taza de queso cheddar rallado",
-      "1 taza de queso monterrey jack rallado",
-      "8 tortillas de maíz",
-      "Aceite de oliva",
-      "Sal",
-      "Pimienta",
-      "Cilantro fresco picado para decorar"
-    ],
-    "steps": [
-      "En una sartén grande, calienta un poco de aceite de oliva a fuego medio. Agrega la cebolla picada y el ajo picado, y saltea hasta que estén tiernos y fragantes.",
-      "Añade el pollo desmenuzado a la sartén y mezcla con la cebolla y el ajo. Sazona con sal y pimienta al gusto.",
-      "Añade la mitad de la salsa de enchilada y los chiles verdes picados a la mezcla de pollo. Cocina por unos minutos hasta que todo esté bien caliente.",
-      "Precalienta el horno a 180°C (350°F).",
-      "Calienta las tortillas de maíz en una sartén o en el microondas según las instrucciones del paquete.",
-      "Rellena cada tortilla con la mezcla de pollo y dobla las tortillas en forma de enchiladas.",
-      "Coloca las enchiladas rellenas en una fuente para horno. Vierte la salsa de enchilada restante sobre las enchiladas y espolvorea el queso cheddar y el queso monterrey jack rallados por encima.",
-      "Hornea las enchiladas en el horno precalentado durante 20-25 minutos, o hasta que el queso esté dorado y burbujeante.",
-      "Sirve las enchiladas calientes, espolvoreadas con cilantro fresco picado. ¡Disfruta de este clásico de la cocina mexicana!"
-    ],
-    "difficulty": "Moderada",
-    "time": "45 minutos",
-    "image": "https://www.gourmet.cl/wp-content/uploads/2021/08/foto-istock-enchilada-tama%C3%B1o-web.jpg",
-    "origin_url": "enlace_a_la_receta"
-  },
-  {
-    "id": 36,
-    "title": "Tacos de Carnitas",
-    "description": "Tacos de carnitas, una deliciosa receta mexicana con cerdo desmenuzado cocido lentamente con especias hasta que esté tierno y crujiente.",
-    "ingredients": [
-      "1 kg de carne de cerdo (preferiblemente pierna o paleta), cortada en trozos",
-      "1 cebolla, picada en trozos grandes",
-      "4 dientes de ajo, picados",
-      "2 hojas de laurel",
-      "1 cucharadita de comino molido",
-      "1 cucharadita de pimentón",
-      "1/2 cucharadita de orégano seco",
-      "Sal",
-      "Pimienta",
-      "Aceite de cocina",
-      "Para servir:",
-      "Tortillas de maíz",
-      "Cebolla morada en rodajas finas",
-      "Cilantro fresco picado",
-      "Limones en rodajas",
-      "Salsa de tomate picante (opcional)"
-    ],
-    "steps": [
-      "En una olla grande, calienta un poco de aceite de cocina a fuego medio-alto. Agrega los trozos de cerdo y dorarlos por todos lados hasta que estén bien sellados.",
-      "Añade la cebolla picada, el ajo picado, las hojas de laurel, el comino molido, el pimentón, el orégano seco, la sal y la pimienta a la olla. Revuelve bien para que todas las especias se mezclen con la carne.",
-      "Cubre la carne con suficiente agua y lleva la mezcla a ebullición. Luego, reduce el fuego a bajo, tapa la olla y cocina a fuego lento durante 2-3 horas, o hasta que la carne esté tierna y se desmenuce fácilmente con un tenedor.",
-      "Una vez que la carne esté lista, retira las hojas de laurel y desmenúzala con un tenedor.",
-      "Calienta las tortillas de maíz en una sartén o en el microondas según las instrucciones del paquete.",
-      "Para armar los tacos, coloca un poco de carne desmenuzada en cada tortilla caliente. Luego, agrega cebolla morada en rodajas finas, cilantro fresco picado y un chorrito de limón. Si lo prefieres, añade salsa de tomate picante.",
-      "Sirve los tacos de carnitas calientes y disfruta de esta deliciosa receta mexicana."
-    ],
-    "difficulty": "Moderada",
-    "time": "3 horas",
-    "image": "https://cielitorosado.com/wp-content/uploads/2022/11/CARNITAS-sm.jpg",
-    "origin_url": "enlace_a_la_receta"
-  }
+    {
+        "id": 1,
+        "title": "Pasta Alfredo con Pollo",
+        "description": "Disfruta de un plato cremoso de pasta Alfredo con tiernos trozos de pollo. Esta receta es fácil de preparar y deliciosa.",
+        "ingredients": [
+            "Agua",
+            "200g de pasta fettuccine",
+            "2 pechugas de pollo, cortadas en tiras",
+            "2 cucharadas de mantequilla",
+            "1 taza de crema de leche",
+            "1 taza de queso parmesano rallado",
+            "Sal",
+            "Pimienta",
+            "Perejil fresco picado para decorar"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 1,
+                "name": "Agua",
+                "image": "https://nix-tag-images.s3.amazonaws.com/4483_thumb.jpg"
+            },
+            {
+                "id": 551,
+                "name": "Pasta",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1012_thumb.jpg"
+            },
+            {
+                "id": 599,
+                "name": "Pollo Desmenuzado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/3519_thumb.jpg"
+            },
+            {
+                "id": 445,
+                "name": "Mantequilla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/328_thumb.jpg"
+            },
+            {
+                "id": 269,
+                "name": "Crema De Leche",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            },
+            {
+                "id": 549,
+                "name": "Parmesano Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/594_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 568,
+                "name": "Perejil",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1931_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "Cocina la pasta según las instrucciones del paquete. Escúrrela y reserva.",
+            "En una sartén grande, derrite la mantequilla a fuego medio. Agrega las tiras de pollo y cocina hasta que estén doradas y cocidas por completo.",
+            "Añade la crema de leche y el queso parmesano rallado a la sartén. Cocina a fuego lento hasta que la salsa se espese.",
+            "Incorpora la pasta cocida a la salsa y mezcla bien. Cocina por unos minutos hasta que todo esté bien caliente.",
+            "Sazona con sal y pimienta al gusto. Sirve caliente, espolvoreado con perejil fresco picado."
+        ],
+        "difficulty": "Fácil",
+        "time": "30 minutos",
+        "image": "https://buenprovecho.hn/wp-content/uploads/2020/10/Pasta_Alfredo2.jpeg.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Ensalada César",
+        "description": "Una clásica ensalada César con crutones, pollo a la parrilla y una deliciosa vinagreta cremosa. Perfecta como plato principal o acompañamiento.",
+        "ingredients": [
+            "1 lechuga romana, lavada y cortada en trozos",
+            "2 pechugas de pollo a la parrilla, en tiras",
+            "1 taza de crutones de pan",
+            "1/2 taza de queso parmesano rallado",
+            "Para la vinagreta:",
+            "2 cucharadas de mayonesa",
+            "1 cucharada de mostaza Dijon",
+            "2 dientes de ajo, picados",
+            "2 cucharadas de jugo de limón",
+            "Sal",
+            "Pimienta",
+            "2 cucharadas de aceite de oliva"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 425,
+                "name": "Lechuga",
+                "image": "https://nix-tag-images.s3.amazonaws.com/657_thumb.jpg"
+            },
+            {
+                "id": 598,
+                "name": "Pollo"
+            },
+            {
+                "id": 541,
+                "name": "Pan Tostado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/877_thumb.jpg"
+            },
+            {
+                "id": 549,
+                "name": "Parmesano Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/594_thumb.jpg"
+            },
+            {
+                "id": 452,
+                "name": "Mayonesa",
+                "image": "https://nix-tag-images.s3.amazonaws.com/56_thumb.jpg"
+            },
+            {
+                "id": 490,
+                "name": "Mostaza De Dijon",
+                "image": "https://nix-tag-images.s3.amazonaws.com/526_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 430,
+                "name": "Limón",
+                "image": "https://nix-tag-images.s3.amazonaws.com/653_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            }
+        ],
+        "steps": [
+            "En un tazón grande, combina la lechuga romana, las tiras de pollo a la parrilla, los crutones y el queso parmesano rallado.",
+            "En otro tazón, prepara la vinagreta mezclando la mayonesa, la mostaza Dijon, el ajo picado, el jugo de limón, la sal y la pimienta. Luego, añade lentamente el aceite de oliva mientras mezclas para emulsionar la vinagreta.",
+            "Vierte la vinagreta sobre la ensalada y mezcla bien para asegurarte de que todos los ingredientes estén cubiertos.",
+            "Sirve la ensalada César con un poco de queso parmesano adicional por encima y disfruta."
+        ],
+        "difficulty": "Fácil",
+        "time": "20 minutos",
+        "image": "https://elcomercio.pe/resizer/fguUTIzO_kLM5L3HkGtZ96xXRe0=/1200x675/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/EOQAL66HYBDDTI3ZYIA5FZIQHU.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Salmón al Horno con Limón y Eneldo",
+        "description": "Un plato saludable y delicioso de salmón al horno con una jugosa cobertura de limón y eneldo. Fácil de preparar y perfecto para una cena ligera.",
+        "ingredients": [
+            "4 filetes de salmón",
+            "2 limones, en rodajas finas",
+            "2 cucharadas de eneldo fresco picado",
+            "2 cucharadas de aceite de oliva",
+            "Sal",
+            "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 690,
+                "name": "Salmón",
+                "image": "https://nix-tag-images.s3.amazonaws.com/375_thumb.jpg"
+            },
+            {
+                "id": 430,
+                "name": "Limón",
+                "image": "https://nix-tag-images.s3.amazonaws.com/653_thumb.jpg"
+            },
+            {
+                "id": 22,
+                "name": "Eneldo",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "Precalienta el horno a 180°C (350°F).",
+            "Coloca los filetes de salmón en una bandeja para hornear forrada con papel de aluminio.",
+            "Sazona el salmón con sal y pimienta al gusto. Luego, coloca rodajas de limón encima de cada filete y espolvorea con eneldo fresco picado.",
+            "Rocía los filetes de salmón con aceite de oliva.",
+            "Hornea en el horno precalentado durante 15-20 minutos, o hasta que el salmón esté cocido y se desmenuce fácilmente con un tenedor.",
+            "Sirve caliente con más rodajas de limón y eneldo fresco por encima."
+        ],
+        "difficulty": "Fácil",
+        "time": "20 minutos",
+        "image": "https://1.bp.blogspot.com/-a-oI_9ysNI4/YbXLQ-0z5eI/AAAAAAAAEc8/Q2lWqxfaMf4JdtlFoRgHAsXZHJMGJnPIACNcBGAsYHQ/s0/Salm%25C3%25B3n%2Bal%2BHorno%2Bcon%2BSalsa%2Bde%2BLim%25C3%25B3n%252C%2BEneldo%2By%2BMantequilla%2B%2528Vertical%2529%2B2.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Tacos de Carne Asada",
+        "description": "Deliciosos tacos de carne asada con sabrosos trozos de carne marinada y todos los ingredientes clásicos de los tacos. ¡Prepara una fiesta de tacos en casa!",
+        "ingredients": [
+            "500g de carne de res, en tiras delgadas",
+            "1 cucharada de aceite de oliva",
+            "2 dientes de ajo, picados",
+            "1 cucharada de comino molido",
+            "1 cucharadita de chile en polvo",
+            "1 cucharadita de orégano seco",
+            "Sal",
+            "Pimienta",
+            "Para servir:",
+            "Tortillas de maíz",
+            "Cebolla picada",
+            "Cilantro fresco picado",
+            "Salsa de tomate",
+            "Aguacate en rodajas",
+            "Limones en rodajas"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 762,
+                "name": "Ternera",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 844,
+                "name": "Comino",
+                "image": "https://especiaspedroza.es/85-large_default/comino-en-polvo.jpg"
+            },
+            {
+                "id": 194,
+                "name": "Chile De Asado De Tiras",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            },
+            {
+                "id": 845,
+                "name": "Orégano seco",
+                "image": "https://media.granvelada.com/27712/oregano-seco.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 846,
+                "name": "Tortilla De Maíz",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1753_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 222,
+                "name": "Cilantro",
+                "image": "https://nix-tag-images.s3.amazonaws.com/480_thumb.jpg"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Aguacate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/391_thumb.jpg"
+            },
+            {
+                "id": 430,
+                "name": "Limón",
+                "image": "https://nix-tag-images.s3.amazonaws.com/653_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "En un tazón grande, mezcla la carne de res con el aceite de oliva, el ajo picado, el comino molido, el chile en polvo, el orégano seco, la sal y la pimienta. Asegúrate de que la carne esté bien cubierta con la marinada. Deja marinar durante al menos 30 minutos.",
+            "Calienta una sartén grande a fuego medio-alto. Cocina la carne marinada en la sartén caliente durante 3-4 minutos por cada lado, o hasta que esté cocida a tu gusto.",
+            "Calienta las tortillas de maíz en una sartén o en el microondas.",
+            "Arma los tacos colocando la carne asada cocida en las tortillas calientes. Luego, agrega cebolla picada, cilantro fresco picado, salsa de tomate, aguacate en rodajas y una rodaja de limón por encima de cada taco.",
+            "Sirve los tacos de carne asada calientes y disfruta."
+        ],
+        "difficulty": "Fácil",
+        "time": "30 minutos",
+        "image": "https://www.goya.com/media/4124/carne-asada-tacos1.jpg?quality=80"
+    },
+    {
+        "id": 5,
+        "title": "Pizza Casera",
+        "description": "Haz tu propia pizza casera con los ingredientes que más te gusten. La masa es fácil de hacer y puedes personalizarla a tu gusto.",
+        "ingredients": [
+            "Para la masa:",
+            "300g de harina de trigo",
+            "1 cucharadita de levadura seca",
+            "1 cucharadita de azúcar",
+            "1/2 cucharadita de sal",
+            "200ml de agua tibia",
+            "2 cucharadas de aceite de oliva",
+            "Para la salsa de tomate:",
+            "200g de tomate triturado",
+            "1 diente de ajo, picado",
+            "1 cucharadita de orégano seco",
+            "Sal",
+            "Pimienta",
+            "Para los ingredientes:",
+            "Queso mozzarella rallado",
+            "Jamón, champiñones, pimientos, aceitunas, etc.",
+            "Aceite de oliva para pincelar"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 370,
+                "name": "Harina",
+                "image": "https://nix-tag-images.s3.amazonaws.com/206_thumb.jpg"
+            },
+            {
+                "id": 427,
+                "name": "Levadura En Polvo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/395_thumb.jpg"
+            },
+            {
+                "id": 847,
+                "name": "Azúcar",
+                "image": "https://quierocuidarme.dkv.es/sites/default/files/styles/article_teaser_big_630x360/public/2022-02/propiedades-del-azucar.jpg?itok=fNjc_565"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 1,
+                "name": "Agua",
+                "image": "https://nix-tag-images.s3.amazonaws.com/4483_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 845,
+                "name": "Orégano seco",
+                "image": "https://media.granvelada.com/27712/oregano-seco.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 496,
+                "name": "Mozzarella Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1744_thumb.jpg"
+            },
+            {
+                "id": 396,
+                "name": "Jamón",
+                "image": "https://nix-tag-images.s3.amazonaws.com/217_thumb.jpg"
+            },
+            {
+                "id": 181,
+                "name": "Champiñones",
+                "image": "https://nix-tag-images.s3.amazonaws.com/148_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "Prepara la masa mezclando la harina, la levadura seca, el azúcar y la sal en un tazón grande. Agrega el agua tibia y el aceite de oliva. Amasa la masa durante unos 10 minutos hasta que esté suave y elástica. Cubre el tazón con un paño húmedo y deja que la masa repose durante 1 hora o hasta que duplique su tamaño.",
+            "Mientras tanto, prepara la salsa de tomate mezclando el tomate triturado, el ajo picado, el orégano seco, la sal y la pimienta en un tazón pequeño.",
+            "Precalienta el horno a 220°C (425°F).",
+            "Divide la masa en porciones y estira cada porción en un círculo del tamaño deseado. Coloca las bases de pizza en una bandeja para hornear.",
+            "Extiende la salsa de tomate sobre las bases de pizza y agrega el queso mozzarella rallado y los ingredientes de tu elección.",
+            "Pincela los bordes de la pizza con aceite de oliva.",
+            "Hornea las pizzas en el horno precalentado durante 12-15 minutos o hasta que la masa esté dorada y el queso esté burbujeante.",
+            "Saca las pizzas del horno, córtalas en porciones y sirve caliente."
+        ],
+        "difficulty": "Moderada",
+        "time": "90 minutos",
+        "image": "https://eci.contebio.com/material/contents/29173/1680254323_pizza-casera.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Enchiladas de Pollo",
+        "description": "Disfruta de enchiladas rellenas de pollo, cubiertas con salsa roja y queso derretido. Esta receta es fácil de hacer y llena de sabor.",
+        "ingredients": [
+            "2 pechugas de pollo cocidas y desmenuzadas",
+            "1 cebolla picada",
+            "2 dientes de ajo picados",
+            "1 lata de chiles verdes picados",
+            "1 lata de salsa de enchilada roja",
+            "1 taza de queso cheddar rallado",
+            "8 tortillas de maíz",
+            "Aceite de cocina",
+            "Sal",
+            "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 598,
+                "name": "Pollo"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 194,
+                "name": "Chile De Asado De Tiras",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            },
+            {
+                "id": 622,
+                "name": "Queso Cheddar Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/5311_thumb.jpg"
+            },
+            {
+                "id": 846,
+                "name": "Tortilla De Maíz",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1753_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "En una sartén grande, calienta un poco de aceite de cocina a fuego medio. Agrega la cebolla y el ajo picados y cocina hasta que estén dorados y fragantes.",
+            "Añade los chiles verdes picados y la salsa de enchilada roja a la sartén. Cocina durante unos minutos hasta que la mezcla esté bien caliente.",
+            "Agrega las pechugas de pollo desmenuzadas a la mezcla de salsa y revuelve para cubrir el pollo con la salsa. Cocina por unos minutos hasta que todo esté bien mezclado y caliente. Sazona con sal y pimienta al gusto.",
+            "Precalienta el horno a 180°C (350°F).",
+            "Rellena cada tortilla con la mezcla de pollo y enrolla las tortillas.",
+            "Coloca las enchiladas enrolladas en una fuente para horno.",
+            "Espolvorea el queso cheddar rallado por encima de las enchiladas.",
+            "Hornea en el horno precalentado durante 15-20 minutos, o hasta que el queso esté derretido y burbujeante.",
+            "Sirve las enchiladas de pollo calientes y disfruta."
+        ],
+        "difficulty": "Fácil",
+        "time": "30 minutos",
+        "image": "https://www.divinacocina.es/wp-content/uploads/2023/02/enchiladas-de-pollo-c3.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Risotto de Champiñones",
+        "description": "Un delicioso risotto de champiñones con arroz cremoso y un sabor a hongos reconfortante. Perfecto como plato principal o acompañamiento.",
+        "ingredients": [
+            "300g de arroz Arborio",
+            "200g de champiñones, en rodajas",
+            "1 cucharada de mantequilla",
+            "1 cucharada de aceite de oliva",
+            "1 cebolla, picada",
+            "2 dientes de ajo, picados",
+            "1 taza de vino blanco seco",
+            "1,5 litros de caldo de pollo caliente",
+            "1 taza de queso parmesano rallado",
+            "Sal",
+            "Pimienta",
+            "Perejil fresco picado para decorar"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 55,
+                "name": "Arroz",
+                "image": "https://nix-tag-images.s3.amazonaws.com/784_thumb.jpg"
+            },
+            {
+                "id": 181,
+                "name": "Champiñones",
+                "image": "https://nix-tag-images.s3.amazonaws.com/148_thumb.jpg"
+            },
+            {
+                "id": 445,
+                "name": "Mantequilla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/328_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 803,
+                "name": "Vino Blanco",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1745_thumb.jpg"
+            },
+            {
+                "id": 113,
+                "name": "Caldo De Pollo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/3336_thumb.jpg"
+            },
+            {
+                "id": 549,
+                "name": "Parmesano Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/594_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 568,
+                "name": "Perejil",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1931_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "En una sartén grande, derrite la mantequilla y el aceite de oliva a fuego medio. Agrega la cebolla picada y el ajo picado, y saltea hasta que estén dorados y fragantes.",
+            "Añade los champiñones en rodajas a la sartén y cocina hasta que estén dorados y tiernos.",
+            "Agrega el arroz Arborio a la sartén y revuelve para que se mezcle con los ingredientes.",
+            "Vierte el vino blanco seco en la sartén y revuelve hasta que se absorba.",
+            "Comienza a agregar el caldo de pollo caliente, una cucharada a la vez, revolviendo constantemente y esperando a que se absorba antes de agregar más. Continúa este proceso hasta que el arroz esté cocido y cremoso, esto tomará unos 20-25 minutos.",
+            "Retira la sartén del fuego y mezcla el queso parmesano rallado. Sazona con sal y pimienta al gusto.",
+            "Sirve el risotto de champiñones caliente, espolvoreado con perejil fresco picado por encima."
+        ],
+        "difficulty": "Moderada",
+        "time": "45 minutos",
+        "image": "https://www.hogarmania.com/archivos/201702/5926-1-risotto-de-champinones-1312-xl-1280x720x80xX.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Hamburguesa Clásica",
+        "description": "Prepara una deliciosa hamburguesa casera con tus ingredientes favoritos. Esta hamburguesa clásica es perfecta para una comida reconfortante.",
+        "ingredients": [
+            "500g de carne molida de res",
+            "1 cebolla, picada",
+            "2 dientes de ajo, picados",
+            "1 huevo",
+            "1/2 taza de pan rallado",
+            "1 cucharadita de mostaza",
+            "1 cucharadita de salsa de tomate",
+            "Sal",
+            "Pimienta",
+            "Para servir:",
+            "Pan de hamburguesa",
+            "Lechuga, tomate, cebolla, queso, ketchup, mayonesa, etc."
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 141,
+                "name": "Carne Molida",
+                "image": "https://nix-tag-images.s3.amazonaws.com/47_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 389,
+                "name": "Huevos",
+                "image": "https://nix-tag-images.s3.amazonaws.com/775_thumb.jpg"
+            },
+            {
+                "id": 525,
+                "name": "Pan"
+            },
+            {
+                "id": 489,
+                "name": "Mostaza",
+                "image": "https://nix-tag-images.s3.amazonaws.com/289_thumb.jpg"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 425,
+                "name": "Lechuga",
+                "image": "https://nix-tag-images.s3.amazonaws.com/657_thumb.jpg"
+            },
+            {
+                "id": 779,
+                "name": "Tomates",
+                "image": "https://nix-tag-images.s3.amazonaws.com/191_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "En un tazón grande, mezcla la carne molida de res con la cebolla picada, el ajo picado, el huevo, el pan rallado, la mostaza, la salsa de tomate, la sal y la pimienta. Asegúrate de que todos los ingredientes estén bien combinados.",
+            "Divide la mezcla en porciones y forma hamburguesas del tamaño deseado.",
+            "Calienta una parrilla o sartén a fuego medio-alto. Cocina las hamburguesas a la parrilla durante 4-5 minutos por cada lado, o hasta que estén cocidas a tu gusto.",
+            "Tuesta ligeramente los panes de hamburguesa en la parrilla o en una sartén.",
+            "Arma las hamburguesas colocando las hamburguesas cocidas en los panes y agregando tus ingredientes favoritos, como lechuga, tomate, cebolla, queso, ketchup, mayonesa, etc.",
+            "Sirve las hamburguesas calientes y disfruta."
+        ],
+        "difficulty": "Fácil",
+        "time": "30 minutos",
+        "image": "https://canalcocina.es/medias/images/1402LaCocinaDeNicolaHamburguesaClasicaTrucoFrances.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Sopa de Tomate",
+        "description": "Una reconfortante sopa de tomate casera con un sabor fresco y delicioso. Perfecta como entrante o acompañamiento.",
+        "ingredients": [
+            "1 kg de tomates maduros, pelados y picados",
+            "1 cebolla, picada",
+            "2 dientes de ajo, picados",
+            "2 cucharadas de aceite de oliva",
+            "1 litro de caldo de pollo o vegetal",
+            "1 cucharadita de azúcar",
+            "Sal",
+            "Pimienta",
+            "Para servir:",
+            "Crema fresca",
+            "Albahaca fresca picada",
+            "Crutones de pan"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 779,
+                "name": "Tomates",
+                "image": "https://nix-tag-images.s3.amazonaws.com/191_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 113,
+                "name": "Caldo De Pollo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/3336_thumb.jpg"
+            },
+            {
+                "id": 847,
+                "name": "Azúcar",
+                "image": "https://quierocuidarme.dkv.es/sites/default/files/styles/article_teaser_big_630x360/public/2022-02/propiedades-del-azucar.jpg?itok=fNjc_565"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 5,
+                "name": "Albahaca",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1885_thumb.jpg"
+            },
+            {
+                "id": 525,
+                "name": "Pan"
+            }
+        ],
+        "steps": [
+            "En una cacerola grande, calienta el aceite de oliva a fuego medio. Agrega la cebolla picada y el ajo picado, y saltea hasta que estén dorados y fragantes.",
+            "Añade los tomates picados a la cacerola y cocina durante unos minutos hasta que los tomates se ablanden.",
+            "Vierte el caldo de pollo o vegetal en la cacerola y lleva la mezcla a ebullición. Luego, reduce el fuego y cocina a fuego lento durante unos 15-20 minutos.",
+            "Usa una licuadora de mano o una licuadora de pie para mezclar la sopa hasta que quede suave y sin grumos.",
+            "Vuelve a poner la sopa en la cacerola y caliéntala a fuego lento. Añade azúcar, sal y pimienta al gusto.",
+            "Sirve la sopa de tomate caliente, con una cucharada de crema fresca, albahaca fresca picada y crutones de pan por encima."
+        ],
+        "difficulty": "Fácil",
+        "time": "45 minutos",
+        "image": "https://eci.contebio.com/material/aptc/images/aptc/2187222/sopa-de-tomate-con-queso-feta-y-berberechos_0.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Pollo a la Parrilla con Limón y Hierbas",
+        "description": "Pollo a la parrilla jugoso y lleno de sabor, marinado con limón y hierbas frescas. Una comida deliciosa para los amantes del pollo.",
+        "ingredients": [
+            "4 pechugas de pollo",
+            "2 limones, el jugo y la ralladura",
+            "2 cucharadas de aceite de oliva",
+            "2 dientes de ajo, picados",
+            "1 cucharada de hierbas frescas picadas (romero, tomillo, orégano)",
+            "Sal",
+            "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 599,
+                "name": "Pollo Desmenuzado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/3519_thumb.jpg"
+            },
+            {
+                "id": 430,
+                "name": "Limón",
+                "image": "https://nix-tag-images.s3.amazonaws.com/653_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 845,
+                "name": "Orégano seco",
+                "image": "https://media.granvelada.com/27712/oregano-seco.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "En un tazón grande, mezcla el jugo y la ralladura de limón, el aceite de oliva, el ajo picado, las hierbas frescas picadas, la sal y la pimienta.",
+            "Añade las pechugas de pollo al tazón y asegúrate de que estén bien cubiertas con la marinada. Deja marinar en el refrigerador durante al menos 30 minutos.",
+            "Precalienta la parrilla a fuego medio-alto.",
+            "Retira las pechugas de pollo de la marinada y colócalas en la parrilla caliente. Cocina durante 6-8 minutos por cada lado, o hasta que estén cocidas y doradas.",
+            "Sirve el pollo a la parrilla caliente, con rodajas de limón por encima."
+        ],
+        "difficulty": "Fácil",
+        "time": "40 minutos",
+        "image": "https://assets.kraftfoods.com/recipe_images/opendeploy/179775_640x428.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Tarta de Manzana",
+        "description": "Una deliciosa tarta de manzana casera con una base de masa quebrada y un relleno de manzanas dulces y canela. Perfecta para el postre o la merienda.",
+        "ingredients": [
+            "Para la masa quebrada:",
+            "200g de harina de trigo",
+            "100g de mantequilla fría, en cubos",
+            "1 cucharada de azúcar",
+            "1 pizca de sal",
+            "2-3 cucharadas de agua fría",
+            "Para el relleno:",
+            "4 manzanas, peladas, desinfectadas y en rodajas finas",
+            "1/2 taza de azúcar",
+            "1 cucharadita de canela en polvo",
+            "2 cucharadas de mermelada de albaricoque",
+            "Para decorar:",
+            "Azúcar glas",
+            "Crema batida (opcional)"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 370,
+                "name": "Harina",
+                "image": "https://nix-tag-images.s3.amazonaws.com/206_thumb.jpg"
+            },
+            {
+                "id": 445,
+                "name": "Mantequilla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/328_thumb.jpg"
+            },
+            {
+                "id": 847,
+                "name": "Azúcar",
+                "image": "https://quierocuidarme.dkv.es/sites/default/files/styles/article_teaser_big_630x360/public/2022-02/propiedades-del-azucar.jpg?itok=fNjc_565"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 1,
+                "name": "Agua",
+                "image": "https://nix-tag-images.s3.amazonaws.com/4483_thumb.jpg"
+            },
+            {
+                "id": 447,
+                "name": "Manzana",
+                "image": "https://nix-tag-images.s3.amazonaws.com/384_thumb.jpg"
+            },
+            {
+                "id": 121,
+                "name": "Canela",
+                "image": "https://nix-tag-images.s3.amazonaws.com/481_thumb.jpg"
+            },
+            {
+                "id": 465,
+                "name": "Mermelada De Albaricoque",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            }
+        ],
+        "steps": [
+            "Para la masa quebrada, coloca la harina, la mantequilla, el azúcar y la sal en un procesador de alimentos. Pulsa hasta que la mezcla se parezca a migajas. Luego, agrega el agua fría, una cucharada a la vez, hasta que la masa se una en una bola.",
+            "Envuelve la masa en film transparente y refrigérala durante 30 minutos.",
+            "Precalienta el horno a 180°C (350°F).",
+            "Estira la masa quebrada en un círculo grande y forra un molde para tarta. Pincha el fondo de la masa con un tenedor y hornea durante 15 minutos hasta que esté dorada.",
+            "Mientras tanto, prepara el relleno mezclando las rodajas de manzana, el azúcar y la canela en un tazón grande.",
+            "Una vez que la masa esté lista, sácala del horno y déjala enfriar un poco. Luego, extiende la mermelada de albaricoque sobre la base de la tarta.",
+            "Coloca las rodajas de manzana en la base de la tarta, superponiéndolas ligeramente.",
+            "Hornea la tarta durante 30-35 minutos, o hasta que las manzanas estén tiernas y la tarta esté dorada.",
+            "Deja enfriar la tarta de manzana antes de espolvorearla con azúcar glas y servirla con crema batida si lo deseas."
+        ],
+        "difficulty": "Moderada",
+        "time": "90 minutos",
+        "image": "https://imag.bonviveur.com/tarta-de-manzana.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Sándwich BLT",
+        "description": "Un clásico sándwich BLT (bacon, lechuga y tomate) con tocineta crujiente, lechuga fresca y tomates maduros. Perfecto para un almuerzo rápido y delicioso.",
+        "ingredients": [
+            "4 rebanadas de pan tostado",
+            "8 lonchas de tocineta, cocidas y crujientes",
+            "4 hojas de lechuga",
+            "4 rodajas de tomate maduro",
+            "Mayonesa al gusto",
+            "Sal",
+            "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 525,
+                "name": "Pan"
+            },
+            {
+                "id": 542,
+                "name": "Panceta",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            },
+            {
+                "id": 425,
+                "name": "Lechuga",
+                "image": "https://nix-tag-images.s3.amazonaws.com/657_thumb.jpg"
+            },
+            {
+                "id": 452,
+                "name": "Mayonesa",
+                "image": "https://nix-tag-images.s3.amazonaws.com/56_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "Tuesta las rebanadas de pan hasta que estén doradas y crujientes.",
+            "Unta mayonesa en una de las caras de cada rebanada de pan.",
+            "Coloca las hojas de lechuga sobre dos de las rebanadas de pan.",
+            "Agrega las rodajas de tomate sobre las hojas de lechuga y sazona con sal y pimienta al gusto.",
+            "Coloca las lonchas de tocineta crujiente sobre el tomate.",
+            "Cubre cada sándwich con las rebanadas de pan tostado restantes, con el lado untado de mayonesa hacia abajo.",
+            "Corta los sándwiches por la mitad diagonalmente y sírvelos."
+        ],
+        "difficulty": "Fácil",
+        "time": "15 minutos",
+        "image": "https://www.divinacocina.es/wp-content/uploads/sandwich-blt.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Tacos de Pescado",
+        "description": "Tacos de pescado crujientes y llenos de sabor, con una salsa de yogur y cilantro fresco. Una deliciosa opción de tacos para los amantes del pescado.",
+        "ingredients": [
+            "400g de filetes de pescado blanco (como el bacalao o la tilapia)",
+            "1 taza de harina de trigo",
+            "2 huevos, batidos",
+            "1 taza de pan rallado",
+            "1 cucharadita de paprika",
+            "Sal",
+            "Pimienta",
+            "8 tortillas de maíz",
+            "Para la salsa de yogur:",
+            "1 taza de yogur natural",
+            "1 manojo de cilantro fresco, picado",
+            "1 diente de ajo, picado",
+            "Jugo de 1 limón",
+            "Sal",
+            "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 464,
+                "name": "Merluza",
+                "image": "https://nix-tag-images.s3.amazonaws.com/2119_thumb.jpg"
+            },
+            {
+                "id": 370,
+                "name": "Harina",
+                "image": "https://nix-tag-images.s3.amazonaws.com/206_thumb.jpg"
+            },
+            {
+                "id": 389,
+                "name": "Huevos",
+                "image": "https://nix-tag-images.s3.amazonaws.com/775_thumb.jpg"
+            },
+            {
+                "id": 525,
+                "name": "Pan"
+            },
+            {
+                "id": 548,
+                "name": "Paprika",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1978_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 846,
+                "name": "Tortilla De Maíz",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1753_thumb.jpg"
+            },
+            {
+                "id": 813,
+                "name": "Yogur",
+                "image": "https://nix-tag-images.s3.amazonaws.com/186_thumb.jpg"
+            },
+            {
+                "id": 222,
+                "name": "Cilantro",
+                "image": "https://nix-tag-images.s3.amazonaws.com/480_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 430,
+                "name": "Limón",
+                "image": "https://nix-tag-images.s3.amazonaws.com/653_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "Corta los filetes de pescado en tiras del tamaño deseado.",
+            "En un tazón, mezcla la harina de trigo, la paprika, la sal y la pimienta.",
+            "Pasa las tiras de pescado por la harina de trigo, luego por los huevos batidos y finalmente por el pan rallado, asegurándote de que estén bien cubiertas.",
+            "Calienta aceite en una sartén grande a fuego medio-alto. Fría las tiras de pescado hasta que estén doradas y crujientes, aproximadamente 2-3 minutos por cada lado. Escúrrelas sobre papel absorbente.",
+            "Para hacer la salsa de yogur, mezcla el yogur natural, el cilantro picado, el ajo picado, el jugo de limón, la sal y la pimienta en un tazón.",
+            "Calienta las tortillas de maíz en una sartén o en el microondas.",
+            "Arma los tacos colocando las tiras de pescado fritas en las tortillas calientes y agregando la salsa de yogur por encima.",
+            "Sirve los tacos de pescado calientes y disfruta."
+        ],
+        "difficulty": "Moderada",
+        "time": "30 minutos",
+        "image": "https://images.cookforyourlife.org/wp-content/uploads/2018/08/Lemon-Lime-Fish-Tacos.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Pasta Carbonara",
+        "description": "Una clásica pasta carbonara con una cremosa salsa de huevo, queso parmesano y panceta crujiente. Un plato italiano delicioso y reconfortante.",
+        "ingredients": [
+            "300g de pasta (como espaguetis o fettuccine)",
+            "150g de panceta o tocino, cortada en trozos pequeños",
+            "2 huevos",
+            "150g de queso parmesano rallado",
+            "2 dientes de ajo, picados",
+            "Sal",
+            "Pimienta",
+            "Perejil fresco picado para decorar"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 551,
+                "name": "Pasta",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1012_thumb.jpg"
+            },
+            {
+                "id": 542,
+                "name": "Panceta",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            },
+            {
+                "id": 389,
+                "name": "Huevos",
+                "image": "https://nix-tag-images.s3.amazonaws.com/775_thumb.jpg"
+            },
+            {
+                "id": 549,
+                "name": "Parmesano Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/594_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 568,
+                "name": "Perejil",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1931_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "Cocina la pasta en una olla grande de agua con sal según las instrucciones del paquete hasta que esté al dente. Luego, escúrrela y reserva un poco del agua de cocción.",
+            "Mientras tanto, en una sartén grande, cocina la panceta o tocino a fuego medio-alto hasta que esté crujiente. Retira el exceso de grasa si es necesario.",
+            "En un tazón, bate los huevos y mezcla con el queso parmesano rallado. Agrega el ajo picado y sazona con sal y pimienta al gusto.",
+            "Añade la pasta caliente a la sartén con la panceta crujiente y mezcla bien.",
+            "Retira la sartén del fuego y vierte la mezcla de huevo y queso sobre la pasta caliente, revolviendo rápidamente para que la salsa se adhiera a la pasta. Agrega un poco de agua de cocción reservada si es necesario para obtener una consistencia cremosa.",
+            "Sirve la pasta carbonara caliente, espolvoreada con perejil fresco picado por encima."
+        ],
+        "difficulty": "Fácil",
+        "time": "20 minutos",
+        "image": "https://i.blogs.es/8819e1/carbonara-rec/650_1200.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Tacos Veganos",
+        "description": "Tacos veganos llenos de sabor con carne de nueces, aguacate, salsa de cilantro y cebolla morada encurtida. Una opción deliciosa y sin carne.",
+        "ingredients": [
+            "1 taza de nueces",
+            "1 cucharada de aceite de oliva",
+            "1 cucharada de salsa de soja",
+            "1 cucharadita de comino en polvo",
+            "1 cucharadita de chile en polvo",
+            "1/2 cucharadita de ajo en polvo",
+            "1/2 cucharadita de cebolla en polvo",
+            "8 tortillas de maíz",
+            "2 aguacates, en rodajas",
+            "Para la salsa de cilantro:",
+            "1 manojo de cilantro fresco",
+            "1 diente de ajo",
+            "Jugo de 1 limón",
+            "Sal",
+            "Pimienta",
+            "Para la cebolla morada encurtida:",
+            "1 cebolla morada, en rodajas finas",
+            "Vinagre de manzana",
+            "Sal y azúcar al gusto"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 507,
+                "name": "Nueces",
+                "image": "https://nix-tag-images.s3.amazonaws.com/301_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 713,
+                "name": "Salsa De Soja Oscura",
+                "image": "https://nix-tag-images.s3.amazonaws.com/9306_thumb.jpg"
+            },
+            {
+                "id": 844,
+                "name": "Comino",
+                "image": "https://especiaspedroza.es/85-large_default/comino-en-polvo.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 846,
+                "name": "Tortilla De Maíz",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1753_thumb.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Aguacate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/391_thumb.jpg"
+            },
+            {
+                "id": 222,
+                "name": "Cilantro",
+                "image": "https://nix-tag-images.s3.amazonaws.com/480_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 430,
+                "name": "Limón",
+                "image": "https://nix-tag-images.s3.amazonaws.com/653_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 795,
+                "name": "Vinagre",
+                "image": "https://nix-tag-images.s3.amazonaws.com/867_thumb.jpg"
+            },
+            {
+                "id": 847,
+                "name": "Azúcar",
+                "image": "https://quierocuidarme.dkv.es/sites/default/files/styles/article_teaser_big_630x360/public/2022-02/propiedades-del-azucar.jpg?itok=fNjc_565"
+            }
+        ],
+        "steps": [
+            "En un procesador de alimentos, mezcla las nueces, el aceite de oliva, la salsa de soja, el comino en polvo, el chile en polvo, el ajo en polvo y la cebolla en polvo hasta que todo esté bien combinado y las nueces tengan una textura similar a la carne molida.",
+            "En una sartén grande, calienta la mezcla de nueces a fuego medio-alto y cocina durante unos minutos hasta que estén calientes y fragantes.",
+            "Para hacer la salsa de cilantro, mezcla el cilantro fresco, el ajo, el jugo de limón, la sal y la pimienta en una licuadora hasta obtener una salsa suave.",
+            "Para la cebolla morada encurtida, coloca las rodajas de cebolla en un tazón y cúbrelas con vinagre de manzana. Agrega sal y azúcar al gusto. Deja reposar durante al menos 30 minutos.",
+            "Calienta las tortillas de maíz en una sartén o en el microondas.",
+            "Arma los tacos colocando la carne de nueces cocida en las tortillas calientes y agregando rodajas de aguacate, salsa de cilantro y cebolla morada encurtida por encima.",
+            "Sirve los tacos veganos calientes y disfruta."
+        ],
+        "difficulty": "Moderada",
+        "time": "30 minutos",
+        "image": "https://veggiefestchicago.org/wp-content/uploads/2022/02/Classic-Tacos-B-Wb-1.jpg"
+    },
+    {
+        "id": 16,
+        "title": "Pizza Margarita",
+        "description": "La clásica pizza Margarita con una base de masa de pizza crujiente, salsa de tomate, mozzarella y albahaca fresca. Una delicia italiana simple pero deliciosa.",
+        "ingredients": [
+            "Para la masa de pizza:",
+            "300g de harina de trigo",
+            "1 cucharadita de levadura seca",
+            "1 cucharadita de azúcar",
+            "1 cucharadita de sal",
+            "200ml de agua tibia",
+            "Para la cobertura:",
+            "150ml de salsa de tomate",
+            "200g de mozzarella, rallada o en rodajas",
+            "Unas hojas de albahaca fresca",
+            "Aceite de oliva",
+            "Sal",
+            "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 370,
+                "name": "Harina",
+                "image": "https://nix-tag-images.s3.amazonaws.com/206_thumb.jpg"
+            },
+            {
+                "id": 427,
+                "name": "Levadura En Polvo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/395_thumb.jpg"
+            },
+            {
+                "id": 847,
+                "name": "Azúcar",
+                "image": "https://quierocuidarme.dkv.es/sites/default/files/styles/article_teaser_big_630x360/public/2022-02/propiedades-del-azucar.jpg?itok=fNjc_565"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 1,
+                "name": "Agua",
+                "image": "https://nix-tag-images.s3.amazonaws.com/4483_thumb.jpg"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 496,
+                "name": "Mozzarella Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1744_thumb.jpg"
+            },
+            {
+                "id": 5,
+                "name": "Albahaca",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1885_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "Para hacer la masa de pizza, mezcla la levadura seca, el azúcar y el agua tibia en un tazón y deja reposar durante unos minutos hasta que la mezcla comience a burbujear.",
+            "En otro tazón, mezcla la harina de trigo y la sal. Luego, vierte la mezcla de levadura sobre la harina y mezcla hasta obtener una masa suave.",
+            "Amasa la masa en una superficie enharinada durante unos 5-7 minutos, o hasta que esté elástica y suave. Luego, forma una bola con la masa y colócala en un tazón ligeramente enharinado. Cubre el tazón con un paño húmedo y deja que la masa repose y duplique su tamaño, aproximadamente 1 hora.",
+            "Precalienta el horno a la temperatura más alta posible.",
+            "Estira la masa en una superficie enharinada para que tenga el tamaño y grosor deseados para tu pizza.",
+            "Transfiere la masa estirada a una bandeja para horno enharinada o a una piedra para pizza.",
+            "Extiende la salsa de tomate sobre la masa y agrega la mozzarella rallada o en rodajas.",
+            "Hornea la pizza en el horno precalentado durante 10-15 minutos, o hasta que la masa esté dorada y la mozzarella esté burbujeante y dorada.",
+            "Retira la pizza del horno y agrega las hojas de albahaca fresca. Rocía con un poco de aceite de oliva y sazona con sal y pimienta al gusto.",
+            "Sirve la pizza Margarita caliente y disfruta."
+        ],
+        "difficulty": "Moderada",
+        "time": "90 minutos",
+        "image": "https://images.hola.com/imagenes/cocina/recetas/20200120158501/pizza-margarita-casera/0-770-811/pizza-margarita-m.jpg"
+    },
+    {
+        "id": 17,
+        "title": "Ratatouille",
+        "description": "Una receta clásica de Ratatouille, un guiso francés lleno de vegetales asados en una rica salsa de tomate. Perfecto como plato principal o acompañamiento.",
+        "ingredients": [
+            "1 berenjena, cortada en rodajas finas",
+            "1 calabacín, cortado en rodajas finas",
+            "1 pimiento rojo, cortado en tiras",
+            "1 pimiento amarillo, cortado en tiras",
+            "1 cebolla, cortada en tiras",
+            "2 dientes de ajo, picados",
+            "1 lata de tomates triturados (400g)",
+            "1 cucharadita de tomillo seco",
+            "1 cucharadita de albahaca seca",
+            "Aceite de oliva",
+            "Sal",
+            "Pimienta",
+            "Perejil fresco picado para decorar"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 848,
+                "name": "Berenjena",
+                "image": "https://nix-tag-images.s3.amazonaws.com/540_thumb.jpg"
+            },
+            {
+                "id": 98,
+                "name": "Calabacín",
+                "image": "https://nix-tag-images.s3.amazonaws.com/884_thumb.jpg"
+            },
+            {
+                "id": 578,
+                "name": "Pimienta De Jamaica",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1945_thumb.jpg"
+            },
+            {
+                "id": 580,
+                "name": "Pimiento",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 5,
+                "name": "Albahaca",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1885_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 568,
+                "name": "Perejil",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1931_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "Precalienta el horno a 200°C (390°F).",
+            "En una bandeja para horno grande, coloca las rodajas de berenjena, calabacín, tiras de pimiento rojo, tiras de pimiento amarillo y tiras de cebolla.",
+            "En un tazón, mezcla los tomates triturados, el ajo picado, el tomillo seco y la albahaca seca. Vierte esta mezcla sobre las verduras en la bandeja para horno.",
+            "Rocía un poco de aceite de oliva sobre las verduras y sazona con sal y pimienta al gusto.",
+            "Hornea en el horno precalentado durante 45-50 minutos, o hasta que las verduras estén tiernas y ligeramente doradas.",
+            "Sirve el Ratatouille caliente, espolvoreado con perejil fresco picado por encima."
+        ],
+        "difficulty": "Fácil",
+        "time": "60 minutos",
+        "image": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/9cffafab1d5436c0695bd417c6200a19/Derivates/400b7cd10996dc118063ff8c2028e2627e28bd36.jpg"
+    },
+    {
+        "id": 18,
+        "title": "Tarta de Chocolate",
+        "description": "Una indulgente tarta de chocolate con una base de galleta, un relleno de chocolate suave y una cobertura de ganache de chocolate. Perfecta para los amantes del chocolate.",
+        "ingredients": [
+            "Para la base:",
+            "200g de galletas digestivas",
+            "100g de mantequilla derretida",
+            "Para el relleno:",
+            "200g de chocolate negro, picado",
+            "300ml de nata para montar",
+            "2 cucharadas de azúcar",
+            "Para la ganache:",
+            "100g de chocolate negro, picado",
+            "100ml de nata para montar",
+            "1 cucharada de mantequilla"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 340,
+                "name": "Galleta",
+                "image": "https://nix-tag-images.s3.amazonaws.com/57_thumb.jpg"
+            },
+            {
+                "id": 445,
+                "name": "Mantequilla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/328_thumb.jpg"
+            },
+            {
+                "id": 210,
+                "name": "Chocolate Negro",
+                "image": "https://nix-tag-images.s3.amazonaws.com/269_thumb.jpg"
+            },
+            {
+                "id": 504,
+                "name": "Nata Montada",
+                "image": "https://nix-tag-images.s3.amazonaws.com/9319_thumb.jpg"
+            },
+            {
+                "id": 847,
+                "name": "Azúcar",
+                "image": "https://quierocuidarme.dkv.es/sites/default/files/styles/article_teaser_big_630x360/public/2022-02/propiedades-del-azucar.jpg?itok=fNjc_565"
+            }
+        ],
+        "steps": [
+            "Para hacer la base de galleta, tritura las galletas digestivas en un procesador de alimentos hasta que se conviertan en migajas finas. Luego, mezcla las migajas de galleta con la mantequilla derretida.",
+            "Presiona la mezcla de galleta en el fondo de un molde para tarta desmontable y refrigérala mientras preparas el relleno.",
+            "Para hacer el relleno de chocolate, calienta la nata para montar en una cacerola hasta que comience a hervir. Luego, retira la cacerola del fuego y agrega el chocolate picado y el azúcar. Revuelve hasta que el chocolate se derrita y la mezcla esté suave.",
+            "Vierte la mezcla de chocolate sobre la base de galleta en el molde para tarta. Refrigera durante al menos 2 horas, o hasta que el relleno esté firme.",
+            "Para hacer la ganache de chocolate, calienta la nata para montar en una cacerola hasta que comience a hervir. Luego, retira la cacerola del fuego y agrega el chocolate picado y la mantequilla. Revuelve hasta que el chocolate se derrita y la mezcla esté suave.",
+            "Vierte la ganache de chocolate sobre la tarta de chocolate y refrigera durante al menos 1 hora, o hasta que la ganache esté firme.",
+            "Desmolda la tarta de chocolate y sírvela fría. Disfruta de esta deliciosa indulgencia."
+        ],
+        "difficulty": "Moderada",
+        "time": "3 horas",
+        "image": "https://e00-xlk-cooking-elmundo.uecdn.es/files/gallery_image_mobile_cover/uploads/2023/03/01/63fe893b130ca.jpeg"
+    },
+    {
+        "id": 19,
+        "title": "Ensalada de Quinua",
+        "description": "Una ensalada saludable y deliciosa de quinua con aguacate, tomate, pepino y aderezo de limón y cilantro. Perfecta como plato principal o acompañamiento.",
+        "ingredients": [
+            "1 taza de quinua",
+            "2 tazas de agua",
+            "1 aguacate, en cubos",
+            "1 tomate, en cubos",
+            "1 pepino, en cubos",
+            "1/2 cebolla roja, picada",
+            "Para el aderezo de limón y cilantro:",
+            "Jugo de 2 limones",
+            "1/4 de taza de cilantro fresco picado",
+            "2 cucharadas de aceite de oliva",
+            "Sal",
+            "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 655,
+                "name": "Quinoa",
+                "image": "https://nix-tag-images.s3.amazonaws.com/762_thumb.jpg"
+            },
+            {
+                "id": 1,
+                "name": "Agua",
+                "image": "https://nix-tag-images.s3.amazonaws.com/4483_thumb.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Aguacate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/391_thumb.jpg"
+            },
+            {
+                "id": 770,
+                "name": "Tomate Cherry",
+                "image": "https://nix-tag-images.s3.amazonaws.com/4275_thumb.jpg"
+            },
+            {
+                "id": 565,
+                "name": "Pepino",
+                "image": "https://nix-tag-images.s3.amazonaws.com/522_thumb.jpg"
+            },
+            {
+                "id": 155,
+                "name": "Cebolla Roja",
+                "image": "https://nix-tag-images.s3.amazonaws.com/8573_thumb.jpg"
+            },
+            {
+                "id": 430,
+                "name": "Limón",
+                "image": "https://nix-tag-images.s3.amazonaws.com/653_thumb.jpg"
+            },
+            {
+                "id": 222,
+                "name": "Cilantro",
+                "image": "https://nix-tag-images.s3.amazonaws.com/480_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "Enjuaga la quinua bajo agua fría en un colador fino.",
+            "En una olla, lleva a ebullición 2 tazas de agua. Agrega la quinua enjuagada y reduce el fuego a bajo. Cubre y cocina durante 15-20 minutos, o hasta que la quinua esté tierna y el líquido se haya absorbido por completo. Retira del fuego y deja reposar durante 5 minutos antes de destapar con un tenedor.",
+            "Mientras tanto, prepara el aderezo de limón y cilantro mezclando el jugo de limón, el cilantro picado, el aceite de oliva, la sal y la pimienta en un tazón pequeño.",
+            "En un tazón grande, combina la quinua cocida, el aguacate en cubos, el tomate en cubos, el pepino en cubos y la cebolla roja picada.",
+            "Vierte el aderezo de limón y cilantro sobre la ensalada de quinua y mezcla bien para asegurarte de que todos los ingredientes estén cubiertos con el aderezo.",
+            "Sirve la ensalada de quinua fría como plato principal o acompañamiento. Disfruta de esta deliciosa y saludable opción."
+        ],
+        "difficulty": "Fácil",
+        "time": "30 minutos",
+        "image": "https://www.goya.com/media/4003/quinoa-salad.jpg?quality=80"
+    },
+    {
+        "id": 20,
+        "title": "Sushi de Salmón",
+        "description": "Sushi de salmón fresco y sabroso, hecho en casa. Aprende a preparar este delicioso sushi con salmón, arroz y otros ingredientes.",
+        "ingredients": [
+            "200g de salmón fresco, cortado en tiras",
+            "1 taza de arroz para sushi",
+            "2 tazas de agua",
+            "2 cucharadas de vinagre de arroz",
+            "1 cucharada de azúcar",
+            "1 cucharadita de sal",
+            "Alga nori",
+            "Wasabi y salsa de soja para acompañar"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 690,
+                "name": "Salmón",
+                "image": "https://nix-tag-images.s3.amazonaws.com/375_thumb.jpg"
+            },
+            {
+                "id": 55,
+                "name": "Arroz",
+                "image": "https://nix-tag-images.s3.amazonaws.com/784_thumb.jpg"
+            },
+            {
+                "id": 1,
+                "name": "Agua",
+                "image": "https://nix-tag-images.s3.amazonaws.com/4483_thumb.jpg"
+            },
+            {
+                "id": 795,
+                "name": "Vinagre",
+                "image": "https://nix-tag-images.s3.amazonaws.com/867_thumb.jpg"
+            },
+            {
+                "id": 847,
+                "name": "Azúcar",
+                "image": "https://quierocuidarme.dkv.es/sites/default/files/styles/article_teaser_big_630x360/public/2022-02/propiedades-del-azucar.jpg?itok=fNjc_565"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 15,
+                "name": "Alga Marina",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1226_thumb.jpg"
+            },
+            {
+                "id": 713,
+                "name": "Salsa De Soja Oscura",
+                "image": "https://nix-tag-images.s3.amazonaws.com/9306_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "Enjuaga el arroz para sushi bajo agua fría en un colador hasta que el agua salga clara.",
+            "En una olla, combina el arroz enjuagado y 2 tazas de agua. Lleva a ebullición, luego reduce el fuego a bajo, cubre y cocina durante 15-20 minutos, o hasta que el arroz esté cocido y el agua se haya absorbido por completo.",
+            "Mientras el arroz se cocina, en un tazón pequeño, mezcla el vinagre de arroz, el azúcar y la sal. Calienta la mezcla en el microondas durante unos segundos hasta que el azúcar y la sal se disuelvan por completo.",
+            "Una vez que el arroz esté cocido, colócalo en un tazón grande y vierte la mezcla de vinagre caliente sobre él. Mezcla el arroz suavemente para que quede bien sazonado.",
+            "Deja enfriar el arroz sazonado a temperatura ambiente.",
+            "Para armar los rollos de sushi, coloca una hoja de alga nori en una esterilla de bambú para sushi cubierta con film transparente. Humedece tus manos y extiende una capa delgada de arroz sobre el alga nori, dejando un borde de 1 cm sin cubrir en la parte superior.",
+            "Coloca tiras de salmón en el centro del arroz.",
+            "Usando la esterilla de bambú, enrolla el sushi de salmón presionando firmemente pero con cuidado. Humedece ligeramente el borde sin arroz para sellar el rollo.",
+            "Repite el proceso con el resto de ingredientes.",
+            "Corta los rollos de sushi en rodajas y sírvelos con wasabi y salsa de soja."
+        ],
+        "difficulty": "Moderada",
+        "time": "45 minutos",
+        "image": "https://s1.eestatic.com/2019/06/18/cocinillas/actualidad-gastronomica/sushi-pescado-actualidad_gastronomica_407220618_125852168_1706x960.jpg"
+    },
+    {
+        "id": 21,
+        "title": "Tacos de Pollo",
+        "description": "Tacos de pollo con un relleno sabroso de pollo desmenuzado, cebolla, pimientos y especias. Sirve con tortillas de maíz calientes y tus ingredientes favoritos para tacos.",
+        "ingredients": [
+            "2 pechugas de pollo",
+            "1 cebolla, cortada en tiras",
+            "1 pimiento rojo, cortado en tiras",
+            "1 pimiento verde, cortado en tiras",
+            "2 cucharaditas de comino molido",
+            "2 cucharaditas de chile en polvo",
+            "1 cucharadita de ajo en polvo",
+            "1 cucharadita de cebolla en polvo",
+            "Sal",
+            "Pimienta",
+            "Tortillas de maíz",
+            "Ingredientes para servir, como queso rallado, aguacate en cubos, crema agria y salsa"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 599,
+                "name": "Pollo Desmenuzado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/3519_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 585,
+                "name": "Pimiento Rojo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/8707_thumb.jpg"
+            },
+            {
+                "id": 586,
+                "name": "Pimiento Verde",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1843_thumb.jpg"
+            },
+            {
+                "id": 844,
+                "name": "Comino",
+                "image": "https://especiaspedroza.es/85-large_default/comino-en-polvo.jpg"
+            },
+            {
+                "id": 194,
+                "name": "Chile De Asado De Tiras",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 846,
+                "name": "Tortilla De Maíz",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1753_thumb.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Aguacate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/391_thumb.jpg"
+            },
+            {
+                "id": 651,
+                "name": "Queso Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/594_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "En una sartén grande, calienta un poco de aceite a fuego medio-alto. Agrega las pechugas de pollo y cocínalas hasta que estén doradas por ambos lados y cocidas por completo. Luego, retira el pollo de la sartén y desmenúzalo con dos tenedores.",
+            "En la misma sartén, agrega un poco más de aceite si es necesario y luego agrega la cebolla y los pimientos cortados en tiras. Cocina hasta que estén tiernos.",
+            "Vuelve a agregar el pollo desmenuzado a la sartén y espolvorea las especias (comino, chile en polvo, ajo en polvo, cebolla en polvo) sobre la mezcla. Sazona con sal y pimienta al gusto. Cocina por unos minutos para que los sabores se mezclen bien.",
+            "Calienta las tortillas de maíz en una sartén o en el microondas según las instrucciones del paquete.",
+            "Sirve los tacos de pollo con el relleno de pollo desmenuzado, cebolla y pimientos en las tortillas de maíz calientes. Agrega tus ingredientes favoritos para tacos, como queso rallado, aguacate en cubos, crema agria y salsa.",
+            "Disfruta de tus deliciosos tacos de pollo caseros."
+        ],
+        "difficulty": "Fácil",
+        "time": "30 minutos",
+        "image": "https://cdn0.recetasgratis.net/es/posts/8/2/9/tacos_de_pollo_mexicanos_72928_orig.jpg"
+    },
+    {
+        "id": 22,
+        "title": "Ensalada Caprese",
+        "description": "Una ensalada Caprese fresca y sencilla con tomates maduros, mozzarella fresca, albahaca y un aderezo balsámico. Perfecta como entrada o acompañamiento.",
+        "ingredients": [
+            "4 tomates maduros, en rodajas",
+            "200g de mozzarella fresca, en rodajas",
+            "Hojas de albahaca fresca",
+            "3 cucharadas de aceite de oliva extra virgen",
+            "2 cucharadas de vinagre balsámico",
+            "Sal",
+            "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 779,
+                "name": "Tomates",
+                "image": "https://nix-tag-images.s3.amazonaws.com/191_thumb.jpg"
+            },
+            {
+                "id": 495,
+                "name": "Mozzarella Fresca",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1642_thumb.jpg"
+            },
+            {
+                "id": 5,
+                "name": "Albahaca",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1885_thumb.jpg"
+            },
+            {
+                "id": 796,
+                "name": "Vinagre Balsámico",
+                "image": "https://nix-tag-images.s3.amazonaws.com/398_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "En un plato grande, alterna las rodajas de tomate y mozzarella y coloca hojas de albahaca fresca entre ellas.",
+            "En un tazón pequeño, mezcla el aceite de oliva y el vinagre balsámico. Sazona con sal y pimienta al gusto.",
+            "Rocía la vinagreta sobre la ensalada Caprese antes de servir.",
+            "Disfruta de esta refrescante ensalada como entrada o acompañamiento."
+        ],
+        "difficulty": "Fácil",
+        "time": "15 minutos",
+        "image": "https://cdn.elcocinerocasero.com/imagen/receta/1000/2022-07-06-20-09-06/ensalada-caprese.jpeg"
+    },
+    {
+        "id": 23,
+        "title": "Arroz Frito con Verduras",
+        "description": "Arroz frito con verduras, una receta rápida y deliciosa que puedes preparar en casa. Perfecta como plato principal o acompañamiento.",
+        "ingredients": [
+            "2 tazas de arroz cocido y frío",
+            "1 zanahoria, en cubos pequeños",
+            "1 pimiento rojo, en cubos pequeños",
+            "1 pimiento verde, en cubos pequeños",
+            "1 cebolla, picada",
+            "2 dientes de ajo, picados",
+            "2 huevos, batidos",
+            "3 cucharadas de salsa de soja",
+            "Aceite de sésamo tostado",
+            "Aceite vegetal",
+            "Sal",
+            "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 56,
+                "name": "Arroz Basmati",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1242_thumb.jpg"
+            },
+            {
+                "id": 823,
+                "name": "Zanahoria",
+                "image": "https://nix-tag-images.s3.amazonaws.com/452_thumb.jpg"
+            },
+            {
+                "id": 585,
+                "name": "Pimiento Rojo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/8707_thumb.jpg"
+            },
+            {
+                "id": 586,
+                "name": "Pimiento Verde",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1843_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 389,
+                "name": "Huevos",
+                "image": "https://nix-tag-images.s3.amazonaws.com/775_thumb.jpg"
+            },
+            {
+                "id": 713,
+                "name": "Salsa De Soja Oscura",
+                "image": "https://nix-tag-images.s3.amazonaws.com/9306_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "En una sartén grande o wok, calienta un poco de aceite vegetal a fuego medio-alto. Agrega los huevos batidos y revuelve para hacer revuelto. Retira el revuelto de la sartén y reserva.",
+            "Añade un poco más de aceite a la sartén y luego agrega el ajo picado y la cebolla picada. Cocina hasta que estén fragantes y la cebolla esté dorada.",
+            "Agrega la zanahoria en cubos y los pimientos rojo y verde en cubos a la sartén. Cocina hasta que las verduras estén tiernas pero aún crujientes.",
+            "Añade el arroz cocido y frío a la sartén y revuelve para combinar con las verduras.",
+            "Vierte la salsa de soja sobre el arroz y mezcla bien para que esté uniformemente cubierto.",
+            "Agrega el revuelto de huevo cocido de nuevo a la sartén y revuelve para combinar con el arroz y las verduras.",
+            "Sazona con sal y pimienta al gusto.",
+            "Justo antes de servir, rocía un poco de aceite de sésamo tostado sobre el arroz frito para darle un sabor adicional.",
+            "Sirve el arroz frito con verduras caliente como plato principal o acompañamiento."
+        ],
+        "difficulty": "Fácil",
+        "time": "25 minutos",
+        "image": "https://myplate-prod.azureedge.us/sites/default/files/styles/large/public/2022-08/VegetableFriedRice_527x323.jpg?itok=1FzGv2OK"
+    },
+    {
+        "id": 24,
+        "title": "Papas Bravas",
+        "description": "Papas bravas, un clásico aperitivo español. Papas fritas crujientes servidas con una salsa picante de tomate. ¡Perfectas para compartir con amigos!",
+        "ingredients": [
+            "4 papas grandes, peladas y cortadas en cubos",
+            "Aceite vegetal para freír",
+            "Sal al gusto",
+            "Para la salsa brava:",
+            "1/2 taza de puré de tomate",
+            "1 cucharadita de pimentón picante",
+            "1 cucharadita de pimentón dulce",
+            "1 cucharadita de harina",
+            "1 cucharada de aceite de oliva",
+            "Sal al gusto",
+            "Pimienta negra al gusto"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 555,
+                "name": "Patata",
+                "image": "https://nix-tag-images.s3.amazonaws.com/752_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 578,
+                "name": "Pimienta De Jamaica",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1945_thumb.jpg"
+            },
+            {
+                "id": 370,
+                "name": "Harina",
+                "image": "https://nix-tag-images.s3.amazonaws.com/206_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "En una sartén grande, calienta suficiente aceite vegetal para freír las papas a fuego medio-alto.",
+            "Fríe las papas en lotes hasta que estén doradas y crujientes. Retira las papas fritas a un plato forrado con papel absorbente para eliminar el exceso de aceite. Sazona con sal al gusto.",
+            "En una pequeña cacerola, calienta una cucharada de aceite de oliva a fuego medio. Agrega la harina y los dos tipos de pimentón (picante y dulce) y cocina durante unos minutos hasta que estén fragantes.",
+            "Añade el puré de tomate a la cacerola y mezcla bien para combinar todos los ingredientes. Cocina a fuego lento durante unos minutos hasta que la salsa esté caliente y espesa.",
+            "Sazona la salsa brava con sal y pimienta negra al gusto.",
+            "Sirve las papas bravas calientes, acompañadas de la salsa brava. ¡Disfruta de este clásico aperitivo español!"
+        ],
+        "difficulty": "Moderada",
+        "time": "40 minutos",
+        "image": "https://www.goya.com/media/7699/spicy-potatoes.jpg?quality=80"
+    },
+    {
+        "id": 25,
+        "title": "Lasaña",
+        "description": "Una lasaña clásica con capas de pasta, carne molida, salsa de tomate y queso ricotta, gratinada al horno. Una delicia italiana que a todos les encantará.",
+        "ingredients": [
+            "9 láminas de pasta para lasaña, cocidas según las instrucciones del paquete",
+            "500g de carne molida de res",
+            "1 cebolla, picada",
+            "2 dientes de ajo, picados",
+            "800g de salsa de tomate",
+            "250g de queso ricotta",
+            "1 huevo",
+            "1 taza de queso mozzarella rallado",
+            "1/2 taza de queso parmesano rallado",
+            "1 cucharadita de albahaca seca",
+            "1 cucharadita de orégano seco",
+            "Sal",
+            "Pimienta",
+            "Aceite de oliva"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 551,
+                "name": "Pasta",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1012_thumb.jpg"
+            },
+            {
+                "id": 141,
+                "name": "Carne Molida",
+                "image": "https://nix-tag-images.s3.amazonaws.com/47_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 496,
+                "name": "Mozzarella Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1744_thumb.jpg"
+            },
+            {
+                "id": 549,
+                "name": "Parmesano Rallado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/594_thumb.jpg"
+            },
+            {
+                "id": 5,
+                "name": "Albahaca",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1885_thumb.jpg"
+            },
+            {
+                "id": 845,
+                "name": "Orégano seco",
+                "image": "https://media.granvelada.com/27712/oregano-seco.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            }
+        ],
+        "steps": [
+            "En una sartén grande, calienta un poco de aceite de oliva a fuego medio. Agrega la cebolla y el ajo picados y cocina hasta que estén fragantes y la cebolla esté dorada.",
+            "Añade la carne molida de res a la sartén y cocina hasta que esté dorada y cocida por completo. Escurre cualquier exceso de grasa.",
+            "Agrega la salsa de tomate, la albahaca seca, el orégano seco, la sal y la pimienta a la sartén con la carne molida. Cocina a fuego lento durante unos minutos para que los sabores se mezclen.",
+            "En un tazón aparte, mezcla el queso ricotta con el huevo batido y una pizca de sal y pimienta.",
+            "Precalienta el horno a 180°C (350°F).",
+            "En una fuente para horno, coloca una capa de láminas de pasta cocida, seguida de una capa de la mezcla de carne y salsa de tomate, una capa de queso ricotta y una capa de queso mozzarella rallado. Repite este proceso hasta que todos los ingredientes se hayan utilizado, terminando con una capa de queso mozzarella y espolvoreando queso parmesano rallado por encima.",
+            "Hornea la lasaña en el horno precalentado durante 30-35 minutos, o hasta que esté dorada y burbujeante.",
+            "Deja reposar la lasaña durante unos minutos antes de servir. ¡Disfruta de esta deliciosa lasaña casera!"
+        ],
+        "difficulty": "Moderada",
+        "time": "90 minutos",
+        "image": "https://www.elespectador.com/resizer/fiMsG1Eb5XgeEHV1hQDAhGISghE=/arc-anglerfish-arc2-prod-elespectador/public/46JYAOVG3FBHVKVV2GIXNWYK2Y.jpg"
+    },
+    {
+        "id": 26,
+        "title": "Tortilla Española",
+        "description": "Una tortilla española clásica, también conocida como tortilla de patatas. Esta deliciosa tortilla se hace con papas, cebolla y huevos, y es perfecta para el desayuno, el almuerzo o la cena.",
+        "ingredients": [
+            "4 papas grandes, peladas y cortadas en rodajas finas",
+            "1 cebolla grande, cortada en rodajas finas",
+            "6 huevos",
+            "Aceite de oliva",
+            "Sal",
+            "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 555,
+                "name": "Patata",
+                "image": "https://nix-tag-images.s3.amazonaws.com/752_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 389,
+                "name": "Huevos",
+                "image": "https://nix-tag-images.s3.amazonaws.com/775_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            }
+        ],
+        "steps": [
+            "En una sartén grande, calienta suficiente aceite de oliva para cubrir el fondo a fuego medio. Agrega las papas en rodajas y la cebolla en rodajas y cocínalas a fuego lento hasta que estén tiernas pero no doradas. Escurre el exceso de aceite y sazona con sal y pimienta al gusto.",
+            "En un tazón grande, bate los huevos y sazona con sal y pimienta al gusto.",
+            "Añade las papas y la cebolla cocidas a los huevos batidos y mezcla bien para que estén bien combinados.",
+            "En la misma sartén, calienta un poco más de aceite si es necesario y vierte la mezcla de huevo, papas y cebolla.",
+            "Cocina la tortilla a fuego lento durante unos minutos hasta que los bordes estén dorados y la parte superior esté casi cocida.",
+            "Con la ayuda de un plato grande o una tapadera, voltea la tortilla y cocínala por el otro lado hasta que esté dorada y completamente cocida por dentro.",
+            "Sirve la tortilla española caliente o a temperatura ambiente, cortada en triángulos o cuadros. ¡Disfruta!"
+        ],
+        "difficulty": "Fácil",
+        "time": "45 minutos",
+        "image": "https://recetasdecocina.elmundo.es/wp-content/uploads/2023/04/tortilla-de-patatas-espanola.jpg"
+    },
+    {
+        "id": 27,
+        "title": "Pollo al Curry",
+        "description": "Pollo al curry con una salsa cremosa de tomate, cebolla, ajo, jengibre y especias. Sirve este plato aromático con arroz o naan.",
+        "ingredients": [
+            "4 pechugas de pollo, cortadas en trozos",
+            "1 cebolla grande, picada",
+            "3 dientes de ajo, picados",
+            "1 trozo de jengibre fresco, rallado",
+            "2 cucharadas de aceite de cocina",
+            "2 cucharadas de pasta de curry (rojo, verde o amarillo, según tu preferencia)",
+            "1 lata de tomate triturado",
+            "1 lata de leche de coco",
+            "1 cucharadita de cúrcuma en polvo",
+            "1 cucharadita de comino molido",
+            "1 cucharadita de cilantro molido",
+            "Sal",
+            "Pimienta",
+            "Hojas de cilantro fresco para decorar",
+            "Arroz o naan para servir"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 599,
+                "name": "Pollo Desmenuzado",
+                "image": "https://nix-tag-images.s3.amazonaws.com/3519_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 401,
+                "name": "Jengibre",
+                "image": "https://nix-tag-images.s3.amazonaws.com/5245_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 288,
+                "name": "Curry Puff",
+                "image": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 419,
+                "name": "Leche De Coco",
+                "image": "https://nix-tag-images.s3.amazonaws.com/288_thumb.jpg"
+            },
+            {
+                "id": 294,
+                "name": "Cúrcuma",
+                "image": "https://nix-tag-images.s3.amazonaws.com/2038_thumb.jpg"
+            },
+            {
+                "id": 844,
+                "name": "Comino",
+                "image": "https://especiaspedroza.es/85-large_default/comino-en-polvo.jpg"
+            },
+            {
+                "id": 222,
+                "name": "Cilantro",
+                "image": "https://nix-tag-images.s3.amazonaws.com/480_thumb.jpg"
+            },
+            {
+                "id": 56,
+                "name": "Arroz Basmati",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1242_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "En una sartén grande, calienta el aceite de cocina a fuego medio. Agrega la cebolla picada y cocina hasta que esté dorada.",
+            "Añade el ajo picado y el jengibre rallado a la sartén y cocina durante unos minutos hasta que estén fragantes.",
+            "Agrega la pasta de curry a la sartén y saltea durante unos minutos para que se mezclen bien los sabores.",
+            "Añade los trozos de pollo a la sartén y cocina hasta que estén dorados por todos lados.",
+            "Vierte el tomate triturado en la sartén y mezcla bien con el pollo y la cebolla.",
+            "Agrega la leche de coco, la cúrcuma en polvo, el comino molido y el cilantro molido a la sartén. Sazona con sal y pimienta al gusto. Cocina a fuego lento durante unos 20-25 minutos, o hasta que el pollo esté cocido y la salsa se haya espesado.",
+            "Sirve el pollo al curry caliente, espolvoreado con hojas de cilantro fresco y acompáñalo con arroz o naan. ¡Disfruta!"
+        ],
+        "difficulty": "Moderada",
+        "time": "45 minutos",
+        "image": "https://i.blogs.es/9ea7a4/pollo_curry-copia/650_1200.jpg"
+    },
+    {
+        "id": 28,
+        "title": "Gazpacho",
+        "description": "Gazpacho, una sopa fría española hecha con tomates maduros, pimientos, pepinos y ajo. Perfecta para los días calurosos de verano.",
+        "ingredients": [
+            "1 kg de tomates maduros, pelados y picados",
+            "1 pimiento verde, picado",
+            "1 pepino, pelado y picado",
+            "1 cebolla, picada",
+            "2 dientes de ajo, picados",
+            "1/4 de taza de vinagre de vino tinto",
+            "1/4 de taza de aceite de oliva",
+            "Sal",
+            "Pimienta",
+            "Pan duro (opcional, para espesar)"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 779,
+                "name": "Tomates",
+                "image": "https://nix-tag-images.s3.amazonaws.com/191_thumb.jpg"
+            },
+            {
+                "id": 586,
+                "name": "Pimiento Verde",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1843_thumb.jpg"
+            },
+            {
+                "id": 565,
+                "name": "Pepino",
+                "image": "https://nix-tag-images.s3.amazonaws.com/522_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 797,
+                "name": "Vinagre De Jerez",
+                "image": "https://nix-tag-images.s3.amazonaws.com/281_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 525,
+                "name": "Pan"
+            }
+        ],
+        "steps": [
+            "En una licuadora o procesador de alimentos, combina los tomates picados, el pimiento verde, el pepino, la cebolla y el ajo. Procesa hasta obtener una mezcla suave.",
+            "Añade el jugo de tomate, el vinagre de vino tinto y el aceite de oliva a la mezcla y vuelve a procesar hasta que todo esté bien combinado.",
+            "Si deseas que el gazpacho sea más espeso, puedes añadir trozos de pan duro a la mezcla y procesar nuevamente hasta obtener la consistencia deseada.",
+            "Sazona el gazpacho con sal y pimienta al gusto y refrigéralo durante al menos 2 horas antes de servirlo para que esté bien frío.",
+            "Sirve el gazpacho en cuencos individuales y decóralo con trozos de pimiento, pepino y cebolla si lo deseas. ¡Disfruta de esta refrescante sopa fría!"
+        ],
+        "difficulty": "Fácil",
+        "time": "15 minutos",
+        "image": "https://i.blogs.es/a8ade0/gazpacho_tradicional/840_560.jpg"
+    },
+    {
+        "id": 29,
+        "title": "Sopa de Lentejas",
+        "description": "Sopa de lentejas nutritiva y reconfortante con lentejas, verduras y especias. Perfecta para los días fríos de invierno.",
+        "ingredients": [
+            "1 taza de lentejas secas",
+            "1 cebolla, picada",
+            "2 zanahorias, peladas y cortadas en rodajas",
+            "2 tallos de apio, cortados en rodajas",
+            "3 dientes de ajo, picados",
+            "1 lata de tomate triturado",
+            "1 cucharadita de comino molido",
+            "1 cucharadita de pimentón",
+            "1/2 cucharadita de pimienta de cayena (opcional)",
+            "6 tazas de caldo de verduras",
+            "Sal",
+            "Pimienta",
+            "Aceite de oliva",
+            "Hojas de perejil fresco para decorar"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 426,
+                "name": "Lentejas",
+                "image": "https://nix-tag-images.s3.amazonaws.com/230_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 823,
+                "name": "Zanahoria",
+                "image": "https://nix-tag-images.s3.amazonaws.com/452_thumb.jpg"
+            },
+            {
+                "id": 52,
+                "name": "Apio",
+                "image": "https://nix-tag-images.s3.amazonaws.com/456_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 714,
+                "name": "Salsa De Tomate",
+                "image": "https://nix-tag-images.s3.amazonaws.com/321_thumb.jpg"
+            },
+            {
+                "id": 844,
+                "name": "Comino",
+                "image": "https://especiaspedroza.es/85-large_default/comino-en-polvo.jpg"
+            },
+            {
+                "id": 578,
+                "name": "Pimienta De Jamaica",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1945_thumb.jpg"
+            },
+            {
+                "id": 110,
+                "name": "Caldo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1089_thumb.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            },
+            {
+                "id": 568,
+                "name": "Perejil",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1931_thumb.jpg"
+            }
+        ],
+        "steps": [
+            "Enjuaga las lentejas bajo agua fría y escúrrelas.",
+            "En una olla grande, calienta un poco de aceite de oliva a fuego medio. Agrega la cebolla picada, las zanahorias cortadas en rodajas, el apio cortado en rodajas y el ajo picado. Cocina hasta que las verduras estén tiernas y fragantes.",
+            "Añade el comino molido, el pimentón y la pimienta de cayena (si la estás usando) a las verduras y saltea durante unos minutos para que las especias se mezclen bien.",
+            "Añade las lentejas enjuagadas y el tomate triturado a la olla. Vierte el caldo de verduras y sazona con sal y pimienta al gusto.",
+            "Lleva la sopa a ebullición, luego reduce el fuego y cocina a fuego lento durante 25-30 minutos, o hasta que las lentejas estén tiernas.",
+            "Sirve la sopa de lentejas caliente, decorada con hojas de perejil fresco. ¡Disfruta de esta reconfortante sopa!"
+        ],
+        "difficulty": "Fácil",
+        "time": "45 minutos",
+        "image": "https://www.goya.com/media/3686/hearty-lentil-soup.jpg?quality=80"
+    },
+    {
+        "id": 30,
+        "title": "Arroz con Pollo",
+        "description": "Arroz con pollo, un plato clásico de la cocina latinoamericana con arroz, pollo, verduras y sabores deliciosos. Reconfortante y delicioso.",
+        "ingredients": [
+            "2 tazas de arroz",
+            "4 tazas de caldo de pollo",
+            "4 pechugas de pollo, cortadas en trozos",
+            "1 cebolla, picada",
+            "1 pimiento rojo, picado",
+            "1 pimiento verde, picado",
+            "3 dientes de ajo, picados",
+            "1/2 taza de zanahorias en rodajas finas",
+            "1 cucharadita de comino molido",
+            "1 cucharadita de azafrán en hebras (opcional)",
+            "Aceite de oliva",
+            "Sal",
+            "Pimienta"
+        ],
+        "parsed_ingredients": [
+            {
+                "id": 55,
+                "name": "Arroz",
+                "image": "https://nix-tag-images.s3.amazonaws.com/784_thumb.jpg"
+            },
+            {
+                "id": 113,
+                "name": "Caldo De Pollo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/3336_thumb.jpg"
+            },
+            {
+                "id": 16,
+                "name": "Alitas De Pollo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1830_thumb.jpg"
+            },
+            {
+                "id": 152,
+                "name": "Cebolla",
+                "image": "https://nix-tag-images.s3.amazonaws.com/717_thumb.jpg"
+            },
+            {
+                "id": 585,
+                "name": "Pimiento Rojo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/8707_thumb.jpg"
+            },
+            {
+                "id": 586,
+                "name": "Pimiento Verde",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1843_thumb.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Ajo",
+                "image": "https://nix-tag-images.s3.amazonaws.com/330_thumb.jpg"
+            },
+            {
+                "id": 823,
+                "name": "Zanahoria",
+                "image": "https://nix-tag-images.s3.amazonaws.com/452_thumb.jpg"
+            },
+            {
+                "id": 844,
+                "name": "Comino",
+                "image": "https://especiaspedroza.es/85-large_default/comino-en-polvo.jpg"
+            },
+            {
+                "id": 676,
+                "name": "Sal",
+                "image": "https://nix-tag-images.s3.amazonaws.com/177_thumb.jpg"
+            },
+            {
+                "id": 579,
+                "name": "Pimienta Negra",
+                "image": "https://nix-tag-images.s3.amazonaws.com/1755_thumb.jpg"
+            },
+            {
+                "id": 843,
+                "name": "Aceite de Oliva",
+                "image": "https://rizoscurls.com/cdn/shop/articles/rizoscurlsoliveoil.png?v=1618003199&width=1200"
+            }
+        ],
+        "steps": [
+            "En una olla grande, calienta un poco de aceite de oliva a fuego medio-alto. Agrega el pollo cortado en trozos y cocina hasta que esté dorado por todos lados. Retira el pollo de la olla y reserva.",
+            "En la misma olla, agrega un poco más de aceite si es necesario, luego añade la cebolla, los pimientos y el ajo. Cocina hasta que las verduras estén tiernas.",
+            "Añade el arroz a la olla y mezcla para que se impregne de los sabores. Cocina durante unos minutos hasta que el arroz esté ligeramente dorado.",
+            "Regresa el pollo dorado a la olla y mezcla con el arroz y las verduras.",
+            "Añade el caldo de pollo, los guisantes, las zanahorias, el comino molido, el azafrán (si lo estás usando), la sal y la pimienta. Lleva la mezcla a ebullición, luego reduce el fuego a bajo, tapa la olla y cocina a fuego lento durante unos 20-25 minutos, o hasta que el arroz esté cocido y el líquido se haya absorbido por completo.",
+            "Sirve el arroz con pollo caliente y disfruta de este clásico plato latinoamericano."
+        ],
+        "difficulty": "Moderada",
+        "time": "60 minutos",
+        "image": "https://www.aceitesdeolivadeespana.com/wp-content/uploads/2021/05/Arroz-con-pollo.jpg"
+    }
 ]
