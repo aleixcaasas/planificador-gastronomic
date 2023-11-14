@@ -53,3 +53,44 @@ describe('POST /email-register', () => {
         expect(response.status).toBe(500)
     })
 })
+const request = require('supertest')
+const app = require('../utils/firebase.js')
+const { signInWithEmailAndPassword } = require('../controllers/auth.controller.js')
+
+jest.mock('firebase/auth')
+
+describe('POST /login', () => {
+    it('should return a 200 status code and user_id if the user is successfully logged in', async () => {
+        const mockUser = {
+            email: 'testuser@example.com',
+            password: 'password123'
+        }
+
+        signInWithEmailAndPassword.mockResolvedValueOnce({
+            user: {
+                uid: '1234567890'
+            }
+        })
+
+        const response = await request(app).post('/login').send(mockUser)
+
+        expect(signInWithEmailAndPassword).toHaveBeenCalledWith(expect.anything(), mockUser.email, mockUser.password)
+        expect(response.status).toBe(200)
+        expect(response.body).toEqual({ user_id: '1234567890', loged: true })
+    })
+
+    it('should return a 500 status code if there is an error logging in the user', async () => {
+        const mockUser = {
+            email: 'testuser@example.com',
+            password: 'password123'
+        }
+
+        signInWithEmailAndPassword.mockRejectedValueOnce(new Error('Firebase error'))
+
+        const response = await request(app).post('/login').send(mockUser)
+
+        expect(signInWithEmailAndPassword).toHaveBeenCalledWith(expect.anything(), mockUser.email, mockUser.password)
+        expect(response.status).toBe(500)
+        expect(response.body).toEqual({ loged: false })
+    })
+})
