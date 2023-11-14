@@ -1,6 +1,5 @@
 const { User, WeeklyPlan } = require('../models/user.model.js')
-const { db } = require('../utils/admin.js')
-const { auth } = require('../utils/firebase.js')
+const { db, auth } = require('../utils/firebase.js')
 
 const { createUserWithEmailAndPassword } = require('firebase/auth')
 

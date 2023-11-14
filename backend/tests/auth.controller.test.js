@@ -1,7 +1,7 @@
 const request = require('supertest')
 const app = require('../utils/firebase.js')
 const { createUserWithEmailAndPassword } = require('../controllers/auth.controller.js')
-const { db } = require('../utils/admin.js')
+const { db } = require('../utils/firebase.js')
 const { User, WeeklyPlan } = require('../models/user.model.js')
 
 jest.mock('firebase/auth')
