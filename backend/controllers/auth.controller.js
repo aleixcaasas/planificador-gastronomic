@@ -41,11 +41,13 @@ const logIn = async (req, res) => {
 }
 
 const googleLogIn = async (req, res) => {
+    const user = req.body
     try {
-        const user_name = result.email.split('@')[0]
-        const full_name = result.displayName
-        const email = result.email
-        const image = result.photoURL
+        console.log(user)
+        const user_name = user.email.split('@')[0]
+        const full_name = user.displayName
+        const email = user.email
+        const image = user.photoURL
         const emailUsed = await isEmailUsed(email)
 
         if (!emailUsed) {
@@ -59,7 +61,7 @@ const googleLogIn = async (req, res) => {
         } else {
             res.status(200).json({ user_id: result.user.uid, loged: true })
         }
-    } catch {
+    } catch (error) {
         res.status(500).json({ loged: false })
         console.log(error)
     }

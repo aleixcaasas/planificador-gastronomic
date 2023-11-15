@@ -1,7 +1,67 @@
 import './LoginRegister.css'
+import axios from 'axios'
+import { useState } from 'react'
 import { Tabs, Tab } from '@nextui-org/react'
+import { auth, provider } from '../../../firebase.js'
+import { signInWithRedirect, GoogleAuthProvider } from 'firebase/auth'
 
 function LoginRegister() {
+    const [loginForm, setLoginForm] = useState({ email: '', password: '' })
+    const { email, password } = loginForm
+
+    const handleChange = (e) => {
+        setLoginForm({ ...loginForm, [e.target.name]: e.target.value })
+    }
+
+    const googleLogin = async () => {
+        try {
+            signInWithRedirect(auth, provider)
+            getRedirectResult(auth)
+                .then((result) => {
+                    // This gives you a Google Access Token. You can use it to access Google APIs.
+                    const credential = GoogleAuthProvider.credentialFromResult(result)
+                    const token = credential.accessToken
+
+                    // The signed-in user info.
+                    const user = result.user
+                    // IdP data available using getAdditionalUserInfo(result)
+                    // ...
+                })
+                .catch((error) => {
+                    // Handle Errors here.
+                    const errorCode = error.code
+                    const errorMessage = error.message
+                    // The email of the user's account used.
+                    const email = error.customData.email
+                    // The AuthCredential type that was used.
+                    const credential = GoogleAuthProvider.credentialFromError(error)
+                    // ...
+                })
+            await axios.post(`${import.meta.env.VITE_API_URL}/google-login`, result.user)
+
+            console.log(result)
+            return true
+        } catch (error) {
+            console.log(error)
+            return false
+        }
+    }
+
+    const login = async (e) => {
+        e.preventDefault()
+        try {
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/login`, {
+                email: email,
+                password: password
+            })
+            console.log(res)
+            return true
+        } catch (error) {
+            console.log(error)
+            return false
+        }
+    }
+
     return (
         <div className='flex items-center justify-center h-screen w-screen overflow-hidden'>
             <div className='w-[29.375rem] h-[29.375rem] left-[-3.5rem] top-[40rem] absolute bg-false-blue bg-opacity-70 rounded-full' />
@@ -27,9 +87,13 @@ function LoginRegister() {
                                     />
                                 </svg>
                                 <input
-                                    type='text'
+                                    type='email'
+                                    name='email'
                                     className='p-3 pl-6 font-medium input'
                                     placeholder='Correo electrónico'
+                                    value={email}
+                                    onChange={handleChange}
+                                    required
                                 />
                             </div>
                             <div className='pt-5 px-0 relative flex items-center'>
@@ -47,19 +111,30 @@ function LoginRegister() {
                                 </svg>
                                 <input
                                     type='password'
+                                    name='password'
                                     className=' p-3 pl-6 font-medium input'
                                     placeholder='Contraseña'
+                                    value={password}
+                                    onChange={handleChange}
+                                    required
                                 />
                             </div>
                             <a href='' className='text-xs hover:underline'>
                                 He olvidado mi contraseña
                             </a>
-                            <button className='submit text-base mt-8 py-3 rounded-xl bg-false-orange font-bold flex items-center justify-center w-full cursor-pointer uppercase'>
+                            <button
+                                className='submit text-base mt-8 py-3 rounded-xl bg-false-orange font-bold flex items-center justify-center w-full cursor-pointer uppercase'
+                                type='submit'
+                                onClick={login}
+                            >
                                 <span>Iniciar Sesión</span>
                             </button>
 
                             <div className='line'></div>
-                            <button className='text-base mt-8 py-1 rounded-xl flex items-center justify-center w-full cursor-pointer bg-[white] border-1 border-false-dark-gray'>
+                            <button
+                                className='text-base mt-8 py-1 rounded-xl flex items-center justify-center w-full cursor-pointer bg-[white] border-1 border-false-dark-gray'
+                                onClick={googleLogin}
+                            >
                                 <svg
                                     className='m-2'
                                     xmlns='http://www.w3.org/2000/svg'
@@ -91,7 +166,7 @@ function LoginRegister() {
                     </Tab>
                     <Tab key='Register' title='Crear cuenta' className='px-4 py-3 rounded-md'>
                         <form className='p-8 pt-2'>
-                            <div className='pt-5 pb-4 px-0 relative flex items-center'>
+                            <div className='py-3 px-0 relative flex items-center'>
                                 <svg
                                     className='absolute top-[2.25rem]'
                                     xmlns='http://www.w3.org/2000/svg'
@@ -106,7 +181,7 @@ function LoginRegister() {
                                 </svg>
                                 <input type='text' className='p-3 pl-6 font-medium input' placeholder='Nombre' />
                             </div>
-                            <div className='py-4 px-0 relative flex items-center'>
+                            <div className='py-3 px-0 relative flex items-center'>
                                 <svg
                                     className='absolute top-[2.25rem]'
                                     xmlns='http://www.w3.org/2000/svg'
@@ -125,7 +200,7 @@ function LoginRegister() {
                                     placeholder='Correo electrónico'
                                 />
                             </div>
-                            <div className='py-4 px-0 relative flex items-center'>
+                            <div className='py-3 px-0 relative flex items-center'>
                                 <svg
                                     className='absolute top-[2.25rem]'
                                     xmlns='http://www.w3.org/2000/svg'
@@ -144,7 +219,7 @@ function LoginRegister() {
                                     placeholder='Repetir contraseña'
                                 />
                             </div>
-                            <div className='py-4 px-0 relative flex items-center'>
+                            <div className='py-3 px-0 relative flex items-center'>
                                 <svg
                                     className='absolute top-[2.25rem]'
                                     xmlns='http://www.w3.org/2000/svg'
