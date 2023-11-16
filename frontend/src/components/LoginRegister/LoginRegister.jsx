@@ -1,16 +1,59 @@
 import './LoginRegister.css'
 import axios from 'axios'
 import { useState } from 'react'
+import { Toaster, toast } from 'sonner'
 import { Tabs, Tab } from '@nextui-org/react'
 import { auth, provider } from '../../../firebase.js'
 import { signInWithRedirect, GoogleAuthProvider } from 'firebase/auth'
 
 function LoginRegister() {
     const [loginForm, setLoginForm] = useState({ email: '', password: '' })
-    const { email, password } = loginForm
+    const { email: loginEmail, password: loginPassword } = loginForm
 
-    const handleChange = (e) => {
+    const [registerForm, setRegisterForm] = useState({ name: '', email: '', password: '', confirmPassword: '' })
+    const {
+        name: registerName,
+        email: registerEmail,
+        password: registerPassword,
+        confirmPassword: registerConfirmPassword
+    } = registerForm
+
+    const handleLoginChange = (e) => {
         setLoginForm({ ...loginForm, [e.target.name]: e.target.value })
+    }
+
+    const handleRegisterChange = (e) => {
+        setRegisterForm({ ...registerForm, [e.target.name]: e.target.value })
+    }
+
+    const validateLoginForm = () => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailRegex.test(loginEmail)) {
+            toast.warning('Por favor, introduce un email válido.')
+            return false
+        }
+        if (loginPassword.length === 0) {
+            toast.warning('Por favor, introduce tu contraseña.')
+            return false
+        }
+        return true
+    }
+
+    const validateRegisterForm = () => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailRegex.test(registerEmail)) {
+            toast.warning('Por favor, introduce un email válido.')
+            return false
+        }
+        if (registerPassword.length < 6) {
+            toast.warning('La contraseña debe tener al menos 6 caracteres.')
+            return false
+        }
+        if (registerPassword !== registerConfirmPassword) {
+            toast.warning('Las contraseñas no coinciden.')
+            return false
+        }
+        return true
     }
 
     const googleLogin = async () => {
@@ -49,16 +92,34 @@ function LoginRegister() {
 
     const login = async (e) => {
         e.preventDefault()
+        if (!validateLoginForm()) return
+
         try {
-            const res = await axios.post(`${import.meta.env.VITE_API_URL}/login`, {
-                email: email,
-                password: password
-            })
-            console.log(res)
-            return true
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/login`, loginForm)
         } catch (error) {
-            console.log(error)
-            return false
+            toast.error('Error al iniciar sesión. Por favor, intenta de nuevo.')
+        }
+    }
+
+    const register = async (e) => {
+        e.preventDefault()
+        if (!validateRegisterForm()) return
+
+        const user_name = registerEmail.split('@')[0]
+        const userData = {
+            user_name: user_name,
+            full_name: registerName,
+            email: registerEmail,
+            password: registerPassword
+        }
+
+        try {
+            await axios.post(`${import.meta.env.VITE_API_URL}/email-register`, userData)
+
+            // Suponiendo que todo va bien
+            toast.success('Registro exitoso. Bienvenido a la plataforma!')
+        } catch (error) {
+            toast.error('Error al registrar. Por favor, intenta de nuevo.')
         }
     }
 
@@ -69,7 +130,7 @@ function LoginRegister() {
             <div className='w-[26.25rem] h-[26.25rem] left-[3.1875rem] top-[0.625rem] absolute bg-false-blue bg-opacity-70 rounded-full' />
 
             <div className='relative w-screen flex flex-col items-center justify-center overflow-hidden'>
-                <h1 className='text-center font-bold text-4xl opacity-80 font-mono mb-10'>EASYPLAN</h1>
+                <h1 className='text-center font-bold text-4xl opacity-80 font-mono mb-10'>Menu Vital</h1>
                 <Tabs className='flex flex-row items-center justify-center gap-2 pt-10 w-full' color='danger'>
                     <Tab key='Login' title='Iniciar sesión' className='px-4 py-3 rounded-md '>
                         <form className='p-8 pt-2'>
@@ -91,8 +152,8 @@ function LoginRegister() {
                                     name='email'
                                     className='p-3 pl-6 font-medium input'
                                     placeholder='Correo electrónico'
-                                    value={email}
-                                    onChange={handleChange}
+                                    value={loginEmail}
+                                    onChange={handleLoginChange}
                                     required
                                 />
                             </div>
@@ -114,8 +175,8 @@ function LoginRegister() {
                                     name='password'
                                     className=' p-3 pl-6 font-medium input'
                                     placeholder='Contraseña'
-                                    value={password}
-                                    onChange={handleChange}
+                                    value={loginPassword}
+                                    onChange={handleLoginChange}
                                     required
                                 />
                             </div>
@@ -168,7 +229,7 @@ function LoginRegister() {
                         <form className='p-8 pt-2'>
                             <div className='py-3 px-0 relative flex items-center'>
                                 <svg
-                                    className='absolute top-[2.25rem]'
+                                    className='absolute top-[1.75rem]'
                                     xmlns='http://www.w3.org/2000/svg'
                                     width='1em'
                                     height='1em'
@@ -179,11 +240,18 @@ function LoginRegister() {
                                         d='M224 256a128 128 0 1 0 0-256a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7c0-98.5-79.8-178.3-178.3-178.3h-91.4z'
                                     />
                                 </svg>
-                                <input type='text' className='p-3 pl-6 font-medium input' placeholder='Nombre' />
+                                <input
+                                    type='text'
+                                    name='name'
+                                    className='p-3 pl-6 font-medium input'
+                                    placeholder='Nombre'
+                                    value={registerName}
+                                    onChange={handleRegisterChange}
+                                />
                             </div>
                             <div className='py-3 px-0 relative flex items-center'>
                                 <svg
-                                    className='absolute top-[2.25rem]'
+                                    className='absolute top-[1.75rem]'
                                     xmlns='http://www.w3.org/2000/svg'
                                     width='1em'
                                     height='1em'
@@ -196,13 +264,16 @@ function LoginRegister() {
                                 </svg>
                                 <input
                                     type='text'
+                                    name='email'
                                     className='p-3 pl-6 font-medium input'
                                     placeholder='Correo electrónico'
+                                    value={registerEmail}
+                                    onChange={handleRegisterChange}
                                 />
                             </div>
                             <div className='py-3 px-0 relative flex items-center'>
                                 <svg
-                                    className='absolute top-[2.25rem]'
+                                    className='absolute top-[1.75rem]'
                                     xmlns='http://www.w3.org/2000/svg'
                                     width='1em'
                                     height='1em'
@@ -215,13 +286,16 @@ function LoginRegister() {
                                 </svg>
                                 <input
                                     type='password'
+                                    name='password'
                                     className=' p-3 pl-6 font-medium input'
                                     placeholder='Repetir contraseña'
+                                    value={registerPassword}
+                                    onChange={handleRegisterChange}
                                 />
                             </div>
                             <div className='py-3 px-0 relative flex items-center'>
                                 <svg
-                                    className='absolute top-[2.25rem]'
+                                    className='absolute top-[1.75rem]'
                                     xmlns='http://www.w3.org/2000/svg'
                                     width='1em'
                                     height='1em'
@@ -234,17 +308,24 @@ function LoginRegister() {
                                 </svg>
                                 <input
                                     type='password'
+                                    name='confirmPassword'
                                     className=' p-3 pl-6 font-medium input'
                                     placeholder='Contraseña'
+                                    value={registerConfirmPassword}
+                                    onChange={handleRegisterChange}
                                 />
                             </div>
-                            <button className='submit text-base mt-8 py-3 rounded-xl bg-false-orange font-bold flex items-center justify-center w-full cursor-pointer uppercase'>
+                            <button
+                                className='submit text-base mt-8 py-3 rounded-xl bg-false-orange font-bold flex items-center justify-center w-full cursor-pointer uppercase'
+                                onClick={register}
+                            >
                                 <span>Crear cuenta</span>
                             </button>
                         </form>
                     </Tab>
                 </Tabs>
             </div>
+            <Toaster position='top-center' richColors />
         </div>
     )
 }
