@@ -87,16 +87,18 @@ const googleLogIn = async (req, res) => {
     }
 }
 
-const resetPassword = async (email) => {
+const resetPassword = async (req, res) => {
+    const { email } = req.body
     try {
-        if (await isEmailUsed(email)) {
-            await sendPasswordResetEmail(email)
-            res.status(200).json({ reset: true })
-        } else {
-            res.status(200).json({ reset: false })
+        const emailExists = await isEmailUsed(email)
+        if (!emailExists) {
+            return res.status(404).json({ error: 'No existe ninguna cuenta con este correo electrónico', reset: false })
         }
+
+        await sendPasswordResetEmail(auth, email)
+        res.status(200).json({ reset: true })
     } catch (error) {
-        res.status(500).json({ reset: false })
+        res.status(500).json({ error: 'Error interno del servidor', reset: false })
         console.log(error)
     }
 }

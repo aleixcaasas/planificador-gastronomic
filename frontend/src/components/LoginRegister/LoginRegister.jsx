@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Toaster, toast } from 'sonner'
 import { Tabs, Tab } from '@nextui-org/react'
 import { auth, provider } from '../../../firebase.js'
-import { signInWithRedirect, GoogleAuthProvider } from 'firebase/auth'
+import { signInWithRedirect, GoogleAuthProvider, sendPasswordResetEmail } from 'firebase/auth'
 
 function LoginRegister() {
     const [loginForm, setLoginForm] = useState({ email: '', password: '' })
@@ -17,6 +17,9 @@ function LoginRegister() {
         password: registerPassword,
         confirmPassword: registerConfirmPassword
     } = registerForm
+
+    const [resetEmail, setResetEmail] = useState('')
+    const [showResetModal, setShowResetModal] = useState(false)
 
     const handleLoginChange = (e) => {
         setLoginForm({ ...loginForm, [e.target.name]: e.target.value })
@@ -123,6 +126,21 @@ function LoginRegister() {
         }
     }
 
+    const resetPassword = async (e) => {
+        e.preventDefault()
+        if (resetEmail === '') {
+            toast.warning('Por favor, introduce un email válido.')
+            return
+        }
+        try {
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/reset-password`, { email: resetEmail })
+            toast.success('Correo de restablecimiento enviado.')
+        } catch (error) {
+            if (error.response.status === 404) toast.warning('No se encontró un usuario con ese correo.')
+            else toast.error('Error al enviar el correo de restablecimiento.')
+        }
+    }
+
     return (
         <div className='flex items-center justify-center h-screen w-screen overflow-hidden'>
             <div className='w-[29.375rem] h-[29.375rem] left-[-3.5rem] top-[40rem] absolute bg-false-blue bg-opacity-70 rounded-full' />
@@ -180,7 +198,10 @@ function LoginRegister() {
                                     required
                                 />
                             </div>
-                            <a href='' className='text-xs hover:underline'>
+                            <a
+                                onClick={() => setShowResetModal(true)}
+                                className='text-xs hover:underline cursor-pointer'
+                            >
                                 He olvidado mi contraseña
                             </a>
                             <button
@@ -221,7 +242,7 @@ function LoginRegister() {
                                         fill='#EB4335'
                                     />
                                 </svg>
-                                <p>Iniciar sesión con Google</p>
+                                <p className='mr-1'>Iniciar sesión con Google</p>
                             </button>
                         </form>
                     </Tab>
@@ -288,7 +309,7 @@ function LoginRegister() {
                                     type='password'
                                     name='password'
                                     className=' p-3 pl-6 font-medium input'
-                                    placeholder='Repetir contraseña'
+                                    placeholder='Contraseña'
                                     value={registerPassword}
                                     onChange={handleRegisterChange}
                                 />
@@ -310,7 +331,7 @@ function LoginRegister() {
                                     type='password'
                                     name='confirmPassword'
                                     className=' p-3 pl-6 font-medium input'
-                                    placeholder='Contraseña'
+                                    placeholder='Repetir contraseña'
                                     value={registerConfirmPassword}
                                     onChange={handleRegisterChange}
                                 />
@@ -326,6 +347,50 @@ function LoginRegister() {
                 </Tabs>
             </div>
             <Toaster position='top-center' richColors />
+            {showResetModal && (
+                <div
+                    className='fixed inset-0 flex justify-center items-center bg-false-blue bg-opacity-70'
+                    onClick={() => setShowResetModal(false)}
+                >
+                    <div
+                        className='bg-[#FFF] p-8 rounded-xl shadow-lg border-false-orange border-2'
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <h2 className='text-center font-bold text-2xl font-mono'>Restablecer Contraseña</h2>
+                        <form onSubmit={resetPassword}>
+                            <div className='py-5 px-0 relative flex items-center'>
+                                <svg
+                                    className='absolute top-[2.25rem]'
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width='1em'
+                                    height='1em'
+                                    viewBox='0 0 448 512'
+                                >
+                                    <path
+                                        fill='#3d424a'
+                                        d='M224 256a128 128 0 1 0 0-256a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7c0-98.5-79.8-178.3-178.3-178.3h-91.4z'
+                                    />
+                                </svg>
+                                <input
+                                    type='email'
+                                    name='resetEmail'
+                                    className='p-3 pl-6 font-medium input w-full'
+                                    placeholder='Correo electrónico'
+                                    value={resetEmail}
+                                    onChange={(e) => setResetEmail(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <button
+                                type='submit'
+                                className='bg-false-orange text-white font-bold py-2 px-4 rounded hover:bg-orange-600 w-full'
+                            >
+                                Enviar correo
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
