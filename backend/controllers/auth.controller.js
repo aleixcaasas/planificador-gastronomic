@@ -37,6 +37,7 @@ const emailRegister = async (req, res) => {
 
 const logIn = async (req, res) => {
     const { email, password } = req.body
+    console.log(req.body)
 
     if (!email || !password) {
         return res.status(400).json({ error: 'Email y contraseña son requeridos' })
@@ -63,7 +64,6 @@ const logIn = async (req, res) => {
 const googleLogIn = async (req, res) => {
     const user = req.body
     try {
-        console.log(user)
         const user_name = user.email.split('@')[0]
         const full_name = user.displayName
         const email = user.email
@@ -77,9 +77,16 @@ const googleLogIn = async (req, res) => {
 
             const jsonUser = JSON.stringify(newUser)
             const response = await db.collection('users').add(JSON.parse(jsonUser))
-            res.status(201).json({ user_id: response._path.segments[1] })
+            res.status(201).json({
+                user_id: response._path.segments[1],
+                loged: true,
+                user_name: user_name,
+                full_name: full_name,
+                email: email,
+                image: image
+            })
         } else {
-            res.status(200).json({ user_id: result.user.uid, loged: true })
+            res.status(200).json({ user_name: user_name, loged: true })
         }
     } catch (error) {
         res.status(500).json({ loged: false })

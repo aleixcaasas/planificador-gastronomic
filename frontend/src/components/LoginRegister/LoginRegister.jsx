@@ -1,12 +1,14 @@
 import './LoginRegister.css'
 import axios from 'axios'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Toaster, toast } from 'sonner'
 import { Tabs, Tab } from '@nextui-org/react'
 import { auth, provider } from '../../../firebase.js'
-import { signInWithRedirect, GoogleAuthProvider, sendPasswordResetEmail } from 'firebase/auth'
+import { useUser } from '../../context/UserContext.jsx'
+import { signInWithRedirect, getRedirectResult } from 'firebase/auth'
 
 function LoginRegister() {
+    const { setUser, setIsAuthenticated } = useUser()
     const [loginForm, setLoginForm] = useState({ email: '', password: '' })
     const { email: loginEmail, password: loginPassword } = loginForm
 
@@ -20,6 +22,26 @@ function LoginRegister() {
 
     const [resetEmail, setResetEmail] = useState('')
     const [showResetModal, setShowResetModal] = useState(false)
+
+    useEffect(() => {
+        const processRedirectResult = async () => {
+            try {
+                const result = await getRedirectResult(auth)
+                if (result) {
+                    await axios.post(`${import.meta.env.VITE_API_URL}/google-login`, result.user)
+                    setUser(result.user)
+                    setIsAuthenticated(true)
+                }
+            } catch (error) {
+                setIsAuthenticated(false)
+                setUser(null)
+                toast.error('Error al iniciar sesión con Google. Por favor, intenta de nuevo.')
+                console.log(error)
+            }
+        }
+
+        processRedirectResult()
+    }, [])
 
     const handleLoginChange = (e) => {
         setLoginForm({ ...loginForm, [e.target.name]: e.target.value })
@@ -61,33 +83,12 @@ function LoginRegister() {
 
     const googleLogin = async () => {
         try {
-            signInWithRedirect(auth, provider)
-            getRedirectResult(auth)
-                .then((result) => {
-                    // This gives you a Google Access Token. You can use it to access Google APIs.
-                    const credential = GoogleAuthProvider.credentialFromResult(result)
-                    const token = credential.accessToken
-
-                    // The signed-in user info.
-                    const user = result.user
-                    // IdP data available using getAdditionalUserInfo(result)
-                    // ...
-                })
-                .catch((error) => {
-                    // Handle Errors here.
-                    const errorCode = error.code
-                    const errorMessage = error.message
-                    // The email of the user's account used.
-                    const email = error.customData.email
-                    // The AuthCredential type that was used.
-                    const credential = GoogleAuthProvider.credentialFromError(error)
-                    // ...
-                })
-            await axios.post(`${import.meta.env.VITE_API_URL}/google-login`, result.user)
-
-            console.log(result)
-            return true
+            await signInWithRedirect(auth, provider)
+            // signInWithRedirect redirige al usuario, así que el siguiente código se ejecutará
         } catch (error) {
+            setIsAuthenticated(false)
+            setUser(null)
+            toast.error('Error al iniciar sesión con Google. Por favor, intenta de nuevo.')
             console.log(error)
             return false
         }
@@ -99,8 +100,13 @@ function LoginRegister() {
 
         try {
             const res = await axios.post(`${import.meta.env.VITE_API_URL}/login`, loginForm)
+            setIsAuthenticated(true)
+            setUser(res.data)
         } catch (error) {
+            setIsAuthenticated(false)
+            setUser(null)
             toast.error('Error al iniciar sesión. Por favor, intenta de nuevo.')
+            console.log(error)
         }
     }
 
