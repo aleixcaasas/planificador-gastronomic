@@ -37,7 +37,6 @@ const emailRegister = async (req, res) => {
 
 const logIn = async (req, res) => {
     const { email, password } = req.body
-    console.log(req.body)
 
     if (!email || !password) {
         return res.status(400).json({ error: 'Email y contraseña son requeridos' })

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import LoginRegisterPage from './pages/LoginRegisterPage'
+import Home from './pages/Home'
 import { UserProvider } from './context/UserContext'
 
 export default function Router() {
@@ -8,7 +8,7 @@ export default function Router() {
             <UserProvider>
                 <BrowserRouter>
                     <Routes>
-                        <Route path='/' element={<LoginRegisterPage />} />
+                        <Route path='/' element={<Home />} />
                     </Routes>
                 </BrowserRouter>
             </UserProvider>
