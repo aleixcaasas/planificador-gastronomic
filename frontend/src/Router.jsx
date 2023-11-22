@@ -1,14 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import LoginRegisterPage from './pages/LoginRegisterPage'
+import Home from './pages/Home'
+import { UserProvider } from './context/UserContext'
 
 export default function Router() {
     return (
         <div className='h-screen w-screen'>
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<LoginRegisterPage />} />
-                </Routes>
-            </BrowserRouter>
+            <UserProvider>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                    </Routes>
+                </BrowserRouter>
+            </UserProvider>
         </div>
     )
 }
