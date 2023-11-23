@@ -1,5 +1,6 @@
 const { User, WeeklyPlan } = require('../models/user.model.js')
 const { db, auth } = require('../utils/firebase.js')
+const jwt = require('jsonwebtoken')
 
 const { createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } = require('firebase/auth')
 
@@ -49,12 +50,17 @@ const logIn = async (req, res) => {
 
     try {
         await signInWithEmailAndPassword(auth, email, password).then((result) => {
-            res.status(200).json({ user_id: result.user.uid, logged: true })
+            jwt.sign({ user_id: result.user.uid }, process.env.JWT_SECRET, { expiresIn: '7d' }, (err, token) => {
+                if (err) console.log(error)
+                res.cookie('token', token)
+                res.status(200).json({ logged: true, user_id: result.user.uid })
+            })
         })
     } catch (error) {
         if (error.code === 'auth/invalid-login-credentials') {
             res.status(403).json({ error: 'Usuario o Contraseña incorrectos', logged: false })
         } else {
+            console.log(error)
             res.status(500).json({ error: 'Error interno del servidor', logged: false })
         }
     }
@@ -114,4 +120,9 @@ const isEmailUsed = async (email) => {
     return user.docs.length > 0
 }
 
-module.exports = { emailRegister, logIn, googleLogIn, resetPassword }
+const logout = (req, res) => {
+    res.cookie('token', '', { expires: new Date(0), maxAge: 1 })
+    res.status(200).json({ logged: false })
+}
+
+module.exports = { emailRegister, logIn, googleLogIn, resetPassword, logout }

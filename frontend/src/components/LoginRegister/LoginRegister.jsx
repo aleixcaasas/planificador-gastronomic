@@ -1,14 +1,17 @@
-import './LoginRegister.css'
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import './LoginRegister.css'
+import Cookies from 'js-cookie'
 import { Toaster, toast } from 'sonner'
+import { useState, useEffect } from 'react'
 import { Tabs, Tab } from '@nextui-org/react'
 import { auth, provider } from '../../../firebase.js'
 import { useUser } from '../../context/UserContext.jsx'
 import { signInWithRedirect, getRedirectResult } from 'firebase/auth'
 
 function LoginRegister() {
-    const { setUser, setIsAuthenticated } = useUser()
+    axios.withCredentials = true
+
+    const { setUser, setIsAuthenticated, isAuthenticated } = useUser()
     const [loginForm, setLoginForm] = useState({ email: '', password: '' })
     const { email: loginEmail, password: loginPassword } = loginForm
 
@@ -84,7 +87,6 @@ function LoginRegister() {
     const googleLogin = async () => {
         try {
             await signInWithRedirect(auth, provider)
-            // signInWithRedirect redirige al usuario, así que el siguiente código se ejecutará
         } catch (error) {
             setIsAuthenticated(false)
             setUser(null)

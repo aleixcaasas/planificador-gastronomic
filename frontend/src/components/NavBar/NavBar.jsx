@@ -48,13 +48,7 @@ export function NavBar() {
                             fill='none'
                             viewBox='0 0 17 14'
                         >
-                            <path
-                                stroke='currentColor'
-                                stroke-linecap='round'
-                                stroke-linejoin='round'
-                                stroke-width='2'
-                                d='M1 1h15M1 7h15M1 13h15'
-                            />
+                            <path stroke='currentColor' d='M1 1h15M1 7h15M1 13h15' />
                         </svg>
                     </button>
                 </div>
@@ -84,12 +78,12 @@ export function NavBar() {
                     </ul>
                 </div>
                 <div
-                    className={`items-center justify-between w-[95%] absolute bg-[#FFF] top-16 left-1/2 -translate-x-[52%] md:w-1/2 mx-2 ${
+                    className={`items-center justify-between w-[95%] absolute top-16 left-1/2 -translate-x-[52%] md:w-1/2 mx-2 ${
                         !isMenuDropdownOpen ? 'hidden' : ''
                     }`}
                     id='menu-dropdown'
                 >
-                    <ul className='flex flex-col font-medium p-2 border border-false-light-gray shadow-md rounded-lg  '>
+                    <ul className='flex flex-col font-medium p-2 border border-false-light-gray shadow-md rounded-lg bg-[#FFF]'>
                         <li className='hover:bg-false-white rounded-lg'>
                             <a href='/' className='block py-2 px-3'>
                                 Inicio
