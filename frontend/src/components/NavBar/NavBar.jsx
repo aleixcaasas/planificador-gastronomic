@@ -2,7 +2,7 @@ import { useUser } from '../../context/UserContext'
 import { useState } from 'react'
 
 export function NavBar() {
-    const { user, isAuthenticated } = useUser()
+    const { user } = useUser()
 
     const [isUserDropdownOpen, setUserDropdownOpen] = useState(false)
     const [isMenuDropdownOpen, setMenuDropdownOpen] = useState(false)
@@ -17,7 +17,7 @@ export function NavBar() {
     }
 
     return (
-        <nav className='bg-white border-gray-200'>
+        <nav className='bg-[#FFF] border-gray-200 z-50 bg-opacity-75'>
             <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
                 <a href='/' className='flex items-center space-x-3 rtl:space-x-reverse'>
                     <img src='src\assets\favicon.png' className='h-8' />
@@ -59,65 +59,54 @@ export function NavBar() {
                     </button>
                 </div>
                 <div
-                    className={`absolute left-1/2 top-10 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-md z-50 ${
+                    className={`absolute left-1/2 top-10 my-4 text-base list-none bg-[#FFF] divide-y divide-gray-100 rounded-lg shadow-md z-50 ${
                         !isUserDropdownOpen ? 'hidden' : ''
                     }`}
                     id='user-dropdown'
                 >
                     <div className='px-4 py-3'>
-                        <span className='block text-sm text-gray-900 '>
+                        <span className='block text-sm'>
                             <b>{user.name || 'Aleix Casas'}</b>
                         </span>
-                        <span className='block text-sm  text-gray-500 truncate '>{user.email}</span>
+                        <span className='block text-sm truncate'>{user.email}</span>
                     </div>
                     <ul className='p-2' aria-labelledby='user-menu-button'>
                         <li className='hover:bg-false-white rounded-lg'>
-                            <a href='#' className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>
+                            <a href='/perfil' className='block px-4 py-2 text-sm'>
                                 Perfil
                             </a>
                         </li>
                         <li className='hover:bg-false-white rounded-lg'>
-                            <a href='#' className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>
+                            <a href='#' className='block px-4 py-2 text-sm'>
                                 Cerrar sesión
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div
-                    className={`items-center justify-between w-full ${!isMenuDropdownOpen ? 'hidden' : ''}`}
+                    className={`items-center justify-between w-[95%] absolute bg-[#FFF] top-16 left-1/2 -translate-x-[52%] md:w-1/2 mx-2 ${
+                        !isMenuDropdownOpen ? 'hidden' : ''
+                    }`}
                     id='menu-dropdown'
                 >
-                    <ul className='flex flex-col font-medium p-2 mt-4 border border-false-light-gray shadow-md rounded-lg rtl:space-x-reverse '>
-                        <li className='hover:bg-false-white rounded-lg' aria-current='page'>
-                            <a
-                                href='#'
-                                className='block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500'
-                                aria-current='page'
-                            >
+                    <ul className='flex flex-col font-medium p-2 border border-false-light-gray shadow-md rounded-lg  '>
+                        <li className='hover:bg-false-white rounded-lg'>
+                            <a href='/' className='block py-2 px-3'>
                                 Inicio
                             </a>
                         </li>
                         <li className='hover:bg-false-white rounded-lg'>
-                            <a
-                                href='#'
-                                className='block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500'
-                            >
+                            <a href='mis-recetas' className='block py-2 px-3'>
                                 Mis Recetas
                             </a>
                         </li>
                         <li className='hover:bg-false-white rounded-lg'>
-                            <a
-                                href='#'
-                                className='block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500'
-                            >
+                            <a href='lista-compra' className='block py-2 px-3'>
                                 Lista de la compra
                             </a>
                         </li>
                         <li className='hover:bg-false-white rounded-lg'>
-                            <a
-                                href='#'
-                                className='block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500'
-                            >
+                            <a href='explorar-recetas' className='block py-2 px-3'>
                                 Explorar recetas
                             </a>
                         </li>

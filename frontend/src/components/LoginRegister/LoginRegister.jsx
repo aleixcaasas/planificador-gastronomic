@@ -148,12 +148,8 @@ function LoginRegister() {
     }
 
     return (
-        <div className='flex items-center justify-center h-screen w-screen overflow-hidden'>
-            <div className='w-[29.375rem] h-[29.375rem] left-[-3.5rem] top-[40rem] absolute bg-false-blue bg-opacity-70 rounded-full' />
-            <div className='w-[31.25rem] h-[31.25rem] left-[-12.5rem] top-[15.625rem] absolute bg-false-blue bg-opacity-30 rounded-full' />
-            <div className='w-[26.25rem] h-[26.25rem] left-[3.1875rem] top-[0.625rem] absolute bg-false-blue bg-opacity-70 rounded-full' />
-
-            <div className='relative w-screen flex flex-col items-center justify-center overflow-hidden'>
+        <>
+            <div className='relative w-screen flex flex-col items-center justify-center overflow-hidden h-screen'>
                 <h1 className='text-center font-bold text-4xl opacity-80 font-mono mb-10'>Menu Vital</h1>
                 <Tabs className='flex flex-row items-center justify-center gap-2 pt-10 w-full' color='danger'>
                     <Tab key='Login' title='Iniciar sesión' className='px-4 py-3 rounded-md '>
@@ -397,7 +393,7 @@ function LoginRegister() {
                     </div>
                 </div>
             )}
-        </div>
+        </>
     )
 }
 

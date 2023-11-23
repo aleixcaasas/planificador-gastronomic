@@ -1,6 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import MisRecetas from './pages/MisRecetas'
+import Perfil from './pages/Perfil'
+import ListaCompra from './pages/ListaCompra'
+import ExplorarRecetas from './pages/ExplorarRecetas'
 import { UserProvider } from './context/UserContext'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 export default function Router() {
     return (
@@ -9,6 +13,10 @@ export default function Router() {
                 <BrowserRouter>
                     <Routes>
                         <Route path='/' element={<Home />} />
+                        <Route path='/perfil' element={<Perfil />} />
+                        <Route path='/mis-recetas' element={<MisRecetas />} />
+                        <Route path='/lista-compra' element={<ListaCompra />} />
+                        <Route path='/explorar-recetas' element={<ExplorarRecetas />} />
                     </Routes>
                 </BrowserRouter>
             </UserProvider>
