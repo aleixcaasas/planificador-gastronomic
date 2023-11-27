@@ -1,4 +1,3 @@
-import axios from 'axios'
 import './LoginRegister.css'
 import Cookies from 'js-cookie'
 import { Toaster, toast } from 'sonner'
@@ -9,9 +8,7 @@ import { useUser } from '../../context/UserContext.jsx'
 import { signInWithRedirect, getRedirectResult } from 'firebase/auth'
 
 function LoginRegister() {
-    axios.withCredentials = true
-
-    const { setUser, setIsAuthenticated, isAuthenticated } = useUser()
+    const { setUser, setIsAuthenticated, isAuthenticated, axios } = useUser()
     const [loginForm, setLoginForm] = useState({ email: '', password: '' })
     const { email: loginEmail, password: loginPassword } = loginForm
 
@@ -45,6 +42,26 @@ function LoginRegister() {
 
         processRedirectResult()
     }, [])
+
+    useEffect(() => {
+        const getVerifyToken = async () => {
+            const cookies = Cookies.get()
+            if (cookies.token) {
+                console.log('token found')
+                try {
+                    const res = await axios.get(`${import.meta.env.VITE_API_URL}/verify-token`)
+                    if (res.data) {
+                        setIsAuthenticated(true)
+                        setUser(res.data)
+                    }
+                } catch (error) {
+                    setIsAuthenticated(false)
+                    setUser(null)
+                }
+            }
+        }
+        getVerifyToken()
+    }, [isAuthenticated])
 
     const handleLoginChange = (e) => {
         setLoginForm({ ...loginForm, [e.target.name]: e.target.value })
@@ -127,7 +144,6 @@ function LoginRegister() {
         try {
             await axios.post(`${import.meta.env.VITE_API_URL}/email-register`, userData)
 
-            // Suponiendo que todo va bien
             toast.success('Registro exitoso. Bienvenido a la plataforma!')
         } catch (error) {
             toast.error('Error al registrar. Por favor, intenta de nuevo.')
