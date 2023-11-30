@@ -2,10 +2,9 @@ import { Navigate, Outlet } from 'react-router-dom'
 import { useUser } from './context/UserContext'
 
 function ProtectedRoutes() {
-    const { isAuthenticated } = useUser()
+    const { isAuthenticated, loading } = useUser()
 
-    if (!isAuthenticated) return <Navigate to='/' replace />
-
+    if (!loading && !isAuthenticated) return <Navigate to='/' replace />
     return <Outlet />
 }
 

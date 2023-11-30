@@ -49,16 +49,36 @@ const logIn = async (req, res) => {
     }
 
     try {
-        await signInWithEmailAndPassword(auth, email, password).then((result) => {
-            jwt.sign({ user_id: result.user.uid }, process.env.JWT_SECRET, { expiresIn: '30d' }, (err, token) => {
-                if (err) console.log(error)
-                res.cookie('token', token, {
-                    httpOnly: false,
-                    secure: true,
-                    /*sameSite: 'None',*/
-                    maxAge: 30 * 24 * 60 * 60 * 1000
-                })
-                res.status(200).json({ logged: true, user_id: result.user.uid })
+        const userCredential = await signInWithEmailAndPassword(auth, email, password)
+
+        // Recupera los datos del usuario de Firestore
+        const userDoc = await db.collection('users').where('email', '==', email).get()
+        if (userDoc.empty) {
+            return res.status(404).json({ error: 'Usuario no encontrado' })
+        }
+
+        const userData = userDoc.docs[0].data()
+        const userId = userDoc.docs[0].id
+
+        jwt.sign({ user_id: userId }, process.env.JWT_SECRET, { expiresIn: '30d' }, (err, token) => {
+            if (err) {
+                console.log(err)
+                return res.status(500).json({ logged: false, error: 'Error generating token' })
+            }
+
+            res.cookie('token', token, {
+                httpOnly: false,
+                secure: true,
+                /* sameSite: 'None', */
+                maxAge: 30 * 24 * 60 * 60 * 1000
+            })
+
+            res.status(200).json({
+                logged: true,
+                user_id: userId,
+                full_name: userData.full_name,
+                email: userData.email,
+                image: userData.image
             })
         })
     } catch (error) {
@@ -154,31 +174,41 @@ const logout = (req, res) => {
     res.status(200).json({ logged: false })
 }
 
-const verifyToken = (req, res) => {
-    const token = req.headers.cookie.split('=')[1]
-    if (!token) {
-        return res.status(401).json({ error: 'No autorizado' })
+const verifyToken = async (req, res) => {
+    if (!req.headers.cookie) {
+        return res.status(401).json({ error: 'No autorizado1' })
     }
 
-    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+    const token = req.headers.cookie.split('token=')[1]
+    if (!token) {
+        return res.status(401).json({ error: 'No autorizado2' })
+    }
+
+    jwt.verify(token, process.env.JWT_SECRET, async (err, decoded) => {
         if (err) {
             console.log(err)
-            return res.status(401).json({ error: 'No autorizado' })
+            return res.status(401).json({ error: 'No autorizado3' })
         }
 
-        const userFound = getUser(decoded.user_id)
-        if (!userFound) {
-            return res.status(401).json({ error: 'No autorizado' })
-        }
+        try {
+            const userFound = await getUser(decoded.user_id)
 
-        return res.status(200).json({
-            logged: true,
-            user_id: decoded.user_id,
-            user_name: userFound.user_name,
-            full_name: userFound.full_name,
-            email: userFound.email,
-            image: userFound.image
-        })
+            if (!userFound) {
+                return res.status(401).json({ error: 'Usuario no encontrado' })
+            }
+
+            res.status(200).json({
+                logged: true,
+                verified: true,
+                user_id: decoded.user_id,
+                full_name: userFound.full_name,
+                email: userFound.email,
+                image: userFound.image
+            })
+        } catch (error) {
+            console.error(error)
+            return res.status(500).json({ error: 'Error interno del servidor' })
+        }
     })
 }
 

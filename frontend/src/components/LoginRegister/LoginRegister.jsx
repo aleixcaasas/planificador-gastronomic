@@ -1,14 +1,13 @@
 import './LoginRegister.css'
-import Cookies from 'js-cookie'
 import { Toaster, toast } from 'sonner'
 import { useState, useEffect } from 'react'
 import { Tabs, Tab } from '@nextui-org/react'
 import { auth, provider } from '../../../firebase.js'
 import { useUser } from '../../context/UserContext.jsx'
-import { signInWithRedirect, getRedirectResult } from 'firebase/auth'
+import { signInWithRedirect } from 'firebase/auth'
 
 function LoginRegister() {
-    const { setUser, setIsAuthenticated, isAuthenticated, axios } = useUser()
+    const { setUser, setIsAuthenticated, setLoading, axios, isAuthenticated } = useUser()
     const [loginForm, setLoginForm] = useState({ email: '', password: '' })
     const { email: loginEmail, password: loginPassword } = loginForm
 
@@ -22,46 +21,6 @@ function LoginRegister() {
 
     const [resetEmail, setResetEmail] = useState('')
     const [showResetModal, setShowResetModal] = useState(false)
-
-    useEffect(() => {
-        const processRedirectResult = async () => {
-            try {
-                const result = await getRedirectResult(auth)
-                if (result) {
-                    await axios.post(`${import.meta.env.VITE_API_URL}/google-login`, result.user)
-                    setUser(result.user)
-                    setIsAuthenticated(true)
-                }
-            } catch (error) {
-                setIsAuthenticated(false)
-                setUser(null)
-                toast.error('Error al iniciar sesión con Google. Por favor, intenta de nuevo.')
-                console.log(error)
-            }
-        }
-
-        processRedirectResult()
-    }, [])
-
-    useEffect(() => {
-        const getVerifyToken = async () => {
-            const cookies = Cookies.get()
-            if (cookies.token) {
-                console.log('token found')
-                try {
-                    const res = await axios.get(`${import.meta.env.VITE_API_URL}/verify-token`)
-                    if (res.data) {
-                        setIsAuthenticated(true)
-                        setUser(res.data)
-                    }
-                } catch (error) {
-                    setIsAuthenticated(false)
-                    setUser(null)
-                }
-            }
-        }
-        getVerifyToken()
-    }, [isAuthenticated])
 
     const handleLoginChange = (e) => {
         setLoginForm({ ...loginForm, [e.target.name]: e.target.value })

@@ -1,8 +1,9 @@
 import { useUser } from '../../context/UserContext'
 import { useState } from 'react'
+import Cookies from 'js-cookie'
 
 export function NavBar() {
-    const { user } = useUser()
+    const { user, axios, setIsAuthenticated, setUser } = useUser()
 
     const [isUserDropdownOpen, setUserDropdownOpen] = useState(false)
     const [isMenuDropdownOpen, setMenuDropdownOpen] = useState(false)
@@ -14,6 +15,20 @@ export function NavBar() {
     const toggleMenuDropdown = () => {
         setMenuDropdownOpen(!isMenuDropdownOpen)
         setUserDropdownOpen(false)
+    }
+
+    const signOut = async () => {
+        const cookies = Cookies.get()
+        if (cookies.token) {
+            try {
+                await axios.get(`${import.meta.env.VITE_API_URL}/logout`)
+                Cookies.remove('token')
+                setIsAuthenticated(false)
+                setUser(null)
+            } catch (error) {
+                console.log(error)
+            }
+        }
     }
 
     return (
@@ -31,7 +46,11 @@ export function NavBar() {
                     >
                         <img
                             className='w-8 h-8 rounded-full'
-                            src={user.photoURL || 'https://cdn-icons-png.flaticon.com/512/666/666201.png'}
+                            src={
+                                user !== null && user.image !== null
+                                    ? user.image
+                                    : 'https://cdn-icons-png.flaticon.com/512/666/666201.png'
+                            }
                             alt='user photo'
                         />
                     </button>
@@ -60,9 +79,11 @@ export function NavBar() {
                 >
                     <div className='px-4 py-3'>
                         <span className='block text-sm'>
-                            <b>{user.name || 'Aleix Casas'}</b>
+                            <b>{user !== null && user.full_name !== null ? user.full_name : ''}</b>
                         </span>
-                        <span className='block text-sm truncate'>{user.email}</span>
+                        <span className='block text-sm truncate'>
+                            {user !== null && user.email !== null ? user.email : ''}
+                        </span>
                     </div>
                     <ul className='p-2' aria-labelledby='user-menu-button'>
                         <li className='hover:bg-false-white rounded-lg'>
@@ -71,7 +92,7 @@ export function NavBar() {
                             </a>
                         </li>
                         <li className='hover:bg-false-white rounded-lg'>
-                            <a href='#' className='block px-4 py-2 text-sm'>
+                            <a onClick={signOut} className='block px-4 py-2 text-sm hover:cursor-pointer'>
                                 Cerrar sesión
                             </a>
                         </li>
