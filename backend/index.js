@@ -3,6 +3,8 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 const { authRouter } = require('./routes/auth.routes.js')
+const { recipeRouter } = require('./routes/recipe.routes.js')
+const { planningRouter } = require('./routes/planning.routes.js')
 
 const PORT = process.env.PORT || 3000
 
@@ -16,6 +18,8 @@ app.use(express.urlencoded({ extended: true }))
 
 // ALL THE ROUTERS OF THE APP WILL BE HERE
 app.use('/api', authRouter)
+app.use('/api', recipeRouter)
+app.use('/api', planningRouter)
 
 // STARTING THE SERVER
 app.listen(PORT, () => {

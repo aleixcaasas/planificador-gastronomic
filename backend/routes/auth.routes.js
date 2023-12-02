@@ -7,7 +7,6 @@ const {
     logout,
     verifyToken
 } = require('../controllers/auth.controller.js')
-const { auth } = require('../utils/firebase.js')
 
 const authRouter = Router()
 

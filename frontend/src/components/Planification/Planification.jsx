@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 function Planification() {
     const { setUser, setIsAuthenticated, axios } = useUser()
     const { planning, setPlanning } = useState()
-    const [isAlternateView, setIsAlternateView] = useState(false)
+    const [isAlternateView, setIsAlternateView] = useState(true)
     const weekdays = ['LUNES', 'MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES', 'SABADO', 'DOMINGO']
 
     useEffect(() => {
@@ -20,8 +20,8 @@ function Planification() {
         fetchPlanning()
     }, [planning])
 
-    function dailyPlanification(day) {
-        return (
+    function dailyPlanification() {
+        return weekdays.map((day) => (
             <table className='w-11/12 mx-auto shadow-md rounded-lg my-2.5'>
                 <thead>
                     <tr>
@@ -46,7 +46,7 @@ function Planification() {
                     </tr>
                 </tbody>
             </table>
-        )
+        ))
     }
 
     function alternateDailyPlanification() {
@@ -105,39 +105,17 @@ function Planification() {
                             fill='#000000'
                             stroke='none'
                         >
-                            <path
-                                d='M170 467 c-49 -16 -123 -93 -138 -143 -18 -61 -16 -74 13 -74 21 0
-25 5 25 28 0 42 41 104 85 129 69 39 168 28 228 -26 18 -15 18 -16 -5 -21 -14
--4 -24 -14 -26 -28 -3 -21 0 -22 62 -22 l66 0 0 65 c0 59 -2 65 -21 65 -12 0
--23 -8 -26 -20 -5 -18 -7 -17 -42 11 -60 48 -141 61 -221 36z'
-                            />
-                            <path
-                                d='M203 315 c-17 -7 -39 -25 -48 -39 -16 -24 -16 -28 0 -52 9 -14 33
--33 53 -41 32 -13 42 -14 76 -2 22 8 48 26 59 41 19 26 19 28 3 53 -17 25 -71
-55 -98 55 -7 -1 -27 -7 -45 -15z m79 -32 c22 -20 23 -41 1 -65 -20 -22 -41
--23 -65 -1 -22 20 -23 41 -1 65 20 22 41 23 65 1z'
-                            />
-                            <path
-                                d='M224 266 c-10 -26 4 -48 28 -44 17 2 23 10 23 28 0 18 -6 26 -23 28
--13 2 -25 -3 -28 -12z'
-                            />
-                            <path
-                                d='M430 223 c0 -43 -41 -105 -85 -130 -69 -39 -168 -28 -228 26 -18 15
--18 16 5 21 14 4 24 14 26 28 3 21 0 22 -62 22 l-66 0 0 -65 c0 -58 2 -65 20
--65 15 0 20 7 20 26 l0 26 42 -36 c63 -55 137 -69 222 -44 54 16 128 90 144
-144 18 61 16 74 -13 74 -21 0 -25 -5 -25 -27z'
-                            />
+                            <path d='M170 467 c-49 -16 -123 -93 -138 -143 -18 -61 -16 -74 13 -74 21 0 25 5 25 28 0 42 41 104 85 129 69 39 168 28 228 -26 18 -15 18 -16 -5 -21 -14 -4 -24 -14 -26 -28 -3 -21 0 -22 62 -22 l66 0 0 65 c0 59 -2 65 -21 65 -12 0 -23 -8 -26 -20 -5 -18 -7 -17 -42 11 -60 48 -141 61 -221 36z' />
+                            <path d='M203 315 c-17 -7 -39 -25 -48 -39 -16 -24 -16 -28 0 -52 9 -14 33 -33 53 -41 32 -13 42 -14 76 -2 22 8 48 26 59 41 19 26 19 28 3 53 -17 25 -71 55 -98 55 -7 -1 -27 -7 -45 -15z m79 -32 c22 -20 23 -41 1 -65 -20 -22 -41 -23 -65 -1 -22 20 -23 41 -1 65 20 22 41 23 65 1z' />
+                            <path d='M224 266 c-10 -26 4 -48 28 -44 17 2 23 10 23 28 0 18 -6 26 -23 28 -13 2 -25 -3 -28 -12z' />
+                            <path d='M430 223 c0 -43 -41 -105 -85 -130 -69 -39 -168 -28 -228 26 -18 15 -18 16 5 21 14 4 24 14 26 28 3 21 0 22 -62 22 l-66 0 0 -65 c0 -58 2 -65 20 -65 15 0 20 7 20 26 l0 26 42 -36 c63 -55 137 -69 222 -44 54 16 128 90 144 144 18 61 16 74 -13 74 -21 0 -25 -5 -25 -27z' />
                         </g>
                     </svg>
                 </button>
                 <h1 className=' text-2xl font-bold mb-2'>PLANIFICACIÓN</h1>
             </div>
 
-            {isAlternateView ? (
-                <>{weekdays.map((day) => dailyPlanification(day))}</>
-            ) : (
-                <>{alternateDailyPlanification()}</>
-            )}
+            {isAlternateView ? <>{dailyPlanification()}</> : <>{alternateDailyPlanification()}</>}
         </div>
     )
 }
