@@ -28,23 +28,21 @@ class Meal {
 }
 
 class DailyPlan {
-    constructor() {
-        this.breakfast = []
-        this.lunch = []
-        this.dinner = []
+    constructor(data) {
+        this.breakfast = data.breakfast || {}
+        this.lunch = data.lunch || {}
+        this.dinner = data.dinner || {}
     }
 }
 
-class WeeklyPlan {
-    constructor() {
-        this.monday = new DailyPlan()
-        this.tuesday = new DailyPlan()
-        this.wednesday = new DailyPlan()
-        this.thursday = new DailyPlan()
-        this.friday = new DailyPlan()
-        this.saturday = new DailyPlan()
-        this.sunday = new DailyPlan()
+export class WeeklyPlan {
+    constructor(data) {
+        this.monday = new DailyPlan(data.monday || {})
+        this.tuesday = new DailyPlan(data.tuesday || {})
+        this.wednesday = new DailyPlan(data.wednesday || {})
+        this.thursday = new DailyPlan(data.thursday || {})
+        this.friday = new DailyPlan(data.friday || {})
+        this.saturday = new DailyPlan(data.saturday || {})
+        this.sunday = new DailyPlan(data.sunday || {})
     }
 }
-
-module.exports = { User, ShoppingListItem, Meal, DailyPlan, WeeklyPlan }

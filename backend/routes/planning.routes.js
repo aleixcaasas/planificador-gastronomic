@@ -3,7 +3,7 @@ const { getPlanning, addMeal, deleteMeal } = require('../controllers/planning.co
 
 const planningRouter = Router()
 
-planningRouter.get('/planning', getPlanning)
+planningRouter.post('/planning', getPlanning)
 planningRouter.post('/add-meal', addMeal)
 planningRouter.post('/delete-meal', deleteMeal)
 

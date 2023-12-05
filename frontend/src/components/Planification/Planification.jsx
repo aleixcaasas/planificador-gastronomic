@@ -1,35 +1,50 @@
 import './Planification.css'
 import { useUser } from '../../context/UserContext.jsx'
 import { useEffect, useState } from 'react'
+import { WeeklyPlan } from '../../models/user.model.jsx'
 
 function Planification() {
-    const { setUser, setIsAuthenticated, axios } = useUser()
-    const { planning, setPlanning } = useState()
+    const { user, axios } = useUser()
+    const [planning, setPlanning] = useState()
     const [isAlternateView, setIsAlternateView] = useState(true)
-    const weekdays = ['LUNES', 'MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES', 'SABADO', 'DOMINGO']
+    const weekdays = {
+        monday: 'LUNES',
+        tuesday: 'MARTES',
+        wednesday: 'MIERCOLES',
+        thursday: 'JUEVES',
+        friday: 'VIERNES',
+        saturday: 'SABADO',
+        sunday: 'DOMINGO'
+    }
 
     useEffect(() => {
         const fetchPlanning = async () => {
             try {
-                const response = await axios.get('/planning')
-                setPlanning(response.data)
+                const user_id = user.user_id
+                const response = await axios.post(`${import.meta.env.VITE_API_URL}/planning`, { user_id: user_id })
+                const plan = new WeeklyPlan(response.data)
+                setPlanning(plan)
             } catch (error) {
                 console.log(error)
             }
         }
         fetchPlanning()
-    }, [planning])
+    }, [])
 
     function dailyPlanification() {
-        return weekdays.map((day) => (
-            <table className='w-11/12 mx-auto shadow-md rounded-lg my-2.5'>
+        if (!planning) {
+            return <div>Loading...</div>
+        }
+
+        return Object.entries(planning).map(([day, meals]) => (
+            <table key={day} className='w-11/12 mx-auto shadow-md rounded-lg my-2.5'>
                 <thead>
                     <tr>
                         <th
                             colSpan={3}
                             className='bg-false-orange overflow- font-semibold py-1 rounded-tl-lg rounded-tr-lg'
                         >
-                            {day}
+                            {weekdays[day]}
                         </th>
                     </tr>
                     <tr className='text-center text-sm bg-[#FFF] bg-opacity-80'>
@@ -40,13 +55,28 @@ function Planification() {
                 </thead>
                 <tbody>
                     <tr className=' h-20 bg-[#FFF] rounded-bl-lg rounded-br-lg bg-opacity-80'>
-                        <td className='w-1/3 rounded-bl-lg'></td>
-                        <td className='w-1/3 border-x-1 border-false-light-gray'></td>
-                        <td className='w-1/3 rounded-br-lg'></td>
+                        <td className='w-1/3 rounded-bl-lg'>
+                            {meals.breakfast.map((recipe) => dishCard(recipe, day, 'breakfast'))}
+                        </td>
+                        <td className='w-1/3 border-x-1 border-false-light-gray'>
+                            {meals.lunch.map((recipe) => dishCard(recipe, day, 'lunch'))}
+                        </td>
+                        <td className='w-1/3 rounded-br-lg'>
+                            {meals.dinner.map((recipe) => dishCard(recipe, day, 'dinner'))}
+                        </td>
                     </tr>
                 </tbody>
             </table>
         ))
+    }
+
+    function dishCard(dish, day, meal) {
+        return (
+            <div className='w-11/12 mx-auto shadow-md rounded-lg my-2.5'>
+                <img src={dish['recipe_image']} alt='' />
+                <div className='w-full bg-[#FFF] rounded-lg bg-opacity-80'>{dish['recipe_title']}</div>
+            </div>
+        )
     }
 
     function alternateDailyPlanification() {
@@ -63,17 +93,23 @@ function Planification() {
                     CENA
                 </div>
 
-                {weekdays.map((day, index) => (
+                {Object.entries(planning).map(([day, meals]) => (
                     <>
                         <div
                             className='col-span-1 bg-false-orange rounded-lg py-1.5 px-1 text-center h-full font-bold flex items-center justify-center'
                             style={{ writingMode: 'tb' }}
                         >
-                            {day}
+                            {weekdays[day]}
                         </div>
-                        <div className='col-span-3 bg-[#FFF] bg-opacity-80 rounded-lg h-36'></div>
-                        <div className='col-span-3 bg-[#FFF] bg-opacity-80 rounded-lg h-36'></div>
-                        <div className='col-span-3 bg-[#FFF] bg-opacity-80 rounded-lg h-36'></div>
+                        <div className='col-span-3 bg-[#FFF] bg-opacity-80 rounded-lg h-36 flex flex-row'>
+                            {meals.breakfast.map((recipe) => dishCard(recipe, day, 'breakfast'))}
+                        </div>
+                        <div className='col-span-3 bg-[#FFF] bg-opacity-80 rounded-lg h-36 flex flex-row'>
+                            {meals.lunch.map((recipe) => dishCard(recipe, day, 'lunch'))}
+                        </div>
+                        <div className='col-span-3 bg-[#FFF] bg-opacity-80 rounded-lg h-36'>
+                            {meals.dinner.map((recipe) => dishCard(recipe, day, 'dinner'))}
+                        </div>
                     </>
                 ))}
             </div>
@@ -115,7 +151,7 @@ function Planification() {
                 <h1 className=' text-2xl font-bold mb-2'>PLANIFICACIÓN</h1>
             </div>
 
-            {isAlternateView ? <>{dailyPlanification()}</> : <>{alternateDailyPlanification()}</>}
+            {isAlternateView ? dailyPlanification() : alternateDailyPlanification()}
         </div>
     )
 }
