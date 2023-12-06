@@ -10,7 +10,6 @@ const getPlanning = async (req, res) => {
 
 const addMeal = async (req, res) => {
     const { user_id, day, meal, recipe_id, recipe_title, recipe_image, recipe_time } = req.body
-
     const newMeal = {
         recipe_id: recipe_id,
         recipe_title: recipe_title,

@@ -19,6 +19,9 @@ function Planification() {
     }
 
     const [showAddRecipeModal, setShowAddRecipeModal] = useState(false)
+    const [recipes, setRecipes] = useState([])
+    const [actualMeal, setActualMeal] = useState([])
+    const [searchedRecipes, setSearchedRecipes] = useState([])
 
     useEffect(() => {
         const fetchPlanning = async () => {
@@ -34,11 +37,38 @@ function Planification() {
         fetchPlanning()
     }, [])
 
-    function deleteRecipe(day, meal, recipe) {
+    async function addRecipe(recipe) {
+        try {
+            const user_id = user.user_id
+            const recipe_id = recipe['id']
+            const recipe_title = recipe['title']
+            const recipe_image = recipe['image']
+            const recipe_time = recipe['time']
+            const [day, meal] = actualMeal
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/add-meal`, {
+                user_id,
+                recipe_id,
+                day,
+                meal,
+                recipe_title,
+                recipe_image,
+                recipe_time
+            })
+            const plan = new WeeklyPlan(response.data)
+            setPlanning(plan)
+            setShowAddRecipeModal(false)
+            setActualMeal([])
+        } catch (error) {
+            toast.error('Error al añadir la receta')
+            console.log(error)
+        }
+    }
+
+    async function deleteRecipe(day, meal, recipe) {
         try {
             const user_id = user.user_id
             const recipe_id = recipe['recipe_id']
-            const response = axios.post(`${import.meta.env.VITE_API_URL}/delete-meal`, {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/delete-meal`, {
                 user_id,
                 recipe_id,
                 day,
@@ -52,32 +82,41 @@ function Planification() {
         }
     }
 
-    function addRecipe(day, meal) {
+    function filterRecipes(e) {
+        const search = e.target.value
+        const filteredRecipes = recipes.filter((recipe) => recipe.title.toLowerCase().includes(search.toLowerCase()))
+        setSearchedRecipes(filteredRecipes)
+    }
+
+    async function searchRecipes(day, meal) {
         setShowAddRecipeModal(true)
+        setActualMeal([day, meal])
         try {
-            const user_id = user.user_id
-            const response = axios.post(`${import.meta.env.VITE_API_URL}/add-meal`)
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/recipes`)
+            setRecipes(response.data.sort((a, b) => (a.title > b.title ? 1 : -1)))
+            setSearchedRecipes(recipes)
         } catch (error) {
             toast.error('Error al añadir la receta')
             console.log(error)
         }
     }
 
-    function dishCard(meals, day, meal) {
-        const formatTime = (time) => {
-            if (!time) {
-                return 'No disponible'
-            }
-            const parts = time.split(' ')
-            if (parts.length >= 2) {
-                return `${parts[0]} ${parts[1].substring(0, 3)}`
-            }
-            return time
+    const formatTime = (time) => {
+        if (!time) {
+            return 'No disponible'
         }
+        const parts = time.split(' ')
+        if (parts.length >= 2) {
+            return `${parts[0]} ${parts[1].substring(0, 3)}`
+        }
+        return time
+    }
+
+    function dishCard(meals, day, meal) {
         if (!meals || meals.length === 0)
             return (
                 <div className='w-full h-full flex items-center justify-center'>
-                    <button onClick={() => addRecipe(day, meal)}>
+                    <button onClick={() => searchRecipes(day, meal)}>
                         <svg xmlns='http://www.w3.org/2000/svg' width='2.5em' height='2.5em' viewBox='0 0 24 24'>
                             <path
                                 fill='#7a7979'
@@ -88,44 +127,58 @@ function Planification() {
                 </div>
             )
         else
-            return meals.map((dish) => (
-                <div className='w-11/12 bg-[#F4F6F7] mx-auto shadow-md rounded-md mb-2 p-1'>
-                    <img src={dish['recipe_image']} className='rounded' />
-                    <div className='w-full rounded-md bg-opacity-80'>
-                        <div className=' text-xs flex flex-row py-1 text-[#7a7979] items-center justify-between'>
-                            <div className='flex flex-row'>
-                                <svg
-                                    className='h-4 mr-1'
-                                    xmlns='http://www.w3.org/2000/svg'
-                                    width='1.1em'
-                                    height='1.1em'
-                                    viewBox='0 0 23 23'
-                                >
-                                    <path
-                                        fill='#000'
-                                        d='M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0 0 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a8.994 8.994 0 0 0 7.03-14.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7z'
-                                    />
-                                </svg>
-                                <p className='h-4 leading-[1.125rem] '>{formatTime(dish['recipe_time'])}</p>
+            return (
+                <>
+                    <div className='w-full h-full flex justify-center'>
+                        <button onClick={() => searchRecipes(day, meal)}>
+                            <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'>
+                                <path
+                                    fill='#7a7979'
+                                    d='M12 4c4.411 0 8 3.589 8 8s-3.589 8-8 8s-8-3.589-8-8s3.589-8 8-8m0-2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2zm5 9h-4V7h-2v4H7v2h4v4h2v-4h4v-2z'
+                                />
+                            </svg>
+                        </button>
+                    </div>{' '}
+                    {meals.map((dish) => (
+                        <div className='w-11/12 bg-[#F4F6F7] mx-auto shadow-md rounded-md mb-2 p-1'>
+                            <img src={dish['recipe_image']} className='rounded' />
+                            <div className='w-full rounded-md bg-opacity-80'>
+                                <div className=' text-xs flex flex-row py-1 text-[#7a7979] items-center justify-between'>
+                                    <div className='flex flex-row'>
+                                        <svg
+                                            className='h-4 mr-1'
+                                            xmlns='http://www.w3.org/2000/svg'
+                                            width='1.1em'
+                                            height='1.1em'
+                                            viewBox='0 0 23 23'
+                                        >
+                                            <path
+                                                fill='#000'
+                                                d='M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0 0 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a8.994 8.994 0 0 0 7.03-14.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7z'
+                                            />
+                                        </svg>
+                                        <p className='h-4 leading-[1.125rem] '>{formatTime(dish['recipe_time'])}</p>
+                                    </div>
+                                    <button onClick={() => deleteRecipe(day, meal, dish)}>
+                                        <svg
+                                            xmlns='http://www.w3.org/2000/svg'
+                                            width='1.1em'
+                                            height='1.1em'
+                                            viewBox='0 0 23 23'
+                                        >
+                                            <path
+                                                fill='#000'
+                                                d='M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z'
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p className='text-sm  font-black text-center'>{dish['recipe_title']}</p>
                             </div>
-                            <button onClick={() => deleteRecipe(day, meal, dish)}>
-                                <svg
-                                    xmlns='http://www.w3.org/2000/svg'
-                                    width='1.1em'
-                                    height='1.1em'
-                                    viewBox='0 0 23 23'
-                                >
-                                    <path
-                                        fill='#000'
-                                        d='M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z'
-                                    />
-                                </svg>
-                            </button>
                         </div>
-                        <p className='text-sm  font-black text-center'>{dish['recipe_title']}</p>
-                    </div>
-                </div>
-            ))
+                    ))}
+                </>
+            )
     }
 
     function dailyPlanification() {
@@ -165,37 +218,39 @@ function Planification() {
 
     function alternateDailyPlanification() {
         return (
-            <div className='grid grid-cols-10 gap-2 w-full mx-auto my-2.5'>
-                <div className='col-span-1 text-sm font-semibold rounded-tl-lg py-1.5 h-8'></div>
-                <div className='col-span-3 text-sm font-semibold bg-false-orange rounded-lg py-1.5 text-center h-8'>
-                    DESAYUNO
-                </div>
-                <div className='col-span-3 text-sm font-semibold bg-false-orange rounded-lg py-1.5 text-center h-8'>
-                    COMIDA
-                </div>
-                <div className='col-span-3 text-sm font-semibold bg-false-orange rounded-lg py-1.5 text-center rounded-tr-lg h-8'>
-                    CENA
-                </div>
+            <div className='overflow-x-auto'>
+                <div className='grid grid-cols-10 gap-2 mx-auto my-2.5 overflow-x-scroll'>
+                    <div className='col-span-1 text-sm font-semibold rounded-tl-lg py-1.5 h-8'></div>
+                    <div className='col-span-3 text-sm font-semibold bg-false-orange rounded-lg py-1.5 text-center h-8'>
+                        DESAYUNO
+                    </div>
+                    <div className='col-span-3 text-sm font-semibold bg-false-orange rounded-lg py-1.5 text-center h-8'>
+                        COMIDA
+                    </div>
+                    <div className='col-span-3 text-sm font-semibold bg-false-orange rounded-lg py-1.5 text-center rounded-tr-lg h-8'>
+                        CENA
+                    </div>
 
-                {Object.entries(planning).map(([day, meals]) => (
-                    <>
-                        <div
-                            className='col-span-1 bg-false-orange rounded-lg py-1.5 px-1 text-center h-full font-bold flex items-center justify-center'
-                            style={{ writingMode: 'tb' }}
-                        >
-                            {weekdays[day]}
-                        </div>
-                        <div className='col-span-3 bg-[#FFF] bg-opacity-80 rounded-lg h-36 flex flex-row'>
-                            {dishCard(meals.breakfast, day, 'breakfast')}
-                        </div>
-                        <div className='col-span-3 bg-[#FFF] bg-opacity-80 rounded-lg h-36 flex flex-row'>
-                            {dishCard(meals.lunch, day, 'lunch')}
-                        </div>
-                        <div className='col-span-3 bg-[#FFF] bg-opacity-80 rounded-lg h-36'>
-                            {dishCard(meals.dinner, day, 'dinner')}
-                        </div>
-                    </>
-                ))}
+                    {Object.entries(planning).map(([day, meals]) => (
+                        <>
+                            <div
+                                className='col-span-1 bg-false-orange rounded-lg py-1.5 px-1 text-center h-full font-bold flex items-center justify-center'
+                                style={{ writingMode: 'tb' }}
+                            >
+                                {weekdays[day]}
+                            </div>
+                            <div className='col-span-3 bg-[#FFF] bg-opacity-80 rounded-lg h-36 flex flex-row'>
+                                {dishCard(meals.breakfast, day, 'breakfast')}
+                            </div>
+                            <div className='col-span-3 bg-[#FFF] bg-opacity-80 rounded-lg h-36 flex flex-row'>
+                                {dishCard(meals.lunch, day, 'lunch')}
+                            </div>
+                            <div className='col-span-3 bg-[#FFF] bg-opacity-80 rounded-lg h-36'>
+                                {dishCard(meals.dinner, day, 'dinner')}
+                            </div>
+                        </>
+                    ))}
+                </div>
             </div>
         )
     }
@@ -206,7 +261,7 @@ function Planification() {
 
     return (
         <>
-            <div className='relative flex flex-col items-center justify-center mx-2 my-2 h-full overflow-y-scroll '>
+            <div className='relative flex flex-col items-center justify-center mx-2 my-2 h-full overflow-scroll '>
                 <div className='flex flex-row gap-10'>
                     <h1 className=' text-2xl font-bold mb-2'>PLANIFICACIÓN</h1>
                     <button onClick={toggleView} className='float-left absolute -left-[-2rem] -top-[-1rem]'>
@@ -250,9 +305,40 @@ function Planification() {
                                 name='recipe-title'
                                 id=''
                                 placeholder='Nombre de la receta'
+                                onChange={(e) => filterRecipes(e)}
                                 style={{ outline: 'none' }}
                             />
                         </form>
+                        <div className='flex flex-col gap-2 overflow-y-scroll h-5/6'>
+                            {searchedRecipes.map((recipe, index) => (
+                                <div
+                                    className={`flex flex-row w-full justify-between px-1 pb-1 ${
+                                        index != recipes.length - 1 ? 'border-b-1 border-false-light-gray' : ''
+                                    } `}
+                                >
+                                    <div className='flex flex-row'>
+                                        <img src={recipe.image} className='rounded w-24 h-16 object-cover mr-1' />
+                                        <div>
+                                            <p>{recipe.title}</p>
+                                            <p>{formatTime(recipe.time)}</p>
+                                        </div>
+                                    </div>
+                                    <button onClick={() => addRecipe(recipe)}>
+                                        <svg
+                                            xmlns='http://www.w3.org/2000/svg'
+                                            width='1.5em'
+                                            height='1.5em'
+                                            viewBox='0 0 23 23'
+                                        >
+                                            <path
+                                                fill='#7a7979'
+                                                d='M12 4c4.411 0 8 3.589 8 8s-3.589 8-8 8s-8-3.589-8-8s3.589-8 8-8m0-2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2zm5 9h-4V7h-2v4H7v2h4v4h2v-4h4v-2z'
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             )}
