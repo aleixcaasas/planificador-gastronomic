@@ -28,6 +28,19 @@ const addMeal = async (req, res) => {
     res.json(user.weekly_plan)
 }
 
-const deleteMeal = async (req, res) => {}
+const deleteMeal = async (req, res) => {
+    const { user_id, day, meal, recipe_id } = req.body
+
+    const doc = await db.collection('users').doc(user_id).get()
+    const user = doc.data()
+
+    const newMeals = user.weekly_plan[day][meal].filter((meal) => meal.recipe_id !== recipe_id)
+
+    user.weekly_plan[day][meal] = newMeals
+
+    await db.collection('users').doc(user_id).update({ weekly_plan: user.weekly_plan })
+
+    res.json(user.weekly_plan)
+}
 
 module.exports = { getPlanning, addMeal, deleteMeal }

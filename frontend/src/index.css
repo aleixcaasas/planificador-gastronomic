@@ -8,9 +8,6 @@
     --false-dark-gray: #3d424a;
     --false-light-gray: #c0c0be;
     --false-white: #e6e5de;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
 }
 
 *::-webkit-scrollbar {
@@ -27,4 +24,8 @@
 
 *::-webkit-scrollbar-thumb:hover {
     background-color: rgba(254, 172, 73, 0.642);
+}
+
+body {
+    overflow: unset;
 }

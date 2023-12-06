@@ -1,5 +1,5 @@
 import './LoginRegister.css'
-import { Toaster, toast } from 'sonner'
+import { toast } from 'sonner'
 import { useState, useEffect } from 'react'
 import { Tabs, Tab } from '@nextui-org/react'
 import { auth, provider } from '../../../firebase.js'
@@ -7,7 +7,7 @@ import { useUser } from '../../context/UserContext.jsx'
 import { signInWithRedirect } from 'firebase/auth'
 
 function LoginRegister() {
-    const { setUser, setIsAuthenticated, setLoading, axios, isAuthenticated } = useUser()
+    const { setUser, setIsAuthenticated, axios } = useUser()
     const [loginForm, setLoginForm] = useState({ email: '', password: '' })
     const { email: loginEmail, password: loginPassword } = loginForm
 
@@ -325,7 +325,6 @@ function LoginRegister() {
                     </Tab>
                 </Tabs>
             </div>
-            <Toaster position='top-center' richColors />
             {showResetModal && (
                 <div
                     className='fixed inset-0 flex justify-center items-center bg-false-blue bg-opacity-70'
