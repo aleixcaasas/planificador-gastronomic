@@ -8,6 +8,16 @@ const getPlanning = async (req, res) => {
     res.json(user.weekly_plan)
 }
 
+const deletePlanning = async (req, res) => {
+    const { user_id } = req.body
+
+    const newWeeklyPlan = new WeeklyPlan()
+
+    await db.collection('users').doc(user_id).update({ weekly_plan: newWeeklyPlan.toFirestore() })
+
+    res.json(newWeeklyPlan)
+}
+
 const addMeal = async (req, res) => {
     const { user_id, day, meal, recipe_id, recipe_title, recipe_image, recipe_time } = req.body
     const newMeal = {
@@ -42,4 +52,4 @@ const deleteMeal = async (req, res) => {
     res.json(user.weekly_plan)
 }
 
-module.exports = { getPlanning, addMeal, deleteMeal }
+module.exports = { getPlanning, deletePlanning, addMeal, deleteMeal }
