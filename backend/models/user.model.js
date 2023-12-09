@@ -28,10 +28,18 @@ class Meal {
 }
 
 class DailyPlan {
-    constructor(breakfast, lunch, dinner) {
-        this.breakfast = new Meal()
-        this.lunch = new Meal()
-        this.dinner = new Meal()
+    constructor() {
+        this.breakfast = []
+        this.lunch = []
+        this.dinner = []
+    }
+
+    toFirestore() {
+        return {
+            breakfast: this.breakfast.map((item) => (item.toFirestore ? item.toFirestore() : item)),
+            lunch: this.lunch.map((item) => (item.toFirestore ? item.toFirestore() : item)),
+            dinner: this.dinner.map((item) => (item.toFirestore ? item.toFirestore() : item))
+        }
     }
 }
 
@@ -44,6 +52,18 @@ class WeeklyPlan {
         this.friday = new DailyPlan()
         this.saturday = new DailyPlan()
         this.sunday = new DailyPlan()
+    }
+
+    toFirestore() {
+        return {
+            monday: this.monday.toFirestore(),
+            tuesday: this.tuesday.toFirestore(),
+            wednesday: this.wednesday.toFirestore(),
+            thursday: this.thursday.toFirestore(),
+            friday: this.friday.toFirestore(),
+            saturday: this.saturday.toFirestore(),
+            sunday: this.sunday.toFirestore()
+        }
     }
 }
 

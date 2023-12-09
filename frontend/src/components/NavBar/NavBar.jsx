@@ -99,7 +99,7 @@ export function NavBar() {
                     </ul>
                 </div>
                 <div
-                    className={`items-center justify-between w-[95%] absolute top-16 left-1/2 -translate-x-[52%] md:w-1/2 mx-2 ${
+                    className={`items-center justify-between w-[95%] absolute top-16 left-1/2 -translate-x-[52%] md:w-1/2 mx-2 z-50 ${
                         !isMenuDropdownOpen ? 'hidden' : ''
                     }`}
                     id='menu-dropdown'

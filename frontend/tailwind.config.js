@@ -17,7 +17,8 @@ export default {
         },
         fontFamily: {
             sans: ['"Inter"', 'sans-serif'],
-            poppins: ['Poppins', 'sans-serif']
+            poppins: ['Poppins', 'sans-serif'],
+            raleway: ['Raleway', 'sans-serif']
         },
         extend: {}
     },
