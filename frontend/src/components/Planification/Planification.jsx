@@ -199,7 +199,7 @@ function Planification() {
 
     function dailyPlanification() {
         if (!planning) {
-            return <div>Loading...</div>
+            return <div>Cargando...</div>
         }
 
         return Object.entries(planning).map(([day, meals]) => (
