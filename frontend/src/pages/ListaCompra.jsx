@@ -1,5 +1,6 @@
+import { Toaster } from 'sonner'
 import { NavBar } from '../components/NavBar/NavBar.jsx'
-import { useUser } from '../context/UserContext.jsx'
+import ShoppingList from '../components/ShoppingList/ShoppingList.jsx'
 
 function ListaCompra() {
     return (
@@ -8,6 +9,8 @@ function ListaCompra() {
             <div className='w-[31.25rem] h-[31.25rem] left-[-12.5rem] top-[15.625rem] absolute bg-false-blue bg-opacity-30 rounded-full -z-10' />
             <div className='w-[26.25rem] h-[26.25rem] left-[3.1875rem] top-[0.625rem] absolute bg-false-blue bg-opacity-70 rounded-full -z-10' />
             <NavBar />
+            <ShoppingList />
+            <Toaster position='top-center' richColors />
         </>
     )
 }

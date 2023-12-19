@@ -5,6 +5,7 @@ const cors = require('cors')
 const { authRouter } = require('./routes/auth.routes.js')
 const { recipeRouter } = require('./routes/recipe.routes.js')
 const { planningRouter } = require('./routes/planning.routes.js')
+const { ingredientRouter } = require('./routes/ingredient.routes.js')
 
 const PORT = process.env.PORT || 3000
 
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/api', authRouter)
 app.use('/api', recipeRouter)
 app.use('/api', planningRouter)
+app.use('/api', ingredientRouter)
 
 // STARTING THE SERVER
 app.listen(PORT, () => {
