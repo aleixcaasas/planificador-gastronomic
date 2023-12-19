@@ -15,7 +15,6 @@ function ShoppingList() {
             try {
                 const user_id = user.user_id
                 const response = await axios.post(`${import.meta.env.VITE_API_URL}/shoppingList`, { user_id: user_id })
-                console.log(response.data)
                 setShoppingList(response.data.shoppingList)
             } catch (error) {
                 toast.error(error.message)
