@@ -3,12 +3,15 @@ import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { Tabs, Tab } from '@nextui-org/react'
 import { recipeCard } from '../common.jsx'
+import CreateRecipe from '../CreateRecipe/CreateRecipe.jsx'
 
 function MyRecipes() {
     const { user, axios } = useUser()
 
     const [recipesList, setRecipesList] = useState([])
     const [searchedRecipesList, setsearchedRecipesList] = useState([])
+
+    const [showNewRecipe, setShowNewRecipe] = useState(false)
 
     useEffect(() => {
         const fetchUserRecipesList = async () => {
@@ -23,6 +26,10 @@ function MyRecipes() {
         }
         fetchUserRecipesList()
     }, [user, axios])
+
+    const handleCreateRecipeVisibility = (isVisible) => {
+        setShowNewRecipe(isVisible)
+    }
 
     function filterRecipes(e) {
         const search = e.target.value
@@ -46,33 +53,51 @@ function MyRecipes() {
     }
 
     return (
-        <div className='relative flex flex-col items-center justify-center mx-2 mt-2 '>
-            <h1 className='text-2xl font-bold leading-5'>MIS RECETAS</h1>
-            <div className='w-full flex flex-row gap-3 items-center justify-center'>
-                <input
-                    className='w-7/12 border-2 border-false-orange rounded-full py-2 px-4 my-4'
-                    placeholder='Nombre de la receta'
-                    onChange={(e) => filterRecipes(e)}
-                />
-                <button className='w-4/12 bg-false-orange rounded-xl px-auto py-2 my-4 font-semibold'>
-                    CREAR RECETA
-                </button>
-            </div>
-            <Tabs color='danger' size='lg'>
-                <Tab key='todo' title='Todo' className='w-full flex flex-col justify-center items-center gap-3'>
-                    {renderTabContent(null)}
-                </Tab>
-                <Tab key='desayuno' title='Desayuno' className='w-full flex flex-col justify-center items-center gap-3'>
-                    {renderTabContent('Desayuno')}
-                </Tab>
-                <Tab key='comida' title='Comida' className='w-full flex flex-col justify-center items-center gap-3'>
-                    {renderTabContent('Comida')}
-                </Tab>
-                <Tab key='cena' title='Cena' className='w-full flex flex-col justify-center items-center gap-3'>
-                    {renderTabContent('Cena')}
-                </Tab>
-            </Tabs>
-        </div>
+        <>
+            {!showNewRecipe && (
+                <div className='relative flex flex-col items-center justify-center mx-2 mt-2 '>
+                    <h1 className='text-2xl font-bold leading-5'>MIS RECETAS</h1>
+                    <div className='w-full flex flex-row gap-3 items-center justify-center'>
+                        <input
+                            className='w-7/12 border-2 border-false-orange rounded-full py-2 px-4 my-4'
+                            placeholder='Nombre de la receta'
+                            onChange={(e) => filterRecipes(e)}
+                        />
+                        <button
+                            className='w-4/12 bg-false-orange rounded-xl px-auto py-2 my-4 font-semibold'
+                            onClick={() => setShowNewRecipe(true)}
+                        >
+                            CREAR RECETA
+                        </button>
+                    </div>
+                    <Tabs color='danger' size='lg'>
+                        <Tab key='todo' title='Todo' className='w-full flex flex-col justify-center items-center gap-3'>
+                            {renderTabContent(null)}
+                        </Tab>
+                        <Tab
+                            key='desayuno'
+                            title='Desayuno'
+                            className='w-full flex flex-col justify-center items-center gap-3'
+                        >
+                            {renderTabContent('Desayuno')}
+                        </Tab>
+                        <Tab
+                            key='comida'
+                            title='Comida'
+                            className='w-full flex flex-col justify-center items-center gap-3'
+                        >
+                            {renderTabContent('Comida')}
+                        </Tab>
+                        <Tab key='cena' title='Cena' className='w-full flex flex-col justify-center items-center gap-3'>
+                            {renderTabContent('Cena')}
+                        </Tab>
+                    </Tabs>
+                </div>
+            )}
+            {showNewRecipe && (
+                <CreateRecipe visible={showNewRecipe} onVisibilityChange={handleCreateRecipeVisibility} />
+            )}
+        </>
     )
 }
 

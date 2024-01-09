@@ -1,3 +1,28 @@
+import React from 'react'
+import { storage } from '../../firebase.js'
+
+export const handleUpload = (image) => {
+    const uploadTask = storage.ref(`images/${image.name}`).put(image)
+    uploadTask.on(
+        'state_changed',
+        (snapshot) => {
+            const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
+        },
+        (error) => {
+            console.log(error)
+        },
+        () => {
+            storage
+                .ref('images')
+                .child(image.name)
+                .getDownloadURL()
+                .then((url) => {
+                    setUrl(url)
+                })
+        }
+    )
+}
+
 export function recipeCard(recipe, key) {
     return (
         <div key={key} className='w-11/12 bg-[#FFF] rounded-xl shadow-md'>
@@ -11,4 +36,8 @@ export function recipeCard(recipe, key) {
             </div>
         </div>
     )
+}
+
+export default function Common() {
+    return <div></div>
 }

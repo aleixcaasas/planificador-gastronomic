@@ -6,6 +6,7 @@ import ExplorarRecetas from './pages/ExplorarRecetas'
 import ProtectedRoutes from './ProtectedRoutes'
 import { UserProvider } from './context/UserContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import CreateRecipe from './components/CreateRecipe/CreateRecipe'
 
 export default function Router() {
     return (
@@ -18,6 +19,7 @@ export default function Router() {
                         <Route path='/mis-recetas' element={<MisRecetas />} />
                         <Route path='/lista-compra' element={<ListaCompra />} />
                         <Route path='/explorar-recetas' element={<ExplorarRecetas />} />
+                        <Route path='/crear-receta' element={<CreateRecipe />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
