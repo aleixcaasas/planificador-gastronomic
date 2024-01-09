@@ -1,5 +1,6 @@
 import { NavBar } from '../components/NavBar/NavBar.jsx'
 import MyRecipes from '../components/MyRecipes/MyRecipes.jsx'
+import { Toaster } from 'sonner'
 
 function MisRecetas() {
     return (
@@ -9,6 +10,7 @@ function MisRecetas() {
             <div className='w-[26.25rem] h-[26.25rem] left-[3.1875rem] top-[0.625rem] fixed bg-false-blue bg-opacity-70 rounded-full -z-10' />
             <NavBar />
             <MyRecipes />
+            <Toaster position='top-center' richColors />
         </>
     )
 }
