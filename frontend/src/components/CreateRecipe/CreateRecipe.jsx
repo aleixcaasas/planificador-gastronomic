@@ -86,28 +86,36 @@ function CreateRecipe({ visible, onVisibilityChange }) {
     }
 
     const addIngredient = (ingredient) => {
-        setRecipe({ ...recipe, ingredients: [...recipe.ingredients, ingredient] })
+        setRecipe({ ...recipe, parsed_ingredients: [...recipe.parsed_ingredients, ingredient] })
         toast.success('Ingrediente añadido correctamente')
     }
 
     const deleteIngredient = (ingredient_id) => {
         setShowAddIngredientModal(false)
-        const newIngredients = recipe.ingredients.filter((ingredient) => ingredient.id !== ingredient_id)
-        setRecipe({ ...recipe, ingredients: newIngredients })
+        const newIngredients = recipe.parsed_ingredients.filter((ingredient) => ingredient.id !== ingredient_id)
+        setRecipe({ ...recipe, parsed_ingredients: newIngredients })
         toast.success('Ingrediente eliminado correctamente')
     }
 
     const createRecipe = async () => {
         if (!validateRecipeForm()) {
-            toast.error('Todos los campos son oblgaotorios')
+            toast.error('Todos los campos son obligatorios')
             return
         }
 
+        const formData = new FormData()
+        for (const key in recipe) {
+            if (key === 'image' && selectedFile) {
+                formData.append('image_data', selectedFile)
+            } else {
+                formData.append(key, recipe[key])
+            }
+        }
+        formData.append('user_id', user.user_id)
+
         try {
-            handleUpload(selectedFile)
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/new-recipe`, {
-                ...recipe,
-                user_id: user.user_id
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/new-recipe`, formData, {
+                headers: { 'Content-Type': 'multipart/form-data' }
             })
             toast.success('Receta creada correctamente')
             handleClose()
@@ -141,7 +149,7 @@ function CreateRecipe({ visible, onVisibilityChange }) {
 
                 <div
                     name='ingredients'
-                    value={recipe.ingredients}
+                    value={recipe.parsed_ingredients}
                     className='w-7/12 border-2 border-false-orange rounded-lg py-2 px-4 my-4 gap-1 flex flex-row flex-wrap bg-[#FFF]'
                     onClick={() => searchIngredients()}
                     onChange={handleRecipeChange}
@@ -150,7 +158,7 @@ function CreateRecipe({ visible, onVisibilityChange }) {
                         ? 'Añade ingredientes'
                         : recipe.parsed_ingredients.map((ingredient, key) => (
                               <label
-                                  id={key}
+                                  key={key}
                                   className='px-2 w-auto bg-false-orange rounded-xl flex justify-center items-center gap-1'
                               >
                                   {ingredient.name}
