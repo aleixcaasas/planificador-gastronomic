@@ -1,5 +1,5 @@
-const { WeeklyPlan } = require('../models/user.model.js')
-const { db } = require('../utils/firebase.js')
+const { db, getDownloadURL, storage, ref, uploadBytesResumable } = require('../utils/firebase.js')
+const { convertTitle } = require('../utils/functions.js')
 
 const getRecipes = async (req, res) => {
     const snapshot = await db.collection('recipes').get()
@@ -41,23 +41,39 @@ const getUserRecipes = async (req, res) => {
 }
 
 const createRecipe = async (req, res) => {
-    const { title, description, ingredients, image, difficulty, steps, time, user_id, meal } = req.body
+    const { title, description, parsed_ingredients, difficulty, steps, time, user_id, meal } = req.body
+    const newTime = time + ' min'
+
+    const { file } = req
 
     const newRecipe = {
         title,
         description,
-        ingredients,
-        image,
+        parsed_ingredients,
         difficulty,
         steps,
-        time,
+        time: newTime,
         user_id,
         meal
     }
 
-    const docRef = await db.collection('recipes').add(newRecipe)
+    let docRef
 
-    res.status(200).json({ id: docRef.id, ...newRecipe })
+    try {
+        const storageRef = ref(storage, `images/recipes/${convertTitle(title)}`)
+        const metadata = {
+            contentType: file.mimetype
+        }
+        await uploadBytesResumable(storageRef, file.buffer, metadata)
+        const downloadURL = await getDownloadURL(storageRef)
+
+        docRef = await db.collection('recipes').add({ ...newRecipe, image: downloadURL })
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({ error })
+    }
+
+    return res.status(200).json({ id: docRef.id, ...newRecipe })
 }
 
 const addFavourite = async (req, res) => {}

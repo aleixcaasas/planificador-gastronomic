@@ -25,7 +25,7 @@ function MyRecipes() {
             }
         }
         fetchUserRecipesList()
-    }, [user, axios])
+    }, [user, axios, showNewRecipe])
 
     const handleCreateRecipeVisibility = (isVisible) => {
         setShowNewRecipe(isVisible)
