@@ -1,5 +1,5 @@
 function convertTitle(text) {
-    return text.toLowerCase().replace(' ', '-')
+    return text.toLowerCase().replace(/ /g, '-')
 }
 
 module.exports = { convertTitle }

@@ -2,6 +2,7 @@
     {
         "id": 1,
         "title": "Pasta Alfredo con Pollo",
+        "meal": "Comida",
         "description": "Disfruta de un plato cremoso de pasta Alfredo con tiernos trozos de pollo. Esta receta es fácil de preparar y deliciosa.",
         "ingredients": [
             "Agua",
@@ -75,6 +76,7 @@
     {
         "id": 2,
         "title": "Ensalada César",
+        "meal": "Comida",
         "description": "Una clásica ensalada César con crutones, pollo a la parrilla y una deliciosa vinagreta cremosa. Perfecta como plato principal o acompañamiento.",
         "ingredients": [
             "1 lechuga romana, lavada y cortada en trozos",
@@ -159,6 +161,7 @@
     {
         "id": 3,
         "title": "Salmón al Horno con Limón y Eneldo",
+        "meal": "Cena",
         "description": "Un plato saludable y delicioso de salmón al horno con una jugosa cobertura de limón y eneldo. Fácil de preparar y perfecto para una cena ligera.",
         "ingredients": [
             "4 filetes de salmón",
@@ -215,6 +218,7 @@
     {
         "id": 4,
         "title": "Tacos de Carne Asada",
+        "meal": "Comida",
         "description": "Deliciosos tacos de carne asada con sabrosos trozos de carne marinada y todos los ingredientes clásicos de los tacos. ¡Prepara una fiesta de tacos en casa!",
         "ingredients": [
             "500g de carne de res, en tiras delgadas",
@@ -319,6 +323,7 @@
     {
         "id": 5,
         "title": "Pizza Casera",
+        "meal": "Cena",
         "description": "Haz tu propia pizza casera con los ingredientes que más te gusten. La masa es fácil de hacer y puedes personalizarla a tu gusto.",
         "ingredients": [
             "Para la masa:",
@@ -428,6 +433,7 @@
     {
         "id": 6,
         "title": "Enchiladas de Pollo",
+        "meal": "Comida",
         "description": "Disfruta de enchiladas rellenas de pollo, cubiertas con salsa roja y queso derretido. Esta receta es fácil de hacer y llena de sabor.",
         "ingredients": [
             "2 pechugas de pollo cocidas y desmenuzadas",
@@ -505,6 +511,7 @@
     {
         "id": 7,
         "title": "Risotto de Champiñones",
+        "meal": "Comida",
         "description": "Un delicioso risotto de champiñones con arroz cremoso y un sabor a hongos reconfortante. Perfecto como plato principal o acompañamiento.",
         "ingredients": [
             "300g de arroz Arborio",
@@ -598,6 +605,7 @@
     {
         "id": 8,
         "title": "Hamburguesa Clásica",
+        "meal": "Cena",
         "description": "Prepara una deliciosa hamburguesa casera con tus ingredientes favoritos. Esta hamburguesa clásica es perfecta para una comida reconfortante.",
         "ingredients": [
             "500g de carne molida de res",
@@ -684,6 +692,7 @@
     {
         "id": 9,
         "title": "Sopa de Tomate",
+        "meal": "Comida",
         "description": "Una reconfortante sopa de tomate casera con un sabor fresco y delicioso. Perfecta como entrante o acompañamiento.",
         "ingredients": [
             "1 kg de tomates maduros, pelados y picados",
@@ -765,6 +774,7 @@
     {
         "id": 10,
         "title": "Pollo a la Parrilla con Limón y Hierbas",
+        "meal": "Comida",
         "description": "Pollo a la parrilla jugoso y lleno de sabor, marinado con limón y hierbas frescas. Una comida deliciosa para los amantes del pollo.",
         "ingredients": [
             "4 pechugas de pollo",
@@ -826,6 +836,7 @@
     {
         "id": 11,
         "title": "Tarta de Manzana",
+        "meal": "Desayuno",
         "description": "Una deliciosa tarta de manzana casera con una base de masa quebrada y un relleno de manzanas dulces y canela. Perfecta para el postre o la merienda.",
         "ingredients": [
             "Para la masa quebrada:",
@@ -903,6 +914,7 @@
     {
         "id": 12,
         "title": "Sándwich BLT",
+        "meal": "Desayuno",
         "description": "Un clásico sándwich BLT (bacon, lechuga y tomate) con tocineta crujiente, lechuga fresca y tomates maduros. Perfecto para un almuerzo rápido y delicioso.",
         "ingredients": [
             "4 rebanadas de pan tostado",
@@ -960,6 +972,7 @@
     {
         "id": 13,
         "title": "Tacos de Pescado",
+        "meal": "Cena",
         "description": "Tacos de pescado crujientes y llenos de sabor, con una salsa de yogur y cilantro fresco. Una deliciosa opción de tacos para los amantes del pescado.",
         "ingredients": [
             "400g de filetes de pescado blanco (como el bacalao o la tilapia)",
@@ -1056,6 +1069,7 @@
     {
         "id": 14,
         "title": "Pasta Carbonara",
+        "meal": "Comida",
         "description": "Una clásica pasta carbonara con una cremosa salsa de huevo, queso parmesano y panceta crujiente. Un plato italiano delicioso y reconfortante.",
         "ingredients": [
             "300g de pasta (como espaguetis o fettuccine)",
@@ -1124,6 +1138,7 @@
     {
         "id": 15,
         "title": "Tacos Veganos",
+        "meal": "Cena",
         "description": "Tacos veganos llenos de sabor con carne de nueces, aguacate, salsa de cilantro y cebolla morada encurtida. Una opción deliciosa y sin carne.",
         "ingredients": [
             "1 taza de nueces",
@@ -1244,6 +1259,7 @@
     {
         "id": 16,
         "title": "Pizza Margarita",
+        "meal": "Cena",
         "description": "La clásica pizza Margarita con una base de masa de pizza crujiente, salsa de tomate, mozzarella y albahaca fresca. Una delicia italiana simple pero deliciosa.",
         "ingredients": [
             "Para la masa de pizza:",
@@ -1336,6 +1352,7 @@
     {
         "id": 17,
         "title": "Ratatouille",
+        "meal": "Cena",
         "description": "Una receta clásica de Ratatouille, un guiso francés lleno de vegetales asados en una rica salsa de tomate. Perfecto como plato principal o acompañamiento.",
         "ingredients": [
             "1 berenjena, cortada en rodajas finas",
@@ -1429,6 +1446,7 @@
     {
         "id": 18,
         "title": "Tarta de Chocolate",
+        "meal": "Desayuno",
         "description": "Una indulgente tarta de chocolate con una base de galleta, un relleno de chocolate suave y una cobertura de ganache de chocolate. Perfecta para los amantes del chocolate.",
         "ingredients": [
             "Para la base:",
@@ -1486,6 +1504,7 @@
     {
         "id": 19,
         "title": "Ensalada de Quinua",
+        "meal": "Comida",
         "description": "Una ensalada saludable y deliciosa de quinua con aguacate, tomate, pepino y aderezo de limón y cilantro. Perfecta como plato principal o acompañamiento.",
         "ingredients": [
             "1 taza de quinua",
@@ -1573,6 +1592,7 @@
     {
         "id": 20,
         "title": "Sushi de Salmón",
+        "meal": "Cena",
         "description": "Sushi de salmón fresco y sabroso, hecho en casa. Aprende a preparar este delicioso sushi con salmón, arroz y otros ingredientes.",
         "ingredients": [
             "200g de salmón fresco, cortado en tiras",
@@ -1645,6 +1665,7 @@
     {
         "id": 21,
         "title": "Tacos de Pollo",
+        "meal": "Cena",
         "description": "Tacos de pollo con un relleno sabroso de pollo desmenuzado, cebolla, pimientos y especias. Sirve con tortillas de maíz calientes y tus ingredientes favoritos para tacos.",
         "ingredients": [
             "2 pechugas de pollo",
@@ -1737,6 +1758,7 @@
     {
         "id": 22,
         "title": "Ensalada Caprese",
+        "meal": "Comida",
         "description": "Una ensalada Caprese fresca y sencilla con tomates maduros, mozzarella fresca, albahaca y un aderezo balsámico. Perfecta como entrada o acompañamiento.",
         "ingredients": [
             "4 tomates maduros, en rodajas",
@@ -1792,6 +1814,7 @@
     {
         "id": 23,
         "title": "Arroz Frito con Verduras",
+        "meal": "Comida",
         "description": "Arroz frito con verduras, una receta rápida y deliciosa que puedes preparar en casa. Perfecta como plato principal o acompañamiento.",
         "ingredients": [
             "2 tazas de arroz cocido y frío",
@@ -1882,6 +1905,7 @@
     {
         "id": 24,
         "title": "Papas Bravas",
+        "meal": "Comida",
         "description": "Papas bravas, un clásico aperitivo español. Papas fritas crujientes servidas con una salsa picante de tomate. ¡Perfectas para compartir con amigos!",
         "ingredients": [
             "4 papas grandes, peladas y cortadas en cubos",
@@ -1948,6 +1972,7 @@
     {
         "id": 25,
         "title": "Lasaña",
+        "meal": "Cena",
         "description": "Una lasaña clásica con capas de pasta, carne molida, salsa de tomate y queso ricotta, gratinada al horno. Una delicia italiana que a todos les encantará.",
         "ingredients": [
             "9 láminas de pasta para lasaña, cocidas según las instrucciones del paquete",
@@ -2044,6 +2069,7 @@
     {
         "id": 26,
         "title": "Tortilla Española",
+        "meal": "Comida",
         "description": "Una tortilla española clásica, también conocida como tortilla de patatas. Esta deliciosa tortilla se hace con papas, cebolla y huevos, y es perfecta para el desayuno, el almuerzo o la cena.",
         "ingredients": [
             "4 papas grandes, peladas y cortadas en rodajas finas",
@@ -2101,6 +2127,7 @@
     {
         "id": 27,
         "title": "Pollo al Curry",
+        "meal": "Comida",
         "description": "Pollo al curry con una salsa cremosa de tomate, cebolla, ajo, jengibre y especias. Sirve este plato aromático con arroz o naan.",
         "ingredients": [
             "4 pechugas de pollo, cortadas en trozos",
@@ -2207,6 +2234,7 @@
     {
         "id": 28,
         "title": "Gazpacho",
+        "meal": "Comida",
         "description": "Gazpacho, una sopa fría española hecha con tomates maduros, pimientos, pepinos y ajo. Perfecta para los días calurosos de verano.",
         "ingredients": [
             "1 kg de tomates maduros, pelados y picados",
@@ -2285,6 +2313,7 @@
     {
         "id": 29,
         "title": "Sopa de Lentejas",
+        "meal": "Comida",
         "description": "Sopa de lentejas nutritiva y reconfortante con lentejas, verduras y especias. Perfecta para los días fríos de invierno.",
         "ingredients": [
             "1 taza de lentejas secas",
@@ -2384,6 +2413,7 @@
     {
         "id": 30,
         "title": "Arroz con Pollo",
+        "meal": "Comida",
         "description": "Arroz con pollo, un plato clásico de la cocina latinoamericana con arroz, pollo, verduras y sabores deliciosos. Reconfortante y delicioso.",
         "ingredients": [
             "2 tazas de arroz",

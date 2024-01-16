@@ -1,5 +1,5 @@
-import React from 'react'
 import { storage } from '../../firebase.js'
+import { useRecipe } from '../context/RecipeContext.jsx'
 
 export const handleUpload = (image) => {
     const uploadTask = storage.ref(`images/${image.name}`).put(image)
@@ -23,9 +23,20 @@ export const handleUpload = (image) => {
     )
 }
 
-export function recipeCard(recipe, key) {
+function formatRecipeTitleForUrl(title) {
+    return title.toLowerCase().replace(/ /g, '-')
+}
+
+export function RecipeCard({ recipe, key }) {
+    const { setSelectedRecipeId } = useRecipe()
+    const recipeUrl = `/receta/${formatRecipeTitleForUrl(recipe.title)}`
+
+    const handleClick = () => {
+        setSelectedRecipeId(recipe.id)
+    }
+
     return (
-        <div key={key} className='w-11/12 bg-[#FFF] rounded-xl shadow-md'>
+        <a href={recipeUrl} onClick={handleClick} key={key} className='w-11/12 bg-[#FFF] rounded-xl shadow-md'>
             <img src={recipe.image} className=' h-40 w-full object-cover rounded-t-xl' />
             <div className='py-3 px-3 flex flex-row justify-between'>
                 <h1 className=' w-8/12 h-full font-bold text-lg flex items-center '>{recipe.title}</h1>
@@ -34,7 +45,7 @@ export function recipeCard(recipe, key) {
                     <label className='px-2 bg-false-orange rounded-xl'>{recipe.time}</label>
                 </div>
             </div>
-        </div>
+        </a>
     )
 }
 

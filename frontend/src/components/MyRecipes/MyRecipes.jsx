@@ -2,7 +2,7 @@ import { useUser } from '../../context/UserContext.jsx'
 import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { Tabs, Tab } from '@nextui-org/react'
-import { recipeCard } from '../common.jsx'
+import { RecipeCard } from '../common.jsx'
 import CreateRecipe from '../CreateRecipe/CreateRecipe.jsx'
 
 function MyRecipes() {
@@ -43,7 +43,7 @@ function MyRecipes() {
         const filteredRecipes =
             searchedRecipesList?.filter((recipe) => (mealType ? recipe.meal === mealType : true)) || []
         return filteredRecipes.length > 0 ? (
-            filteredRecipes.map((recipe, key) => recipeCard(recipe, key))
+            filteredRecipes.map((recipe, key) => <RecipeCard recipe={recipe} key={key} />)
         ) : (
             <div className='bg-[#FFF] p-8 rounded-xl shadow-lg border-false-orange border-2 flex flex-col items-center justify-center'>
                 No hay recetas a mostrar con estos filtros
