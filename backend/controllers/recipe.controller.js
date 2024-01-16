@@ -40,14 +40,50 @@ const getUserRecipes = async (req, res) => {
     res.json(recipes)
 }
 
+const getRecipe = async (req, res) => {
+    const { parameter } = req.params
+
+    try {
+        let recipe
+
+        if (!isNaN(parameter)) {
+            const id = parseInt(parameter)
+            // Si el parámetro es un número, busca por ID
+            const docRef = await db.collection('recipes').doc(id.toString()).get()
+            recipe = docRef.data()
+        } else {
+            // De lo contrario, asume que es un nombre de receta y busca por nombre
+            const snapshot = await db.collection('recipes').get()
+            const recipes = snapshot.docs.map((doc) => {
+                const data = doc.data()
+                return data
+            })
+            recipe = recipes.find((recipe) => {
+                return recipe.urlTitle === parameter
+            })
+        }
+
+        if (recipe) {
+            res.json(recipe)
+        } else {
+            res.status(404).send('Receta no encontrada')
+        }
+    } catch (error) {
+        console.error(error)
+        res.status(500).send('Error al procesar la solicitud')
+    }
+}
+
 const createRecipe = async (req, res) => {
     const { title, description, parsed_ingredients, difficulty, steps, time, user_id, meal } = req.body
     const newTime = time + ' min'
 
     const { file } = req
 
+    const urlTitle = convertTitle(title)
     const newRecipe = {
         title,
+        urlTitle,
         description,
         parsed_ingredients,
         difficulty,
@@ -60,7 +96,7 @@ const createRecipe = async (req, res) => {
     let docRef
 
     try {
-        const storageRef = ref(storage, `images/recipes/${convertTitle(title)}`)
+        const storageRef = ref(storage, `images/recipes/${urlTitle}`)
         const metadata = {
             contentType: file.mimetype
         }
@@ -80,4 +116,4 @@ const addFavourite = async (req, res) => {}
 
 const removeFavourite = async (req, res) => {}
 
-module.exports = { getRecipes, getUserRecipes, createRecipe, addFavourite, removeFavourite }
+module.exports = { getRecipes, getUserRecipes, getRecipe, createRecipe, addFavourite, removeFavourite }

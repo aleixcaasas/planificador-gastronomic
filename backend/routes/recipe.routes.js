@@ -3,6 +3,7 @@ const multer = require('multer')
 const {
     getRecipes,
     getUserRecipes,
+    getRecipe,
     createRecipe,
     addFavourite,
     removeFavourite
@@ -13,6 +14,7 @@ const recipeRouter = Router()
 
 recipeRouter.get('/recipes', getRecipes)
 recipeRouter.post('/new-recipe', upload.single('image_data'), createRecipe)
+recipeRouter.get('/recipe/:parameter', getRecipe)
 recipeRouter.post('/add-favourite', addFavourite)
 recipeRouter.post('/remove-favourite', removeFavourite)
 recipeRouter.post('/user-recipes', getUserRecipes)

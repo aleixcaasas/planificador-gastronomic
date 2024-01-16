@@ -107,6 +107,8 @@ function CreateRecipe({ visible, onVisibilityChange }) {
         for (const key in recipe) {
             if (key === 'image' && selectedFile) {
                 formData.append('image_data', selectedFile)
+            } else if (key === 'parsed_ingredients') {
+                formData.append(key, JSON.stringify(recipe[key]))
             } else {
                 formData.append(key, recipe[key])
             }
