@@ -15,7 +15,7 @@ const emailRegister = async (req, res) => {
     try {
         await createUserWithEmailAndPassword(auth, email, password)
         try {
-            const image = null
+            const image = 'https://cdn-icons-png.flaticon.com/512/666/666201.png'
             const newUser = new User(user_name, full_name, email, image)
             newUser.shopping_list = []
             newUser.weekly_plan = new WeeklyPlan()

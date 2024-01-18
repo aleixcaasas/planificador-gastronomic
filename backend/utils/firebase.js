@@ -1,6 +1,6 @@
 // Importaciones para el Cliente SDK
 const { initializeApp: initializeClientApp } = require('firebase/app')
-const { getAuth } = require('firebase/auth')
+const { getAuth, updatePassword } = require('firebase/auth')
 const { getDownloadURL, getStorage, ref, uploadBytesResumable } = require('firebase/storage')
 
 // Importación para el Admin SDK
@@ -40,5 +40,6 @@ module.exports = {
     getDownloadURL,
     getStorage,
     ref,
-    uploadBytesResumable
+    uploadBytesResumable,
+    updatePassword
 }

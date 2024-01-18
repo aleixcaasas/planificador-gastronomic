@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
+const { userRouter } = require('./routes/user.routes.js')
 const { authRouter } = require('./routes/auth.routes.js')
 const { recipeRouter } = require('./routes/recipe.routes.js')
 const { planningRouter } = require('./routes/planning.routes.js')
@@ -17,6 +18,7 @@ const app = express()
 // MIDDLEWARE: JWT verification
 const verifyToken = async (req, res, next) => {
     const token = req.headers.cookie.split('token=')[1]
+
     if (!token) {
         return res.status(401).json({ error: 'No autorizado' })
     }
@@ -41,10 +43,11 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // ALL THE ROUTERS OF THE APP WILL BE HERE
-app.use('/api', verifyToken, authRouter)
+app.use('/api', authRouter)
 app.use('/api', verifyToken, recipeRouter)
 app.use('/api', verifyToken, planningRouter)
 app.use('/api', verifyToken, ingredientRouter)
+app.use('/api', verifyToken, userRouter)
 
 // STARTING THE SERVER
 app.listen(PORT, () => {
