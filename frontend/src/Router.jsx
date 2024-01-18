@@ -2,12 +2,12 @@ import Home from './pages/Home'
 import MisRecetas from './pages/MisRecetas'
 import Perfil from './pages/Perfil'
 import ListaCompra from './pages/ListaCompra'
+import DetallesReceta from './pages/DetallesReceta'
 import ExplorarRecetas from './pages/ExplorarRecetas'
 import ProtectedRoutes from './ProtectedRoutes'
 import { UserProvider } from './context/UserContext'
 import { RecipeProvider } from './context/RecipeContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import DetallesReceta from './pages/DetallesReceta'
 
 export default function Router() {
     return (
