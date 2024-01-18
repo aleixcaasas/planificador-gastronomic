@@ -30,8 +30,7 @@ function Planification() {
     useEffect(() => {
         const fetchPlanning = async () => {
             try {
-                const user_id = user.user_id
-                const response = await axios.post(`${import.meta.env.VITE_API_URL}/planning`, { user_id: user_id })
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/planning`)
                 const plan = new WeeklyPlan(response.data)
                 setPlanning(plan)
             } catch (error) {
@@ -43,14 +42,12 @@ function Planification() {
 
     async function addRecipe(recipe) {
         try {
-            const user_id = user.user_id
             const recipe_id = recipe['id']
             const recipe_title = recipe['title']
             const recipe_image = recipe['image']
             const recipe_time = recipe['time']
             const [day, meal] = actualMeal
             const response = await axios.post(`${import.meta.env.VITE_API_URL}/add-meal`, {
-                user_id,
                 recipe_id,
                 day,
                 meal,
@@ -70,10 +67,8 @@ function Planification() {
 
     async function deleteRecipe(day, meal, recipe) {
         try {
-            const user_id = user.user_id
             const recipe_id = recipe['recipe_id']
             const response = await axios.post(`${import.meta.env.VITE_API_URL}/delete-meal`, {
-                user_id,
                 recipe_id,
                 day,
                 meal
@@ -88,8 +83,7 @@ function Planification() {
 
     async function deletePlanning() {
         try {
-            const user_id = user.user_id
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/delete-planning`, { user_id })
+            const response = await axios.delete(`${import.meta.env.VITE_API_URL}/delete-planning`)
             const plan = new WeeklyPlan(response.data)
             setPlanning(plan)
             setShowDeletePlanningModal(false)
@@ -102,7 +96,7 @@ function Planification() {
     async function addPlanningToShoppingList() {
         try {
             const user_id = user.user_id
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/add-planning`, {
+            await axios.post(`${import.meta.env.VITE_API_URL}/add-planning`, {
                 user_id
             })
             toast.success('Todos los ingredientes se han añadido a la lista de la compra')
@@ -399,41 +393,46 @@ function Planification() {
                                 className=' border-2 border-false-orange rounded-full py-2 px-4 w-full my-4'
                                 type='search'
                                 name='recipe-title'
-                                id=''
                                 placeholder='Nombre de la receta'
                                 onChange={(e) => filterRecipes(e)}
                                 style={{ outline: 'none' }}
                             />
                         </form>
                         <div className='flex flex-col gap-2 overflow-y-scroll h-5/6'>
-                            {searchedRecipes.map((recipe, index) => (
-                                <div
-                                    className={`flex flex-row w-full justify-between px-1 pb-1 ${
-                                        index != recipes.length - 1 ? 'border-b-1 border-false-light-gray' : ''
-                                    } `}
-                                >
-                                    <div className='flex flex-row'>
-                                        <img src={recipe.image} className='rounded w-24 h-16 object-cover mr-1' />
-                                        <div>
-                                            <p>{recipe.title}</p>
-                                            <p>{formatTime(recipe.time)}</p>
-                                        </div>
-                                    </div>
-                                    <button onClick={() => addRecipe(recipe)}>
-                                        <svg
-                                            xmlns='http://www.w3.org/2000/svg'
-                                            width='1.5em'
-                                            height='1.5em'
-                                            viewBox='0 0 23 23'
-                                        >
-                                            <path
-                                                fill='#7a7979'
-                                                d='M12 4c4.411 0 8 3.589 8 8s-3.589 8-8 8s-8-3.589-8-8s3.589-8 8-8m0-2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2zm5 9h-4V7h-2v4H7v2h4v4h2v-4h4v-2z'
-                                            />
-                                        </svg>
-                                    </button>
+                            {searchedRecipes.length <= 0 ? (
+                                <div className='w-full h-full flex flex-col items-center justify-center text-xl font-bold text-center'>
+                                    Las recetas se están cargando...
                                 </div>
-                            ))}
+                            ) : (
+                                searchedRecipes.map((recipe, index) => (
+                                    <div
+                                        className={`flex flex-row w-full justify-between px-1 pb-1 ${
+                                            index != recipes.length - 1 ? 'border-b-1 border-false-light-gray' : ''
+                                        } `}
+                                    >
+                                        <div className='flex flex-row'>
+                                            <img src={recipe.image} className='rounded w-24 h-16 object-cover mr-1' />
+                                            <div>
+                                                <p>{recipe.title}</p>
+                                                <p>{formatTime(recipe.time)}</p>
+                                            </div>
+                                        </div>
+                                        <button onClick={() => addRecipe(recipe)}>
+                                            <svg
+                                                xmlns='http://www.w3.org/2000/svg'
+                                                width='1.5em'
+                                                height='1.5em'
+                                                viewBox='0 0 23 23'
+                                            >
+                                                <path
+                                                    fill='#7a7979'
+                                                    d='M12 4c4.411 0 8 3.589 8 8s-3.589 8-8 8s-8-3.589-8-8s3.589-8 8-8m0-2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2zm5 9h-4V7h-2v4H7v2h4v4h2v-4h4v-2z'
+                                                />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                ))
+                            )}
                         </div>
                     </div>
                 </div>

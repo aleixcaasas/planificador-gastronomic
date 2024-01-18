@@ -18,7 +18,7 @@ const getRecipes = async (req, res) => {
 }
 
 const getUserRecipes = async (req, res) => {
-    const { user_id } = req.body
+    const { user_id } = req.user
     const snapshot = await db.collection('recipes').get()
     const allRecipes = snapshot.docs.map((doc) => {
         const data = doc.data()
@@ -37,7 +37,7 @@ const getUserRecipes = async (req, res) => {
         return recipe.user_id === user_id
     })
 
-    res.json(recipes)
+    res.status(200).json(recipes)
 }
 
 const getRecipe = async (req, res) => {
@@ -79,13 +79,13 @@ const createRecipe = async (req, res) => {
     const newTime = time + ' min'
 
     const { file } = req
-
+    const new_parsed_ingredients = JSON.parse(parsed_ingredients)
     const urlTitle = convertTitle(title)
     const newRecipe = {
         title,
         urlTitle,
         description,
-        parsed_ingredients,
+        parsed_ingredients: new_parsed_ingredients,
         difficulty,
         steps,
         time: newTime,
@@ -112,8 +112,4 @@ const createRecipe = async (req, res) => {
     return res.status(200).json({ id: docRef.id, ...newRecipe })
 }
 
-const addFavourite = async (req, res) => {}
-
-const removeFavourite = async (req, res) => {}
-
-module.exports = { getRecipes, getUserRecipes, getRecipe, createRecipe, addFavourite, removeFavourite }
+module.exports = { getRecipes, getUserRecipes, getRecipe, createRecipe }

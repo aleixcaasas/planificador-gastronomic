@@ -3,9 +3,9 @@ const { getPlanning, deletePlanning, addMeal, deleteMeal } = require('../control
 
 const planningRouter = Router()
 
-planningRouter.post('/planning', getPlanning)
-planningRouter.post('/delete-planning', deletePlanning)
+planningRouter.get('/planning', getPlanning)
 planningRouter.post('/add-meal', addMeal)
 planningRouter.post('/delete-meal', deleteMeal)
+planningRouter.delete('/delete-planning', deletePlanning)
 
 module.exports = { planningRouter }

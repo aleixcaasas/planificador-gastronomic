@@ -1,0 +1,610 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Menu Vital API",
+        "description": "API Rest con Node.js, Express y MongoDB para la aplicación de recetas Menu Vital",
+        "version": "1.0.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "tags": [
+        {
+            "name": "auth",
+            "description": "Operaciones de autenticación"
+        },
+        {
+            "name": "ingredient",
+            "description": "Operaciones con ingredientes"
+        },
+        {
+            "name": "planning",
+            "description": "Operaciones de planificación de comidas"
+        },
+        {
+            "name": "recipe",
+            "description": "Operaciones con recetas"
+        },
+        {
+            "name": "user",
+            "description": "Operaciones relacionadas con usuarios"
+        }
+    ],
+    "paths": {
+        "/email-register": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "user_name": {
+                                    "example": "any"
+                                },
+                                "full_name": {
+                                    "example": "any"
+                                },
+                                "email": {
+                                    "example": "any"
+                                },
+                                "password": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "409": {
+                        "description": "Conflict"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/login": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "example": "any"
+                                },
+                                "password": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/google-login": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "example": "any"
+                                },
+                                "displayName": {
+                                    "example": "any"
+                                },
+                                "photoURL": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/reset-password": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/logout": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/verify-token": {
+            "get": {
+                "tags": [
+                    "auth"
+                ],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "cookie",
+                        "in": "header",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/ingredients": {
+            "get": {
+                "tags": [
+                    "ingredient"
+                ],
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/shoppingList": {
+            "get": {
+                "tags": [
+                    "ingredient"
+                ],
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/add-ingredient": {
+            "post": {
+                "tags": [
+                    "ingredient"
+                ],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "ingredient": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                }
+            }
+        },
+        "/delete-ingredient": {
+            "post": {
+                "tags": [
+                    "ingredient"
+                ],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "ingredient_id": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/add-planning": {
+            "post": {
+                "tags": [
+                    "planning"
+                ],
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/delete-shoppingList": {
+            "delete": {
+                "tags": [
+                    "ingredient"
+                ],
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/planning": {
+            "get": {
+                "tags": [
+                    "planning"
+                ],
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/add-meal": {
+            "post": {
+                "tags": [
+                    "planning"
+                ],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "day": {
+                                    "example": "any"
+                                },
+                                "meal": {
+                                    "example": "any"
+                                },
+                                "recipe_id": {
+                                    "example": "any"
+                                },
+                                "recipe_title": {
+                                    "example": "any"
+                                },
+                                "recipe_image": {
+                                    "example": "any"
+                                },
+                                "recipe_time": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/delete-meal": {
+            "post": {
+                "tags": [
+                    "planning"
+                ],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "day": {
+                                    "example": "any"
+                                },
+                                "meal": {
+                                    "example": "any"
+                                },
+                                "recipe_id": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/delete-planning": {
+            "delete": {
+                "tags": [
+                    "planning"
+                ],
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/recipes": {
+            "get": {
+                "tags": [
+                    "recipe"
+                ],
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/recipe/{parameter}": {
+            "get": {
+                "tags": [
+                    "recipe"
+                ],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "parameter",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/user-recipes": {
+            "get": {
+                "tags": [
+                    "recipe"
+                ],
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/new-recipe": {
+            "post": {
+                "tags": [
+                    "recipe"
+                ],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "example": "any"
+                                },
+                                "description": {
+                                    "example": "any"
+                                },
+                                "parsed_ingredients": {
+                                    "example": "any"
+                                },
+                                "difficulty": {
+                                    "example": "any"
+                                },
+                                "steps": {
+                                    "example": "any"
+                                },
+                                "time": {
+                                    "example": "any"
+                                },
+                                "user_id": {
+                                    "example": "any"
+                                },
+                                "meal": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/user": {
+            "get": {
+                "tags": [
+                    "user"
+                ],
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/update-user": {
+            "patch": {
+                "tags": [
+                    "user"
+                ],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "full_name": {
+                                    "example": "any"
+                                },
+                                "user_name": {
+                                    "example": "any"
+                                },
+                                "newPassword": {
+                                    "example": "any"
+                                },
+                                "confirmNewPassword": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -21,7 +21,7 @@ export function NavBar() {
         const cookies = Cookies.get()
         if (cookies.token) {
             try {
-                await axios.get(`${import.meta.env.VITE_API_URL}/logout`)
+                await axios.post(`${import.meta.env.VITE_API_URL}/logout`)
                 Cookies.remove('token')
                 setIsAuthenticated(false)
                 setUser(null)

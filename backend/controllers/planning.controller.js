@@ -1,25 +1,26 @@
-const { WeeklyPlan, Meal } = require('../models/user.model.js')
+const { WeeklyPlan } = require('../models/user.model.js')
 const { db } = require('../utils/firebase.js')
 
 const getPlanning = async (req, res) => {
-    const { user_id } = req.body
+    const { user_id } = req.user
     const doc = await db.collection('users').doc(user_id).get()
     const user = doc.data()
-    res.json(user.weekly_plan)
+    res.status(200).json(user.weekly_plan)
 }
 
 const deletePlanning = async (req, res) => {
-    const { user_id } = req.body
+    const { user_id } = req.user
 
     const newWeeklyPlan = new WeeklyPlan()
 
     await db.collection('users').doc(user_id).update({ weekly_plan: newWeeklyPlan.toFirestore() })
 
-    res.json(newWeeklyPlan)
+    res.status(200).json(newWeeklyPlan)
 }
 
 const addMeal = async (req, res) => {
-    const { user_id, day, meal, recipe_id, recipe_title, recipe_image, recipe_time } = req.body
+    const { user_id } = req.user
+    const { day, meal, recipe_id, recipe_title, recipe_image, recipe_time } = req.body
     const newMeal = {
         recipe_id: recipe_id,
         recipe_title: recipe_title,
@@ -38,7 +39,8 @@ const addMeal = async (req, res) => {
 }
 
 const deleteMeal = async (req, res) => {
-    const { user_id, day, meal, recipe_id } = req.body
+    const { user_id } = req.user
+    const { day, meal, recipe_id } = req.body
 
     const doc = await db.collection('users').doc(user_id).get()
     const user = doc.data()

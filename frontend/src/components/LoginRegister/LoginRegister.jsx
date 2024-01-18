@@ -116,7 +116,7 @@ function LoginRegister() {
             return
         }
         try {
-            const res = await axios.post(`${import.meta.env.VITE_API_URL}/reset-password`, { email: resetEmail })
+            await axios.post(`${import.meta.env.VITE_API_URL}/reset-password`, { email: resetEmail })
             toast.success('Correo de restablecimiento enviado.')
         } catch (error) {
             if (error.response.status === 404) toast.warning('No se encontró un usuario con ese correo.')

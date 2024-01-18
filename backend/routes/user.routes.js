@@ -6,6 +6,6 @@ const upload = multer({ storage: multer.memoryStorage() })
 const userRouter = Router()
 
 userRouter.get('/user', getUser)
-userRouter.put('/update-user', upload.single('image'), updateUser)
+userRouter.patch('/update-user', upload.single('image'), updateUser)
 
 module.exports = { userRouter }

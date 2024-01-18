@@ -14,8 +14,7 @@ function ShoppingList() {
     useEffect(() => {
         const fetchShoppingList = async () => {
             try {
-                const user_id = user.user_id
-                const response = await axios.post(`${import.meta.env.VITE_API_URL}/shoppingList`, { user_id: user_id })
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/shoppingList`)
                 setShoppingList(response.data.shoppingList)
             } catch (error) {
                 toast.error(error.message)
@@ -26,12 +25,9 @@ function ShoppingList() {
 
     async function addIngredient(ingredient) {
         try {
-            const user_id = user.user_id
             const response = await axios.post(`${import.meta.env.VITE_API_URL}/add-ingredient`, {
-                user_id: user_id,
                 ingredient: ingredient
             })
-            console.log(response.data)
             setShoppingList(response.data.shoppingList)
             toast.success('Ingrediente añadido correctamente')
         } catch (error) {
@@ -42,9 +38,7 @@ function ShoppingList() {
 
     async function deleteIngredient(ingredient_id) {
         try {
-            const user_id = user.user_id
             const response = await axios.post(`${import.meta.env.VITE_API_URL}/delete-ingredient`, {
-                user_id,
                 ingredient_id
             })
             setShoppingList(response.data.shoppingList)
@@ -79,7 +73,7 @@ function ShoppingList() {
 
     async function deleteShoppingList() {
         try {
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/delete-shoppingList`)
+            const response = await axios.delete(`${import.meta.env.VITE_API_URL}/delete-shoppingList`)
             setShoppingList(response.data.shoppingList)
             toast.success('Ingredientes eliminados correctamente')
         } catch (error) {
@@ -95,7 +89,10 @@ function ShoppingList() {
                     <h1 className=' text-2xl font-bold leading-5'>LISTA DE LA COMPRA</h1>
                     <div className='flex flex-col w-[95%] h-full bg-[#FFF] rounded-lg my-5 px-2 overflow-auto'>
                         {shoppingList.length <= 0 ? (
-                            <h2>No hay ingredientes en la lista de la compra</h2>
+                            <div className='w-full h-full flex flex-col items-center justify-center text-xl font-bold text-center'>
+                                Aún no has añadido ningún ingrediente a la lista de la compra
+                                <img src='src\assets\disappointed-face.svg' height='120px' className='mt-4' alt='' />
+                            </div>
                         ) : (
                             shoppingList.map((ingredient, index) => (
                                 <div
@@ -169,31 +166,61 @@ function ShoppingList() {
                             />
                         </form>
                         <div className='flex flex-col gap-2 overflow-y-scroll h-5/6'>
-                            {searchedIngredients.map((ingredient, index) => (
-                                <div
-                                    className={`flex flex-row w-full justify-between px-1 pb-1 ${
-                                        index != ingredients.length - 1 ? 'border-b-1 border-false-light-gray' : ''
-                                    } `}
-                                >
-                                    <div className='flex flex-row'>
-                                        <img src={ingredient.image} className='rounded w-24 h-16 object-cover mr-1' />
-                                        <p>{ingredient.name}</p>
-                                    </div>
-                                    <button onClick={() => addIngredient(ingredient)}>
-                                        <svg
-                                            xmlns='http://www.w3.org/2000/svg'
-                                            width='1.5em'
-                                            height='1.5em'
-                                            viewBox='0 0 23 23'
-                                        >
-                                            <path
-                                                fill='#7a7979'
-                                                d='M12 4c4.411 0 8 3.589 8 8s-3.589 8-8 8s-8-3.589-8-8s3.589-8 8-8m0-2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2zm5 9h-4V7h-2v4H7v2h4v4h2v-4h4v-2z'
-                                            />
-                                        </svg>
-                                    </button>
+                            {searchedIngredients.length <= 0 ? (
+                                <div className='w-full h-full flex flex-col items-center justify-center text-xl font-bold text-center'>
+                                    Los ingredientes se están cargando...
                                 </div>
-                            ))}
+                            ) : (
+                                searchedIngredients.map((ingredient, index) => (
+                                    <div
+                                        key={ingredient.id}
+                                        className={`flex flex-row w-full justify-between px-1 pb-1 ${
+                                            index != ingredients.length - 1 ? 'border-b-1 border-false-light-gray' : ''
+                                        } `}
+                                    >
+                                        <div className='flex flex-row'>
+                                            <img
+                                                src={ingredient.image}
+                                                className='rounded w-24 h-16 object-cover mr-1'
+                                            />
+                                            <p>{ingredient.name}</p>
+                                        </div>
+                                        {shoppingList.find((i) => i.id === ingredient.id) ? (
+                                            <button>
+                                                <svg
+                                                    xmlns='http://www.w3.org/2000/svg'
+                                                    width='1.5em'
+                                                    height='1.5em'
+                                                    viewBox='0 0 23 23'
+                                                >
+                                                    <path
+                                                        fill='#80cf5b'
+                                                        d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z'
+                                                    ></path>
+                                                    <path
+                                                        fill='#80cf5b'
+                                                        d='M9.999 13.587 7.7 11.292l-1.412 1.416 3.713 3.705 6.706-6.706-1.414-1.414z'
+                                                    ></path>
+                                                </svg>
+                                            </button>
+                                        ) : (
+                                            <button onClick={() => addIngredient(ingredient)}>
+                                                <svg
+                                                    xmlns='http://www.w3.org/2000/svg'
+                                                    width='1.5em'
+                                                    height='1.5em'
+                                                    viewBox='0 0 23 23'
+                                                >
+                                                    <path
+                                                        fill='#7a7979'
+                                                        d='M12 4c4.411 0 8 3.589 8 8s-3.589 8-8 8s-8-3.589-8-8s3.589-8 8-8m0-2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2zm5 9h-4V7h-2v4H7v2h4v4h2v-4h4v-2z'
+                                                    />
+                                                </svg>
+                                            </button>
+                                        )}
+                                    </div>
+                                ))
+                            )}
                         </div>
                     </div>
                 </div>

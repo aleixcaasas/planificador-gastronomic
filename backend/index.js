@@ -42,6 +42,12 @@ app.use(cors({ origin: 'http://localhost:5173', credentials: true }))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+// Swagger docs
+const swaggerUi = require('swagger-ui-express')
+const swaggerDocument = require('./swagger.json')
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+
 // ALL THE ROUTERS OF THE APP WILL BE HERE
 app.use('/api', authRouter)
 app.use('/api', verifyToken, recipeRouter)

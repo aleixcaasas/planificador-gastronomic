@@ -16,8 +16,7 @@ function MyRecipes() {
     useEffect(() => {
         const fetchUserRecipesList = async () => {
             try {
-                const user_id = user.user_id
-                const response = await axios.post(`${import.meta.env.VITE_API_URL}/user-recipes`, { user_id: user_id })
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/user-recipes`)
                 setRecipesList(response.data)
                 setsearchedRecipesList(response.data)
             } catch (error) {

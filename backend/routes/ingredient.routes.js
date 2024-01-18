@@ -11,10 +11,10 @@ const {
 const ingredientRouter = Router()
 
 ingredientRouter.get('/ingredients', getIngredients)
-ingredientRouter.post('/shoppingList', getShoppingList)
-ingredientRouter.post('/delete-shoppingList', resetShoppingList)
+ingredientRouter.get('/shoppingList', getShoppingList)
 ingredientRouter.post('/add-ingredient', addIngredient)
 ingredientRouter.post('/delete-ingredient', deleteIngredient)
 ingredientRouter.post('/add-planning', addPlanningToShoppingList)
+ingredientRouter.delete('/delete-shoppingList', resetShoppingList)
 
 module.exports = { ingredientRouter }

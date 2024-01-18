@@ -17,21 +17,16 @@ const getIngredients = async (req, res) => {
 }
 
 const getShoppingList = async (req, res) => {
-    const { user_id } = req.body
-
-    const doc = await db.collection('users').doc(user_id).get()
-    const user = doc.data()
-    const shoppingList = user.shopping_list
+    const shoppingList = req.user.shopping_list
 
     res.status(200).json({ shoppingList })
 }
 
 const addIngredient = async (req, res) => {
-    const { user_id, ingredient } = req.body
+    const { user_id } = req.user
+    const { ingredient } = req.body
 
-    const doc = await db.collection('users').doc(user_id).get()
-    const user = doc.data()
-    const shoppingList = user.shopping_list
+    const shoppingList = req.user.shopping_list
 
     const ingredientExists = shoppingList.find((item) => item.id === ingredient.id)
 
@@ -47,11 +42,9 @@ const addIngredient = async (req, res) => {
 }
 
 const deleteIngredient = async (req, res) => {
-    const { user_id, ingredient_id } = req.body
-
-    const doc = await db.collection('users').doc(user_id).get()
-    const user = doc.data()
-    const shoppingList = user.shopping_list
+    const { ingredient_id } = req.body
+    const { user_id } = req.user
+    const shoppingList = req.user.shopping_list
 
     const newShoppingList = shoppingList.filter((item) => item.id !== ingredient_id)
 
@@ -80,7 +73,6 @@ const addPlanningToShoppingList = async (req, res) => {
 
         // Procesar los ingredientes de las recetas encontradas
         const planificationIngredients = recipeList.flatMap((recipe) => recipe.parsed_ingredients || [])
-        console.log(planificationIngredients)
 
         // Aplanar planificationIngredients a un solo nivel
         const flattenedIngredients = planificationIngredients.flat()

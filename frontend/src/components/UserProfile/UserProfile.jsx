@@ -54,7 +54,7 @@ export function UserProfile() {
         }
 
         try {
-            const response = await axios.put(`${import.meta.env.VITE_API_URL}/update-user`, formData, {
+            const response = await axios.patch(`${import.meta.env.VITE_API_URL}/update-user`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
