@@ -1,4 +1,3 @@
-import { Toaster } from 'sonner'
 import { NavBar } from '../components/NavBar/NavBar.jsx'
 import ShoppingList from '../components/ShoppingList/ShoppingList.jsx'
 
@@ -10,7 +9,6 @@ function ListaCompra() {
             <div className='w-[26.25rem] h-[26.25rem] left-[3.1875rem] top-[0.625rem] fixed bg-false-blue bg-opacity-70 rounded-full -z-10' />
             <NavBar />
             <ShoppingList />
-            <Toaster position='top-center' richColors />
         </>
     )
 }

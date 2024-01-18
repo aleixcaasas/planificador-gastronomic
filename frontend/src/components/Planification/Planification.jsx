@@ -3,6 +3,8 @@ import { useUser } from '../../context/UserContext.jsx'
 import { useEffect, useState } from 'react'
 import { WeeklyPlan } from '../../models/user.model.jsx'
 import { toast } from 'sonner'
+import { Button } from '@nextui-org/react'
+import { formatRecipeTitleForUrl } from '../common.jsx'
 
 function Planification() {
     const { user, axios } = useUser()
@@ -22,6 +24,8 @@ function Planification() {
     const [recipes, setRecipes] = useState([])
     const [actualMeal, setActualMeal] = useState([])
     const [searchedRecipes, setSearchedRecipes] = useState([])
+
+    const [showDeletePlanningModal, setShowDeletePlanningModal] = useState(false)
 
     useEffect(() => {
         const fetchPlanning = async () => {
@@ -88,8 +92,22 @@ function Planification() {
             const response = await axios.post(`${import.meta.env.VITE_API_URL}/delete-planning`, { user_id })
             const plan = new WeeklyPlan(response.data)
             setPlanning(plan)
+            setShowDeletePlanningModal(false)
         } catch (error) {
             toast.error('Error al eliminar la planificación')
+            console.log(error)
+        }
+    }
+
+    async function addPlanningToShoppingList() {
+        try {
+            const user_id = user.user_id
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/add-planning`, {
+                user_id
+            })
+            toast.success('Todos los ingredientes se han añadido a la lista de la compra')
+        } catch (error) {
+            toast.error('Error al añadir la planificación a la lista de la compra')
             console.log(error)
         }
     }
@@ -153,11 +171,18 @@ function Planification() {
                     </div>
                     {meals.map((dish) => (
                         <div
+                            key={dish['recipe_id']}
                             className={`w-32 bg-[#F4F6F7]  shadow-md rounded-md my-1 p-1 flex flex-col items-center ${
                                 !isAlternateView ? 'mr-2 justify-start ' : 'mx-auto'
                             } `}
                         >
-                            <img src={dish['recipe_image']} className='rounded h-16 min-h-[4rem] w-24 object-cover' />
+                            <a href={`/receta/${formatRecipeTitleForUrl(dish['recipe_title'])}`}>
+                                <img
+                                    src={dish['recipe_image']}
+                                    className='rounded h-16 min-h-[4rem] w-24 object-cover'
+                                />
+                            </a>
+
                             <div className='w-full rounded-md bg-opacity-80'>
                                 <div className=' text-xs flex flex-row py-1 text-[#7a7979] items-center justify-between'>
                                     <div className='flex flex-row'>
@@ -189,7 +214,9 @@ function Planification() {
                                         </svg>
                                     </button>
                                 </div>
-                                <p className='text-sm  font-black text-center'>{dish['recipe_title']}</p>
+                                <a href={`/receta/${formatRecipeTitleForUrl(dish['recipe_title'])}`}>
+                                    <p className='text-sm  font-black text-center'>{dish['recipe_title']}</p>
+                                </a>
                             </div>
                         </div>
                     ))}
@@ -292,12 +319,19 @@ function Planification() {
         <>
             <div className='relative flex flex-col items-center justify-center mx-2 my-2 h-full overflow-scroll '>
                 <div className='flex flex-row items-center justify-between w-11/12'>
-                    <button onClick={toggleView}>
+                    <Button
+                        isIconOnly
+                        color='danger'
+                        variant='ghost'
+                        aria-label='Eliminar todos los ingredientes'
+                        onClick={toggleView}
+                        className='flex items-center justify-center'
+                    >
                         <svg
                             version='1.0'
                             xmlns='http://www.w3.org/2000/svg'
-                            width='1.5rem'
-                            height='1.5rem'
+                            width='1.4rem'
+                            height='1.4rem'
                             viewBox='0 0 50.000000 50.000000'
                             preserveAspectRatio='xMidYMid meet'
                         >
@@ -312,16 +346,41 @@ function Planification() {
                                 <path d='M430 223 c0 -43 -41 -105 -85 -130 -69 -39 -168 -28 -228 26 -18 15 -18 16 5 21 14 4 24 14 26 28 3 21 0 22 -62 22 l-66 0 0 -65 c0 -58 2 -65 20 -65 15 0 20 7 20 26 l0 26 42 -36 c63 -55 137 -69 222 -44 54 16 128 90 144 144 18 61 16 74 -13 74 -21 0 -25 -5 -25 -27z' />
                             </g>
                         </svg>
-                    </button>
+                    </Button>
+
                     <h1 className=' text-2xl font-bold leading-5'>PLANIFICACIÓN</h1>
-                    <button onClick={deletePlanning}>
-                        <svg xmlns='http://www.w3.org/2000/svg' width='1.6rem' height='1.6rem' viewBox='0 0 23 23'>
-                            <path
-                                fill='#000'
-                                d='M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z'
-                            />
-                        </svg>
-                    </button>
+                    <div className='flex gap-2'>
+                        <Button
+                            isIconOnly
+                            color='danger'
+                            variant='ghost'
+                            aria-label='Eliminar todos los ingredientes'
+                            onClick={() => addPlanningToShoppingList()}
+                            className='flex items-center justify-center'
+                        >
+                            <svg xmlns='http://www.w3.org/2000/svg' width='1.5rem' height='1.5rem' viewBox='0 0 24 24'>
+                                <path
+                                    fill='#000000'
+                                    d='M7 22q-.825 0-1.412-.587T5 20q0-.825.588-1.412T7 18q.825 0 1.413.588T9 20q0 .825-.587 1.413T7 22m10 0q-.825 0-1.412-.587T15 20q0-.825.588-1.412T17 18q.825 0 1.413.588T19 20q0 .825-.587 1.413T17 22M6.15 6l2.4 5h7l2.75-5zM5.2 4h14.75q.575 0 .875.513t.025 1.037l-3.55 6.4q-.275.5-.737.775T15.55 13H8.1L7 15h11q.425 0 .713.288T19 16q0 .425-.288.713T18 17H7q-1.125 0-1.7-.987t-.05-1.963L6.6 11.6L3 4H2q-.425 0-.712-.288T1 3q0-.425.288-.712T2 2h1.625q.275 0 .525.15t.375.425zm3.35 7h7z'
+                                />
+                            </svg>
+                        </Button>
+                        <Button
+                            isIconOnly
+                            color='danger'
+                            variant='ghost'
+                            aria-label='Eliminar todos los ingredientes'
+                            onClick={() => setShowDeletePlanningModal(true)}
+                            className='flex items-center justify-center'
+                        >
+                            <svg xmlns='http://www.w3.org/2000/svg' width='1.5rem' height='1.5rem' viewBox='0 0 24 24'>
+                                <path
+                                    fill='#000'
+                                    d='M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z'
+                                />
+                            </svg>
+                        </Button>
+                    </div>
                 </div>
                 {isAlternateView ? dailyPlanification() : alternateDailyPlanification()}
             </div>
@@ -375,6 +434,35 @@ function Planification() {
                                     </button>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </div>
+            )}
+            {showDeletePlanningModal && (
+                <div
+                    className='fixed inset-0 flex justify-center items-center bg-false-blue bg-opacity-70'
+                    onClick={() => setShowDeletePlanningModal(false)}
+                >
+                    <div
+                        className='bg-[#FFF] w-11/12 p-8 rounded-xl shadow-lg border-false-orange border-2'
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <h2 className='text-center font-bold text-2xl font-mono mb-2'>
+                            Estas seguro que quieres eliminar la planificación?
+                        </h2>
+                        <div className='flex flex-row gap-3 w-full items-center justify-center'>
+                            <button
+                                className='bg-[#d2d2d2] rounded-lg py-1.5 px-3 text-white font-bold'
+                                onClick={() => setShowDeletePlanningModal(false)}
+                            >
+                                Cancelar
+                            </button>
+                            <button
+                                className='bg-danger rounded-lg py-1.5 px-3 text-white font-bold'
+                                onClick={() => deletePlanning()}
+                            >
+                                Eliminar Planificación
+                            </button>
                         </div>
                     </div>
                 </div>
