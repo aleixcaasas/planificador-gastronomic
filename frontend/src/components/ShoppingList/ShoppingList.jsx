@@ -1,5 +1,6 @@
 import { useUser } from '../../context/UserContext.jsx'
 import { useEffect, useState } from 'react'
+import { Button } from '@nextui-org/react'
 import { toast } from 'sonner'
 
 function ShoppingList() {
@@ -46,7 +47,6 @@ function ShoppingList() {
                 user_id,
                 ingredient_id
             })
-            console.log(response.data)
             setShoppingList(response.data.shoppingList)
             toast.success('Ingrediente eliminado correctamente')
         } catch (error) {
@@ -74,6 +74,17 @@ function ShoppingList() {
                 toast.error('Error al buscar los ingredientes')
                 console.log(error)
             }
+        }
+    }
+
+    async function deleteShoppingList() {
+        try {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/delete-shoppingList`)
+            setShoppingList(response.data.shoppingList)
+            toast.success('Ingredientes eliminados correctamente')
+        } catch (error) {
+            toast.error('Error al eliminar los ingredientes')
+            console.log(error)
         }
     }
 
@@ -114,13 +125,29 @@ function ShoppingList() {
                             ))
                         )}
                     </div>
-
-                    <button
-                        className='bg-false-orange rounded-xl px-14 py-2.5 font-semibold'
-                        onClick={() => searchIngredients()}
-                    >
-                        AÑADIR INGREDIENTE
-                    </button>
+                    <div className='flex flex-row gap-4'>
+                        <button
+                            className='bg-false-orange rounded-xl px-14 py-2.5 font-semibold'
+                            onClick={() => searchIngredients()}
+                        >
+                            AÑADIR INGREDIENTE
+                        </button>
+                        <Button
+                            isIconOnly
+                            color='danger'
+                            variant='ghost'
+                            aria-label='Eliminar todos los ingredientes'
+                            onClick={() => deleteShoppingList()}
+                            className='flex items-center justify-center'
+                        >
+                            <svg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' viewBox='0 0 24 24'>
+                                <path
+                                    fill='#000'
+                                    d='M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z'
+                                />
+                            </svg>
+                        </Button>
+                    </div>
                 </div>
             </div>
             {showAddIngredientModal && (

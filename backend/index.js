@@ -7,9 +7,32 @@ const { recipeRouter } = require('./routes/recipe.routes.js')
 const { planningRouter } = require('./routes/planning.routes.js')
 const { ingredientRouter } = require('./routes/ingredient.routes.js')
 
+const jwt = require('jsonwebtoken')
+const { getUser } = require('./utils/queries.js')
+
 const PORT = process.env.PORT || 3000
 
 const app = express()
+
+// MIDDLEWARE: JWT verification
+const verifyToken = async (req, res, next) => {
+    const token = req.headers.cookie.split('token=')[1]
+    if (!token) {
+        return res.status(401).json({ error: 'No autorizado' })
+    }
+
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET)
+        req.user = { ...(await getUser(decoded.user_id)), user_id: decoded.user_id }
+        if (!req.user) {
+            return res.status(401).json({ error: 'Usuario no encontrado' })
+        }
+        next()
+    } catch (err) {
+        console.log(err)
+        return res.status(401).json({ error: 'No autorizado' })
+    }
+}
 
 // Middlewares
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
@@ -18,10 +41,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // ALL THE ROUTERS OF THE APP WILL BE HERE
-app.use('/api', authRouter)
-app.use('/api', recipeRouter)
-app.use('/api', planningRouter)
-app.use('/api', ingredientRouter)
+app.use('/api', verifyToken, authRouter)
+app.use('/api', verifyToken, recipeRouter)
+app.use('/api', verifyToken, planningRouter)
+app.use('/api', verifyToken, ingredientRouter)
 
 // STARTING THE SERVER
 app.listen(PORT, () => {

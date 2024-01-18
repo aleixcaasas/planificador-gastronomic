@@ -23,7 +23,7 @@ export const handleUpload = (image) => {
     )
 }
 
-function formatRecipeTitleForUrl(title) {
+export function formatRecipeTitleForUrl(title) {
     return title.toLowerCase().replace(/ /g, '-')
 }
 
