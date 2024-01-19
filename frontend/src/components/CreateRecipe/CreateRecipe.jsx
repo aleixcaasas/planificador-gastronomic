@@ -45,7 +45,12 @@ function CreateRecipe({ visible, onVisibilityChange }) {
     }
 
     const handleRecipeChange = (e) => {
-        setRecipe({ ...recipe, [e.target.name]: e.target.value })
+        if (e.target.name === 'steps') {
+            const stepsArray = e.target.value.split('\n')
+            setRecipe({ ...recipe, steps: stepsArray })
+        } else {
+            setRecipe({ ...recipe, [e.target.name]: e.target.value })
+        }
     }
 
     const validateRecipeForm = () => {
@@ -112,7 +117,6 @@ function CreateRecipe({ visible, onVisibilityChange }) {
                 formData.append(key, recipe[key])
             }
         }
-        formData.append('user_id', user.user_id)
 
         try {
             await axios.post(`${import.meta.env.VITE_API_URL}/new-recipe`, formData, {
@@ -185,12 +189,11 @@ function CreateRecipe({ visible, onVisibilityChange }) {
                           ))}
                 </div>
 
-                <input
-                    type='textarea'
+                <textarea
                     name='steps'
                     value={recipe.steps}
                     className='w-7/12 border-2 border-false-orange rounded-lg py-2 px-4 my-4'
-                    placeholder='Pasos a seguir'
+                    placeholder='Pasos a seguir (separados por líneas / enter)'
                     onChange={handleRecipeChange}
                 />
 

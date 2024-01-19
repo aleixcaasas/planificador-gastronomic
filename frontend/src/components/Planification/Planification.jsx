@@ -163,7 +163,7 @@ function Planification() {
                             </svg>
                         </button>
                     </div>
-                    {meals.map((dish) => (
+                    {Object.values(meals).map((dish) => (
                         <div
                             key={dish['recipe_id']}
                             className={`w-32 bg-[#F4F6F7]  shadow-md rounded-md my-1 p-1 flex flex-col items-center ${
@@ -222,7 +222,6 @@ function Planification() {
         if (!planning) {
             return <div>Cargando...</div>
         }
-
         return Object.entries(planning).map(([day, meals]) => (
             <table key={day} className='w-11/12 mx-auto shadow-md rounded-lg my-2.5'>
                 <thead>

@@ -75,11 +75,13 @@ const getRecipe = async (req, res) => {
 }
 
 const createRecipe = async (req, res) => {
-    const { title, description, parsed_ingredients, difficulty, steps, time, user_id, meal } = req.body
+    const { user_id } = req.user
+    const { title, description, parsed_ingredients, difficulty, steps, time, meal } = req.body
     const newTime = time + ' min'
 
     const { file } = req
     const new_parsed_ingredients = JSON.parse(parsed_ingredients)
+    const new_steps = steps.split('\n')
     const urlTitle = convertTitle(title)
     const newRecipe = {
         title,
@@ -87,7 +89,7 @@ const createRecipe = async (req, res) => {
         description,
         parsed_ingredients: new_parsed_ingredients,
         difficulty,
-        steps,
+        steps: new_steps,
         time: newTime,
         user_id,
         meal

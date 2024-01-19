@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3000
 
 const app = express()
 
-// MIDDLEWARE: JWT verification
+// MIDDLEWARE: JWT token verification
 const verifyToken = async (req, res, next) => {
     const token = req.headers.cookie.split('token=')[1]
 
@@ -46,7 +46,7 @@ app.use(express.urlencoded({ extended: true }))
 const swaggerUi = require('swagger-ui-express')
 const swaggerDocument = require('./swagger.json')
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 // ALL THE ROUTERS OF THE APP WILL BE HERE
 app.use('/api', authRouter)
