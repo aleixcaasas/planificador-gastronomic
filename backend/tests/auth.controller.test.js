@@ -1,137 +1,166 @@
-const request = require('supertest')
-const { createUserWithEmailAndPassword } = require('firebase/auth')
-const { db } = require('../utils/firebase.js')
-const { User, WeeklyPlan } = require('../models/user.model.js')
+const axios = require('axios')
+require('dotenv').config()
+const http = require('http')
+const jwt = require('jsonwebtoken')
 
-// Simulación de firebase/auth y firebase.js
-jest.mock('firebase/auth', () => ({
-    ...jest.requireActual('firebase/auth'), // Conserva las exportaciones originales
-    createUserWithEmailAndPassword: jest.fn() // Simula esta función
-}))
+const baseUrl = 'http://localhost:3000/api'
 
-jest.mock('../utils/firebase.js', () => ({
-    db: {
-        collection: jest.fn().mockReturnThis(),
-        add: jest.fn()
-    },
-    // Asegúrate de que `app` se simula correctamente como una aplicación Express
-    app: jest.fn(() => ({
-        post: jest.fn().mockReturnThis(),
-        send: jest.fn()
-    }))
-}))
-
-describe('POST /email-register', () => {
-    it('should return a 500 status code if there is an error creating the user in the database', async () => {
-        const mockUser = {
+describe('email-register endpoint', () => {
+    it('should create a user with valid data', async () => {
+        const response = await axios.post(`${baseUrl}/email-register`, {
             user_name: 'testuser',
             full_name: 'Test User',
-            email: 'testuser@example.com',
+            email: 'test@example.com',
             password: 'password123'
-        }
-
-        createUserWithEmailAndPassword.mockResolvedValueOnce({}) // Asegúrate de que esta función se simula correctamente
-        db.collection.mockReturnValueOnce({
-            add: jest.fn().mockRejectedValueOnce(new Error('Database error'))
         })
 
-        const response = await request(app).post('/email-register').send(mockUser)
-
-        expect(response.status).toBe(400)
-        expect(response.body).toEqual({ error: 'Los campos user_name, full_name, email y password son obligatorios.' })
-    })
-
-    it('should return a 201 status code and user_id if the user is successfully registered', async () => {
-        const mockUser = {
-            user_name: 'testuser',
-            full_name: 'Test User',
-            email: 'testuser@example.com',
-            password: 'password123'
-        }
-
-        auth.createUserWithEmailAndPassword.mockResolvedValueOnce({})
-        db.collection.mockReturnValueOnce({
-            add: jest.fn().mockResolvedValueOnce({ _path: { segments: ['users', '1234567890'] } })
-        })
-
-        const response = await request(app).post('/email-register').send(mockUser)
-
-        expect(createUserWithEmailAndPassword).toHaveBeenCalledWith(
-            expect.anything(),
-            mockUser.email,
-            mockUser.password
-        )
-        expect(db.collection).toHaveBeenCalledWith('users')
-        expect(db.collection().add).toHaveBeenCalledWith(expect.any(Object))
         expect(response.status).toBe(201)
-        expect(response.body).toEqual({ user_id: '1234567890' })
+        expect(response.data.user_id).toBeDefined()
     })
 
-    it('should return a 500 status code if there is an error creating the user in the database', async () => {
-        const mockUser = {
-            user_name: 'testuser',
-            full_name: 'Test User',
-            email: 'testuser@example.com',
-            password: 'password123'
+    it('should return 400 for missing fields', async () => {
+        try {
+            await axios.post(`${baseUrl}/email-register`, {
+                user_name: 'testuser',
+                full_name: 'Test User'
+            })
+        } catch (error) {
+            expect(error.response.status).toBe(400)
+            expect(error.response.data.error).toContain(
+                'Los campos user_name, full_name, email y password son obligatorios.'
+            )
         }
+    })
+})
 
-        createUserWithEmailAndPassword.mockResolvedValueOnce({})
-        db.collection.mockReturnValueOnce({
-            add: jest.fn().mockRejectedValueOnce(new Error('Database error'))
+describe('login endpoint', () => {
+    it('should log in a user with valid credentials', async () => {
+        const response = await axios.post(`${baseUrl}/login`, {
+            email: 'test@example.com',
+            password: 'password123'
         })
 
-        const response = await request(app).post('/email-register').send(mockUser)
-
-        expect(createUserWithEmailAndPassword).toHaveBeenCalledWith(
-            expect.anything(),
-            mockUser.email,
-            mockUser.password
-        )
-        expect(db.collection).toHaveBeenCalledWith('users')
-        expect(db.collection().add).toHaveBeenCalledWith(expect.any(Object))
-        expect(response.status).toBe(500)
-        expect(response.body).toEqual({ error: 'Error al crear el usuario en la base de datos.' })
+        expect(response.status).toBe(200)
+        expect(response.data.logged).toBeTruthy()
+        expect(response.data.user_id).toBeDefined()
     })
 
-    it('should return a 409 status code if the email is already in use', async () => {
-        const mockUser = {
-            user_name: 'testuser',
-            full_name: 'Test User',
-            email: 'testuser@example.com',
-            password: 'password123'
+    it('should return 400 for missing fields', async () => {
+        try {
+            await axios.post(`${baseUrl}/login`, {})
+        } catch (error) {
+            expect(error.response.status).toBe(400)
+            expect(error.response.data.error).toContain('Email y contraseña son requeridos')
         }
-
-        createUserWithEmailAndPassword.mockRejectedValueOnce({ code: 'auth/email-already-in-use' })
-
-        const response = await request(app).post('/email-register').send(mockUser)
-
-        expect(createUserWithEmailAndPassword).toHaveBeenCalledWith(
-            expect.anything(),
-            mockUser.email,
-            mockUser.password
-        )
-        expect(response.status).toBe(409)
-        expect(response.body).toEqual({ error: 'El email ya está en uso.' })
     })
 
-    it('should return a 500 status code if there is an error creating the user with authentication', async () => {
-        const mockUser = {
-            user_name: 'testuser',
-            full_name: 'Test User',
-            email: 'testuser@example.com',
-            password: 'password123'
+    it('should return 400 for invalid email format', async () => {
+        try {
+            await axios.post(`${baseUrl}/login`, {
+                email: 'invalid-email',
+                password: 'password123'
+            })
+        } catch (error) {
+            expect(error.response.status).toBe(400)
+            expect(error.response.data.error).toContain('Email inválido')
         }
+    })
 
-        createUserWithEmailAndPassword.mockRejectedValueOnce(new Error('Firebase error'))
+    it('should return 403 for invalid credentials', async () => {
+        try {
+            await axios.post(`${baseUrl}/login`, {
+                email: 'test@example.com',
+                password: 'wrongpassword'
+            })
+        } catch (error) {
+            expect(error.response.status).toBe(403)
+            expect(error.response.data.error).toContain('Usuario o Contraseña incorrectos')
+        }
+    })
+})
 
-        const response = await request(app).post('/email-register').send(mockUser)
+describe('google-login endpoint', () => {
+    it('should log in or register a user via Google', async () => {
+        const response = await axios.post(`${baseUrl}/google-login`, {
+            email: 'user@example.com',
+            displayName: 'Example User',
+            photoURL: 'http://example.com/photo.jpg'
+        })
 
-        expect(createUserWithEmailAndPassword).toHaveBeenCalledWith(
-            expect.anything(),
-            mockUser.email,
-            mockUser.password
-        )
-        expect(response.status).toBe(500)
-        expect(response.body).toEqual({ error: 'Error al crear el usuario con autenticación.' })
+        expect(response.status).toBe(200)
+        expect(response.data.logged).toBeTruthy()
+        expect(response.data.user_id).toBeDefined()
+        expect(response.data.full_name).toEqual('Example User')
+        expect(response.data.email).toEqual('user@example.com')
+        expect(response.data.image).toEqual('http://example.com/photo.jpg')
+    })
+})
+
+describe('reset-password endpoint', () => {
+    it('should send a password reset email for a valid email', async () => {
+        const response = await axios.post(`${baseUrl}/reset-password`, {
+            email: 'user@example.com'
+        })
+
+        expect(response.status).toBe(200)
+        expect(response.data.reset).toBeTruthy()
+    })
+
+    it('should return 404 for non-existing email', async () => {
+        try {
+            await axios.post(`${baseUrl}/reset-password`, {
+                email: 'nonexisting@example.com'
+            })
+        } catch (error) {
+            expect(error.response.status).toBe(404)
+            expect(error.response.data.error).toContain('No existe ninguna cuenta con este correo electrónico')
+            expect(error.response.data.reset).toBeFalsy()
+        }
+    })
+})
+
+describe('logout endpoint', () => {
+    it('should log out a user', async () => {
+        const response = await axios.post(`${baseUrl}/logout`)
+
+        expect(response.status).toBe(200)
+        expect(response.data.logged).toBeFalsy()
+
+        const cookie = response.headers['set-cookie'][0]
+        expect(cookie).toContain('token=;')
+    })
+})
+
+describe('verifyToken endpoint', () => {
+    const JWT_SECRET = process.env.JWT_SECRET
+
+    it('should verify a valid token', async () => {
+        const validToken = jwt.sign({ user_id: 'xnVowxyD73V5SYn3t4MD' }, JWT_SECRET, { expiresIn: '1h' })
+        const response = await axios.get(`${baseUrl}/verify-token`, {
+            headers: { Cookie: `token=${validToken}` }
+        })
+
+        expect(response.status).toBe(200)
+    })
+
+    it('should return 401 for no token', async () => {
+        try {
+            await axios.get(`${baseUrl}/verify-token`)
+        } catch (error) {
+            expect(error.response.status).toBe(401)
+            expect(error.response.data.error).toContain('No autorizado1')
+        }
+    })
+
+    it('should return 401 for invalid token', async () => {
+        const invalidToken = 'invalidToken'
+        try {
+            await axios.get(`${baseUrl}/verify-token`, {
+                headers: { Cookie: `token=${invalidToken}` }
+            })
+        } catch (error) {
+            expect(error.response.status).toBe(401)
+            expect(error.response.data.error).toContain('No autorizado3')
+        }
     })
 })
