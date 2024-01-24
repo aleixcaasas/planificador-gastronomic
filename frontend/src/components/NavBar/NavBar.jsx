@@ -35,7 +35,7 @@ export function NavBar() {
         <nav className='bg-[#FFF] border-gray-200 z-50 bg-opacity-75'>
             <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
                 <a href='/' className='flex items-center space-x-3 rtl:space-x-reverse'>
-                    <img src='/src/assets/favicon.png' className='h-8' />
+                    <img src='/assets/favicon-98191b43.png' className='h-8' />
                     <span className='self-center text-2xl font-semibold whitespace-nowrap'>Menu Vital</span>
                 </a>
                 <div className='flex items-center space-x-3 md:space-x-0 rtl:space-x-reverse'>

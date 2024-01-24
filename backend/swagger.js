@@ -5,7 +5,7 @@ const doc = {
         title: 'Menu Vital API',
         description: 'API Rest con Node.js, Express y MongoDB para la aplicación de recetas Menu Vital'
     },
-    host: 'localhost:3000'
+    host: 'menuvital.es'
 }
 
 const outputFile = './swagger.json'

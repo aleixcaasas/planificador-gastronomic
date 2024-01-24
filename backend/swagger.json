@@ -5,7 +5,7 @@
         "description": "API Rest con Node.js, Express y MongoDB para la aplicación de recetas Menu Vital",
         "version": "1.0.0"
     },
-    "host": "localhost:3000",
+    "host": "menuvital.es",
     "basePath": "/api",
     "schemes": [
         "http"

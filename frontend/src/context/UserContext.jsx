@@ -34,6 +34,7 @@ export const UserProvider = ({ children }) => {
                                     setUser(res.data)
                                 }
                             } catch (error) {
+                                toast.error('Error al iniciar sesión con Google. Por favor, intenta de nuevo.')
                                 setIsAuthenticated(false)
                                 setUser(null)
                                 setLoading(false)
