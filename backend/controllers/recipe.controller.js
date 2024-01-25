@@ -14,7 +14,7 @@ const getRecipes = async (req, res) => {
             meal: data.meal
         }
     })
-    res.json(recipes)
+    res.status(200).json(recipes)
 }
 
 const getUserRecipes = async (req, res) => {
@@ -64,7 +64,7 @@ const getRecipe = async (req, res) => {
         }
 
         if (recipe) {
-            res.json(recipe)
+            res.status(200).json(recipe)
         } else {
             res.status(404).send('Receta no encontrada')
         }
