@@ -1,7 +1,4 @@
-const { WeeklyPlan } = require('../models/user.model.js')
 const { db } = require('../utils/firebase.js')
-const jwt = require('jsonwebtoken')
-const { getUser } = require('../utils/queries.js')
 
 const getIngredients = async (req, res) => {
     const snapshot = await db.collection('ingredients').get()

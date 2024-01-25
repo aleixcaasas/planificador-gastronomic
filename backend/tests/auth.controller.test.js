@@ -1,6 +1,5 @@
 const axios = require('axios')
 require('dotenv').config()
-const http = require('http')
 const jwt = require('jsonwebtoken')
 
 const baseUrl = 'http://localhost:3000/api'
