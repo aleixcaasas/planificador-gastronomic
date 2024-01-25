@@ -9,7 +9,7 @@ describe('email-register endpoint', () => {
         const response = await axios.post(`${baseUrl}/email-register`, {
             user_name: 'testuser',
             full_name: 'Test User',
-            email: 'test@example.com',
+            email: 'test1@example.com',
             password: 'password123'
         })
 

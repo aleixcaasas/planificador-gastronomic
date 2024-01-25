@@ -1,5 +1,5 @@
 const axios = require('axios')
-const { WeeklyPlan } = require('../models/user.model.js')
+const { WeeklyPlan } = require('../../models/user.model.js')
 const baseUrl = 'http://localhost:3000/api'
 const testCookie =
     'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiS1dsT0xGNFdtcnJ2eTdldW1UZlciLCJpYXQiOjE3MDYyMDA4NDAsImV4cCI6MTcwODc5Mjg0MH0.79RFCNM-3xrI0YMH07YyEgEm8J4LoVZikJxw6X6Mg7k'

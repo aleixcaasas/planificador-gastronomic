@@ -2,6 +2,7 @@
 const { initializeApp: initializeClientApp } = require('firebase/app')
 const { getAuth, updatePassword } = require('firebase/auth')
 const { getDownloadURL, getStorage, ref, uploadBytesResumable } = require('firebase/storage')
+require('dotenv').config()
 
 // Importación para el Admin SDK
 const admin = require('firebase-admin')
