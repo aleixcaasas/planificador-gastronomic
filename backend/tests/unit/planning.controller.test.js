@@ -44,6 +44,23 @@ jest.mock('../../models/user.model.js', () => {
     }
 })
 
+jest.mock('../../utils/firebase.js', () => {
+    return {
+        db: {
+            collection: jest.fn().mockReturnThis(),
+            doc: jest.fn().mockReturnThis(),
+            update: jest.fn().mockResolvedValue({}),
+            get: jest.fn().mockResolvedValue({
+                data: () => ({
+                    /* datos simulados */
+                })
+            }),
+            add: jest.fn().mockResolvedValue({ id: 'newDocumentId' })
+        }
+        // Mocks adicionales para getDownloadURL, ref, uploadBytesResumable, etc., si es necesario
+    }
+})
+
 const { db } = require('../../utils/firebase.js')
 const { WeeklyPlan } = require('../../models/user.model.js')
 
