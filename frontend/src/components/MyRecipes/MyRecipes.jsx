@@ -42,11 +42,12 @@ function MyRecipes() {
         const filteredRecipes =
             searchedRecipesList?.filter((recipe) => (mealType ? recipe.meal === mealType : true)) || []
         return filteredRecipes.length > 0 ? (
-            filteredRecipes.map((recipe, key) => <RecipeCard recipe={recipe} key={key} />)
+            filteredRecipes.map((recipe, index) => <RecipeCard recipe={recipe} key={index} />)
         ) : (
-            <div className='bg-[#FFF] p-8 rounded-xl shadow-lg border-false-orange border-2 flex flex-col items-center justify-center'>
+            <div className='bg-[#FFF] p-8 rounded-xl shadow-lg border-false-orange border-2 flex flex-col items-center justify-center text-center'>
                 No hay recetas a mostrar con estos filtros
-                <img src='src/assets/disappointed-face.svg' height='120px' className='mt-4' alt='' />
+                <img src='src/assets/disappointed-face.svg' height='120px' className='my-4' alt='' />
+                Puedes crear una nueva receta en el botón que se encuentra arriba a la derecha
             </div>
         )
     }

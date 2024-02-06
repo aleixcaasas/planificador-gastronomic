@@ -1,6 +1,8 @@
 import { useUser } from '../../context/UserContext'
 import { useState } from 'react'
 import Cookies from 'js-cookie'
+import { Link } from 'react-router-dom'
+import favicon from '../../assets/favicon.png'
 
 export function NavBar() {
     const { user, axios, setIsAuthenticated, setUser } = useUser()
@@ -34,10 +36,10 @@ export function NavBar() {
     return (
         <nav className='bg-[#FFF] border-gray-200 z-50 bg-opacity-75'>
             <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-                <a href='/' className='flex items-center space-x-3 rtl:space-x-reverse'>
-                    <img src='/assets/favicon-98191b43.png' className='h-8' />
+                <Link to='/' className='flex items-center space-x-3 rtl:space-x-reverse'>
+                    <img src={favicon} className='h-8' />
                     <span className='self-center text-2xl font-semibold whitespace-nowrap'>Menu Vital</span>
-                </a>
+                </Link>
                 <div className='flex items-center space-x-3 md:space-x-0 rtl:space-x-reverse'>
                     <button
                         type='button'
@@ -87,9 +89,9 @@ export function NavBar() {
                     </div>
                     <ul className='p-2' aria-labelledby='user-menu-button'>
                         <li className='hover:bg-false-white rounded-lg'>
-                            <a href='/perfil' className='block px-4 py-2 text-sm'>
+                            <Link to='/perfil' className='block px-4 py-2 text-sm'>
                                 Perfil
-                            </a>
+                            </Link>
                         </li>
                         <li className='hover:bg-false-white rounded-lg'>
                             <a onClick={signOut} className='block px-4 py-2 text-sm hover:cursor-pointer'>
@@ -106,24 +108,24 @@ export function NavBar() {
                 >
                     <ul className='flex flex-col font-medium p-2 border border-false-light-gray shadow-md rounded-lg bg-[#FFF]'>
                         <li className='hover:bg-false-white rounded-lg'>
-                            <a href='/' className='block py-2 px-3'>
+                            <Link to='/' className='block py-2 px-3'>
                                 Inicio
-                            </a>
+                            </Link>
                         </li>
                         <li className='hover:bg-false-white rounded-lg'>
-                            <a href='/mis-recetas' className='block py-2 px-3'>
+                            <Link to='/mis-recetas' className='block py-2 px-3'>
                                 Mis Recetas
-                            </a>
+                            </Link>
                         </li>
                         <li className='hover:bg-false-white rounded-lg'>
-                            <a href='/lista-compra' className='block py-2 px-3'>
+                            <Link to='/lista-compra' className='block py-2 px-3'>
                                 Lista de la compra
-                            </a>
+                            </Link>
                         </li>
                         <li className='hover:bg-false-white rounded-lg'>
-                            <a href='/explorar-recetas' className='block py-2 px-3'>
+                            <Link to='/explorar-recetas' className='block py-2 px-3'>
                                 Explorar recetas
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

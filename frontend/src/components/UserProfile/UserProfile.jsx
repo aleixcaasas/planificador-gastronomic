@@ -31,8 +31,14 @@ export function UserProfile() {
     const handleImageChange = (e) => {
         const file = e.target.files[0]
         if (file) {
-            setProfileImage(file)
-            setImagePreview(URL.createObjectURL(file))
+            const validImageTypes = ['image/jpeg', 'image/png', 'image/gif']
+            if (validImageTypes.includes(file.type)) {
+                setProfileImage(file)
+                setImagePreview(URL.createObjectURL(file))
+            } else {
+                toast.error('Por favor, selecciona un archivo de imagen válido.')
+                event.target.value = ''
+            }
         }
     }
 

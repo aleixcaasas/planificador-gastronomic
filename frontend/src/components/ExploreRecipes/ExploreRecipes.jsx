@@ -36,7 +36,7 @@ function ExploreRecipes() {
         const filteredRecipes =
             searchedRecipesList?.filter((recipe) => (mealType ? recipe.meal === mealType : true)) || []
         return filteredRecipes.length > 0 ? (
-            filteredRecipes.map((recipe, key) => <RecipeCard recipe={recipe} key={key} />)
+            filteredRecipes.map((recipe, index) => <RecipeCard recipe={recipe} key={index} />)
         ) : (
             <div className='bg-[#FFF] p-8 rounded-xl shadow-lg border-false-orange border-2 flex flex-col items-center justify-center'>
                 No hay recetas a mostrar con estos filtros

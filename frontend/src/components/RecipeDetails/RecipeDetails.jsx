@@ -12,13 +12,8 @@ function RecipeDetails() {
     useEffect(() => {
         const fetchRecipe = async () => {
             try {
-                if (!selectedRecipeId) {
-                    const response = await axios.get(`${import.meta.env.VITE_API_URL}/recipe/${nombreReceta}`)
-                    setRecipe(response.data)
-                } else {
-                    const response = await axios.get(`${import.meta.env.VITE_API_URL}/recipe/${selectedRecipeId}`)
-                    setRecipe(response.data)
-                }
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/recipe/${nombreReceta}`)
+                setRecipe(response.data)
             } catch (error) {
                 console.log(error)
             }
@@ -41,7 +36,7 @@ function RecipeDetails() {
                     </g>
                 </svg>
             )
-        } else if (difficulty === 'Moderada') {
+        } else if (difficulty === 'Moderada' || difficulty === 'Media') {
             return (
                 <svg xmlns='http://www.w3.org/2000/svg' width='2em' height='2em' viewBox='0 0 24 24'>
                     <g fill='none' stroke='#000000'>

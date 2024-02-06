@@ -5,6 +5,7 @@ import { WeeklyPlan } from '../../models/user.model.jsx'
 import { toast } from 'sonner'
 import { Button } from '@nextui-org/react'
 import { formatRecipeTitleForUrl } from '../common.jsx'
+import { Link } from 'react-router-dom'
 
 function Planification() {
     const { user, axios } = useUser()
@@ -170,12 +171,12 @@ function Planification() {
                                 !isAlternateView ? 'mr-2 justify-start ' : 'mx-auto'
                             } `}
                         >
-                            <a href={`/receta/${formatRecipeTitleForUrl(dish['recipe_title'])}`}>
+                            <Link to={`/receta/${formatRecipeTitleForUrl(dish['recipe_title'])}`}>
                                 <img
                                     src={dish['recipe_image']}
                                     className='rounded h-16 min-h-[4rem] w-24 object-cover'
                                 />
-                            </a>
+                            </Link>
 
                             <div className='w-full rounded-md bg-opacity-80'>
                                 <div className=' text-xs flex flex-row py-1 text-[#7a7979] items-center justify-between'>
@@ -208,9 +209,9 @@ function Planification() {
                                         </svg>
                                     </button>
                                 </div>
-                                <a href={`/receta/${formatRecipeTitleForUrl(dish['recipe_title'])}`}>
+                                <Link to={`/receta/${formatRecipeTitleForUrl(dish['recipe_title'])}`}>
                                     <p className='text-sm  font-black text-center'>{dish['recipe_title']}</p>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     ))}
