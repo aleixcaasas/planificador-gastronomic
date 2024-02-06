@@ -81,7 +81,7 @@ const createRecipe = async (req, res) => {
 
     const { file } = req
     const new_parsed_ingredients = JSON.parse(parsed_ingredients)
-    const new_steps = steps.split('\n')
+    const new_steps = steps.split(',')
     const urlTitle = convertTitle(title)
     const newRecipe = {
         title,
